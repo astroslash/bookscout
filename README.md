@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 and the Phase 6.5 curated catalog foundation are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, optional commerce link boundary, and a small curated catalog layer.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Beacon is its first registered connector. **Phases 1 through 6 and the Phase 6.5 curated catalog foundation are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, optional commerce link boundary, and a small curated catalog layer.
 
 ## Local setup
 
@@ -27,7 +27,7 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 | `app/` | Thin Next.js routes and UI |
 | `tests/` | Factory, Google Books adapter, and recommendation pipeline tests |
 
-`invokeTool` is the shared execution path for MCP and REST. It validates inputs, invokes the connector's tool, validates output when declared, and logs safe metadata. Platform code imports no Book Scout logic. The single Book Scout import lives in the composition root.
+`invokeTool` is the shared execution path for MCP and REST. It validates inputs, invokes the connector's tool, validates output when declared, and logs safe metadata. Platform code imports no Book Beacon logic. The single Book Beacon import lives in the composition root.
 
 `GoogleBooksProvider` implements the connector-owned `BookProvider` interface. It accepts an injectable `fetcher` and optional generic `Cache`, so provider calls are mockable and cache storage can be swapped later. The normalized `Book` model never exposes Google Books' `volumeInfo` schema. Unknown reading level, content, popularity, and other missing fields remain absent. Google Books is the primary catalog; Open Library enrichment belongs to a later phase.
 
@@ -37,26 +37,28 @@ The configurable minimum scores in `connectors/book-scout/scoring.ts` are **60 f
 
 ## Current endpoints
 
-- `GET /api/book-scout` returns the manifest, tool list, health flag, deployment commit, and safe catalog diagnostics (schema version, approved count, checksum). It exposes no API keys.
-- `POST /api/book-scout/recommend` calls the `recommend_books` tool through the generic REST adapter. Each recommendation includes `bookScoutUrl`.
-- `/mcp/book-scout` is the generic MCP Streamable HTTP route. It advertises and calls `recommend_books`.
+The canonical connector ID is `book-beacon`. Existing `/api/book-scout` and `/mcp/book-scout` URLs remain aliases for existing clients. The `bookScoutUrl` JSON field and Book Scout catalog provenance IDs also remain stable; their links now use the Book Beacon domain.
+
+- `GET /api/book-beacon` returns the manifest, tool list, health flag, deployment commit, and safe catalog diagnostics (schema version, approved count, checksum). It exposes no API keys.
+- `POST /api/book-beacon/recommend` calls the `recommend_books` tool through the generic REST adapter. Each recommendation includes `bookScoutUrl`.
+- `/mcp/book-beacon` is the generic MCP Streamable HTTP route. It advertises and calls `recommend_books`.
 - `GET /book/[isbn]` displays normalized book metadata. Links use ISBN-13 when available, ISBN-10 next, and an encoded catalog ID for books without either ISBN.
 
-Book pages show a paid Amazon search link only when `AMAZON_ASSOCIATES_TAG` is configured. The link goes directly to Amazon; it is not a redirect through Book Scout. It searches Amazon Books using the ISBN where possible, or title and author otherwise. It does not assert that a particular Amazon listing or edition matches the Google Books record.
+Book pages show a paid Amazon search link only when `AMAZON_ASSOCIATES_TAG` is configured. The link goes directly to Amazon; it is not a redirect through Book Beacon. It searches Amazon Books using the ISBN where possible, or title and author otherwise. It does not assert that a particular Amazon listing or edition matches the Google Books record.
 
 Try REST locally or against the deployed site:
 
 ```sh
-curl -X POST https://bookscout-iota.vercel.app/api/book-scout/recommend \
+curl -X POST https://k4connect.vercel.app/api/book-beacon/recommend \
   -H "Content-Type: application/json" \
   -d '{"age":11,"readingAbility":"advanced","interests":["Greek mythology","history","funny books"],"likedBooks":["Percy Jackson","Harry Potter"],"preferences":{"romance":"low"},"limit":5}'
 ```
 
-The response is `{ "success": true, "data": { "recommendations": [...] } }`. Each result has a `bookScoutUrl` you can open in a browser. MCP clients connect to `https://bookscout-iota.vercel.app/mcp/book-scout` and call `recommend_books` with the same input object. REST and MCP share the same validated tool and service.
+The response is `{ "success": true, "data": { "recommendations": [...] } }`. Each result has a `bookScoutUrl` you can open in a browser. MCP clients connect to `https://k4connect.vercel.app/mcp/book-beacon` and call `recommend_books` with the same input object. REST and MCP share the same validated tool and service.
 
 ## Google Books configuration
 
-Create a Google Cloud API key for the Books API and put it in `.env.local` as `GOOGLE_BOOKS_API_KEY`. Restrict the key to the Books API and set it as a server environment variable in Vercel before deploying live catalog calls. `BOOK_SCOUT_BASE_URL` is optional; it sets the canonical origin in recommendation links and defaults to `https://bookscout-iota.vercel.app`. The provider validates input, requests `https://www.googleapis.com/books/v1/volumes`, and returns normalized books. It uses a 24-hour search TTL and a seven-day lookup TTL when a cache is injected. The current `MemoryCache` is process-local, so entries are not shared across Vercel instances.
+Create a Google Cloud API key for the Books API and put it in `.env.local` as `GOOGLE_BOOKS_API_KEY`. Restrict the key to the Books API and set it as a server environment variable in Vercel before deploying live catalog calls. `BOOK_BEACON_BASE_URL` is optional; it sets the canonical origin in recommendation links and defaults to `https://k4connect.vercel.app`. The provider validates input, requests `https://www.googleapis.com/books/v1/volumes`, and returns normalized books. It uses a 24-hour search TTL and a seven-day lookup TTL when a cache is injected. The current `MemoryCache` is process-local, so entries are not shared across Vercel instances.
 
 ## Amazon Associates configuration
 
@@ -70,7 +72,7 @@ For an external initial dataset, use the [catalog data contract](docs/CATALOG_DA
 
 ## Future recommendation catalog
 
-A browseable catalog of **Book Scout recommendations** is a separate product feature from the Google Books source catalog and the curated-book foundation above. Start with a small set of curated themes or reading situations, such as mythology for advanced middle-grade readers, and store only the theme definitions and selected stable Book Scout IDs. Resolve current metadata from providers and use the existing scoring service where a visitor supplies preferences. This avoids copying a giant book database or storing child profiles. A browse/search UI and any persistence for curated collections can be designed when we build that feature.
+A browseable catalog of **Book Beacon recommendations** is a separate product feature from the Google Books source catalog and the curated-book foundation above. Start with a small set of curated themes or reading situations, such as mythology for advanced middle-grade readers, and store only the theme definitions and selected stable book IDs. Resolve current metadata from providers and use the existing scoring service where a visitor supplies preferences. This avoids copying a giant book database or storing child profiles. A browse/search UI and any persistence for curated collections can be designed when we build that feature.
 
 ## Adding a connector or provider
 
@@ -95,4 +97,4 @@ The Google Books tests use mocked HTTP and need no key. To run the optional live
 
 ## Vercel
 
-Import this repository as a Next.js project and use the standard npm install/build commands. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable in Vercel, then deploy. The build does not require the key, but live Google Books fallback does. `AMAZON_ASSOCIATES_TAG` is optional. Never commit `.env.local`. After deployment, compare `GET /api/book-scout` diagnostics with the local approved count and checksum to confirm which catalog is live.
+Import this repository as a Next.js project and use the standard npm install/build commands. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable in Vercel, then deploy. The build does not require the key, but live Google Books fallback does. `AMAZON_ASSOCIATES_TAG` is optional. Never commit `.env.local`. After deployment, compare `GET /api/book-beacon` diagnostics with the local approved count and checksum to confirm which catalog is live.

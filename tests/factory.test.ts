@@ -30,12 +30,24 @@ function exampleConnector(id = "example"): Connector {
 }
 
 describe("connector factory", () => {
-  it("registers Book Scout and an unrelated second connector", () => {
+  it("registers Book Beacon and an unrelated second connector", () => {
     const registry = new ConnectorRegistry();
     registry.register(bookScoutConnector);
+    registry.registerAlias("book-scout", "book-beacon");
     registry.register(exampleConnector());
-    expect(registry.list().map((item) => item.manifest.id)).toEqual(["book-scout", "example"]);
+    expect(registry.list().map((item) => item.manifest.id)).toEqual(["book-beacon", "example"]);
+    expect(registry.get("book-scout")).toBe(registry.get("book-beacon"));
     expect(registry.get("example").tools[0].name).toBe("echo");
+  });
+
+  it("rejects alias collisions and unknown alias targets", () => {
+    const registry = new ConnectorRegistry();
+    registry.register(exampleConnector());
+    expect(() => registry.registerAlias("example", "example")).toThrow(/already registered/);
+    expect(() => registry.registerAlias("legacy", "missing")).toThrow();
+    registry.registerAlias("legacy", "example");
+    expect(() => registry.registerAlias("legacy", "example")).toThrow(/already registered/);
+    expect(() => registry.register(exampleConnector("legacy"))).toThrow(/already registered/);
   });
 
   it("rejects duplicate connector IDs and invalid manifests", () => {

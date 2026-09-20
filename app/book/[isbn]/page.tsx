@@ -17,9 +17,9 @@ async function loadBook(params: Props["params"]) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const book = await loadBook(params);
-  if (!book) return { title: "Book not found | Book Scout" };
+  if (!book) return { title: "Book not found | Book Beacon" };
   return {
-    title: `${book.title} | Book Scout`,
+    title: `${book.title} | Book Beacon`,
     description: book.description?.slice(0, 160) ?? `Book details for ${book.title}.`,
   };
 }
@@ -31,13 +31,13 @@ export default async function BookPage({ params }: Props) {
 
   return (
     <main className={styles.page}>
-      <Link href="/" className={styles.back}>← Book Scout</Link>
+      <Link href="/" className={styles.back}>← Book Beacon</Link>
       <article className={styles.card}>
         <div className={styles.cover}>
           {book.coverUrl ? <img src={book.coverUrl} alt={`Cover of ${book.title}`} /> : <span>Cover unavailable</span>}
         </div>
         <div className={styles.details}>
-          <p className={styles.eyebrow}>Book Scout · Book details</p>
+          <p className={styles.eyebrow}>Book Beacon · Book details</p>
           <h1>{book.title}</h1>
           {book.subtitle && <p className={styles.subtitle}>{book.subtitle}</p>}
           {book.authors.length > 0 && <p className={styles.authors}>By {book.authors.join(", ")}</p>}

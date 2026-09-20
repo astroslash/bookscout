@@ -22,15 +22,17 @@ function setup() {
     new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] }));
   const registry = new ConnectorRegistry();
   registry.register(connector);
+  registry.registerAlias("book-scout", connector.manifest.id);
   return { connector, registry, search };
 }
 
-describe("Book Scout tool routes", () => {
+describe("Book Beacon tool routes", () => {
   it("exposes safe catalog deployment diagnostics", async () => {
-    const response = await connectorStatus(new Request("http://localhost/api/book-scout"),
-      { params: Promise.resolve({ connector: "book-scout" }) });
+    const response = await connectorStatus(new Request("http://localhost/api/book-beacon"),
+      { params: Promise.resolve({ connector: "book-beacon" }) });
     const body = await response.json();
     expect(response.status).toBe(200);
+    expect(body.data.manifest).toMatchObject({ id: "book-beacon", name: "Book Beacon" });
     expect(body.data.diagnostics).toMatchObject({ catalogSchemaVersion: 1, approvedCuratedBooks: expect.any(Number),
       catalogChecksum: expect.stringMatching(/^[a-f0-9]{16}$/) });
     expect(body.data).not.toHaveProperty("GOOGLE_BOOKS_API_KEY");
@@ -39,10 +41,10 @@ describe("Book Scout tool routes", () => {
   it("uses the same recommendation service for MCP's tool name and the REST path", async () => {
     const { connector, registry, search } = setup();
     const mcpResult = await invokeTool(connector, "recommend_books", input, { logger: { log() {} } });
-    const response = await handleRestTool(new Request("http://localhost/api/book-scout/recommend", {
+    const response = await handleRestTool(new Request("http://localhost/api/book-beacon/recommend", {
       method: "POST",
       body: JSON.stringify(input),
-    }), registry, "book-scout", "recommend");
+    }), registry, "book-beacon", "recommend");
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ success: true, data: mcpResult });
     expect(search).toHaveBeenCalledTimes(2);

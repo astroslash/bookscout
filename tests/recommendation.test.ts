@@ -171,7 +171,7 @@ describe("diversification and service", () => {
     expect(result.recommendations.map((item) => item.book.id)).not.toContain("liked");
     expect(new Set(result.recommendations.map((item) => item.book.id)).size).toBe(result.recommendations.length);
     expect(result.recommendations.every((item) => item.reasons.length > 0 && item.matchScore >= 0 && item.matchScore <= 100)).toBe(true);
-    expect(result.recommendations.every((item) => item.bookScoutUrl.startsWith("https://bookscout-iota.vercel.app/book/"))).toBe(true);
+    expect(result.recommendations.every((item) => item.bookScoutUrl.startsWith("https://k4connect.vercel.app/book/"))).toBe(true);
   });
 
   it("rejects invalid input before provider calls", async () => {

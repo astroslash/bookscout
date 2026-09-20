@@ -7,7 +7,7 @@ export function bookPath(book: Book): string {
   return `/book/${slug}`;
 }
 
-export function bookScoutUrl(book: Book, baseUrl = process.env.BOOK_SCOUT_BASE_URL ?? "https://bookscout-iota.vercel.app"): string {
+export function bookScoutUrl(book: Book, baseUrl = process.env.BOOK_BEACON_BASE_URL ?? "https://k4connect.vercel.app"): string {
   return new URL(bookPath(book), baseUrl).toString();
 }
 
