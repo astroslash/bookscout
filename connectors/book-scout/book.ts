@@ -14,23 +14,24 @@ export const bookSchema = z.object({
   pageCount: z.number().int().positive().optional(),
   language: z.string().min(1).optional(),
   coverUrl: z.url().optional(),
-  popularity: z.number().finite().optional(),
+  // Optional catalog signals use a documented 0 to 100 scale. Never synthesize missing values.
+  popularity: z.number().min(0).max(100).optional(),
   readingLevel: z.object({
     minimumAge: z.number().finite().optional(),
     maximumAge: z.number().finite().optional(),
     lexile: z.number().finite().optional(),
   }).optional(),
   content: z.object({
-    violence: z.number().finite().optional(),
-    romance: z.number().finite().optional(),
-    scary: z.number().finite().optional(),
-    profanity: z.number().finite().optional(),
+    violence: z.number().min(0).max(100).optional(),
+    romance: z.number().min(0).max(100).optional(),
+    scary: z.number().min(0).max(100).optional(),
+    profanity: z.number().min(0).max(100).optional(),
   }).optional(),
   attributes: z.object({
-    humor: z.number().finite().optional(),
-    adventure: z.number().finite().optional(),
-    educational: z.number().finite().optional(),
-    reluctantReader: z.number().finite().optional(),
+    humor: z.number().min(0).max(100).optional(),
+    adventure: z.number().min(0).max(100).optional(),
+    educational: z.number().min(0).max(100).optional(),
+    reluctantReader: z.number().min(0).max(100).optional(),
   }).optional(),
 });
 

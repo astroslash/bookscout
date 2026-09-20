@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 and 2 are implemented:** the shared factory foundation and a normalized book catalog adapter for Google Books. Recommendations, Book Scout tools, and book pages are later phases.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 3 are implemented:** the shared factory, normalized Google Books catalog adapter, and a deterministic recommendation service. Public recommendation tools and book pages are later phases.
 
 ## Local setup
 
@@ -11,27 +11,29 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGLE_BOOKS_API_KEY` when you want live Google Books requests. Phase 2 does not expose public book search; the provider is available for the next recommendation phase and can be tested with an injected fetch function. The key stays server-side and must never use a `NEXT_PUBLIC_` name.
+Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGLE_BOOKS_API_KEY` when you want live Google Books requests. The catalog and recommendation service have no public route yet; both can be tested with an injected provider or fetch function. The key stays server-side and must never use a `NEXT_PUBLIC_` name.
 
 ## Architecture
 
 | Path | Responsibility |
 | --- | --- |
 | `platform/` | Connector contract, manifest schema, registry, MCP and REST adapters, cache, errors, logging |
-| `connectors/book-scout/` | Book domain model and mockable book-provider contract |
+| `connectors/book-scout/` | Book domain model, provider contract, candidate pipeline, scoring, diversification, and recommendation service |
 | `connectors/index.ts` | Composition root where connectors are registered |
 | `providers/google-books/` | Google Books response schema, normalization, and HTTP adapter |
 | `app/` | Thin Next.js routes and UI |
-| `tests/` | Factory and Google Books adapter tests |
+| `tests/` | Factory, Google Books adapter, and recommendation pipeline tests |
 
 `invokeTool` is the shared execution path for MCP and REST. It validates inputs, invokes the connector's tool, validates output when declared, and logs safe metadata. Platform code imports no Book Scout logic. The single Book Scout import lives in the composition root.
 
 `GoogleBooksProvider` implements the connector-owned `BookProvider` interface. It accepts an injectable `fetcher` and optional generic `Cache`, so provider calls are mockable and cache storage can be swapped later. The normalized `Book` model never exposes Google Books' `volumeInfo` schema. Unknown reading level, content, popularity, and other missing fields remain absent. Google Books is the primary catalog; Open Library enrichment belongs to a later phase.
 
+`BookScoutRecommendationService` accepts a `BookProvider` and runs profile validation, up to five catalog searches, ISBN/title-author deduplication, reliable hard filters, weighted scoring, and greedy diversification. Search results survive individual query failures; all failed queries return a typed provider error. Missing book signals contribute a neutral value rather than being treated as negative facts. The default weights and Lexile bands live in `connectors/book-scout/scoring.ts` and can be configured. Match scores are 0-100 ranking scores, not probabilities. Reasons are structured codes and messages. No profile is persisted or logged by this service.
+
 ## Current endpoints
 
 - `GET /api/book-scout` returns the registered manifest, tool list, and stub health result.
-- `POST /api/[connector]/[tool]` is the generic REST tool route. It returns `NOT_FOUND` for Book Scout tools until later phases add them. `POST /api/book-scout/recommend` will use this route when `recommend` is registered.
+- `POST /api/[connector]/[tool]` is the generic REST tool route. It returns `NOT_FOUND` for Book Scout tools until Phase 4 registers them. `POST /api/book-scout/recommend` will use this route when `recommend` is registered.
 - `/mcp/book-scout` is the generic MCP Streamable HTTP route. It currently exposes no tools.
 
 ## Google Books configuration
@@ -57,4 +59,4 @@ The Google Books tests use mocked HTTP and need no key. To run the optional live
 
 ## Vercel
 
-Import this repository as a Next.js project and use the standard npm install/build commands. The current app builds without a Google Books key because the provider is not invoked by a route yet. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable when live catalog tools are added. Never commit `.env.local`.
+Import this repository as a Next.js project and use the standard npm install/build commands. The current app builds without a Google Books key because the recommendation service is not invoked by a route yet. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable when live catalog tools are added. Never commit `.env.local`.

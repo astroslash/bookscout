@@ -2,7 +2,7 @@
 
 > K4 Connect exists to turn useful data into useful conversations. Every connector should solve one narrow problem exceptionally well. The platform owns infrastructure. The connector owns domain intelligence. The AI owns conversation. External providers own raw data. Book Scout is Connector #1. Its job is to help a parent answer: “What book will my kid actually want to read next?” Ship the smallest system that answers that question exceptionally well, then use the same factory to ship the next connector.
 
-This document records the supplied North Star and build specification. The current implementation covers **Phases 1 and 2 only**; later-phase requirements below are design targets, not claims of implemented behavior.
+This document records the supplied North Star and build specification. The current implementation covers **Phases 1 through 3 only**; later-phase requirements below are design targets, not claims of implemented behavior.
 
 ## Product and ownership
 
