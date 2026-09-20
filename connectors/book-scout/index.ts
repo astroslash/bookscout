@@ -1,7 +1,7 @@
 import type { Connector } from "@/platform/connector";
 import { bookScoutManifest } from "./manifest";
 
-// Phase 1 registers the connector. Domain tools and providers arrive in later phases.
+// The catalog provider exists, but recommendation tools are registered in a later phase.
 export const bookScoutConnector: Connector = {
   manifest: bookScoutManifest,
   tools: [],
