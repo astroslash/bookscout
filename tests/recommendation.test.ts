@@ -1,11 +1,12 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import type { Book } from "../connectors/book-scout/book";
-import type { BookProvider } from "../connectors/book-scout/provider";
-import { deduplicateCandidates, generateCandidates, planCandidateQueries, type Candidate } from "../connectors/book-scout/candidates";
+import { deduplicateCandidates, type Candidate } from "../connectors/book-scout/candidates";
 import { diversifyCandidates } from "../connectors/book-scout/diversify";
-import { recommendationInputSchema, recommendationResultSchema } from "../connectors/book-scout/schemas";
+import { recommendationInputSchema } from "../connectors/book-scout/schemas";
 import { BookScoutRecommendationService } from "../connectors/book-scout/service";
 import { defaultRecommendationConfig, passesHardFilters, scoreCandidate, type ScoredCandidate } from "../connectors/book-scout/scoring";
+import { FileCuratedCatalogRepository } from "../connectors/book-scout/curation/file-repository";
+import type { CuratedBookProfile } from "../connectors/book-scout/curation/schemas";
 
 function book(id: string, title: string, author: string, extra: Partial<Book> = {}): Book {
   return { id, title, authors: [author], subjects: [], ...extra };
@@ -15,17 +16,16 @@ function candidate(item: Book, matchedInterests: string[] = [], matchedLikedBook
   return { book: item, matchedInterests, matchedLikedBooks };
 }
 
-function provider(search: (query: string) => Promise<Book[]>): BookProvider {
-  return { search, getByISBN: vi.fn(), getById: vi.fn(), getByTitle: vi.fn() };
+const provenance = { sourceType: "book_scout_classification" as const };
+function curated(item: Book, topic = "mythology"): Candidate {
+  return { ...candidate(item), curated: {
+    id: "bs_00000000-0000-4000-8000-000000000001", book: item, tier: "golden",
+    topics: [{ value: topic as CuratedBookProfile["topics"][number]["value"], provenance }],
+    readerFitTags: [], traits: {}, relationships: [],
+    audit: { createdAt: "2026-01-01T00:00:00.000Z", updatedAt: "2026-01-01T00:00:00.000Z",
+      createdBy: "human:test", updatedBy: "human:test", approvedAt: "2026-01-01T00:00:00.000Z", approvedBy: "human:test" },
+  } };
 }
-
-const profile = recommendationInputSchema.parse({
-  age: 11,
-  readingAbility: "advanced",
-  interests: ["Greek mythology", "history", "funny books"],
-  likedBooks: ["Percy Jackson", "Harry Potter"],
-  preferences: { romance: "low", humor: "high" },
-});
 
 describe("recommendation input", () => {
   it("accepts bounded preferences and supplies defaults", () => {
@@ -42,17 +42,6 @@ describe("recommendation input", () => {
 });
 
 describe("candidate generation", () => {
-  it("caps searches and deduplicates repeated query terms", () => {
-    const input = recommendationInputSchema.parse({
-      interests: ["Greek mythology", "history", "funny", "sports"],
-      likedBooks: ["Greek mythology", "Percy Jackson", "Harry Potter"],
-    });
-    const queries = planCandidateQueries(input);
-    expect(queries).toHaveLength(4);
-    expect(queries.map((item) => item.query)).toEqual(["Greek mythology", "history", "funny", "Percy Jackson"]);
-    expect(queries[0]).toMatchObject({ interests: ["Greek mythology"], likedBooks: ["Greek mythology"] });
-  });
-
   it("deduplicates by ISBN and title-author while preserving search provenance", () => {
     const first = book("google:a", "The Red Pyramid", "Rick Riordan", { isbn13: "9781423113386" });
     const edition = book("google:b", "The Red Pyramid", "Rick Riordan", { isbn13: "9781423113393" });
@@ -76,18 +65,6 @@ describe("candidate generation", () => {
     expect(output[0].book.isbn13).toBe("9781234567897");
   });
 
-  it("keeps successful searches when another provider call fails", async () => {
-    const search = vi.fn(async (query: string) => {
-      if (query === "history") throw new Error("temporary provider failure");
-      return [book("a", "A Mythology Book", "Author")];
-    });
-    const input = recommendationInputSchema.parse({ interests: ["mythology", "history"] });
-    const result = await generateCandidates(provider(search), input);
-    expect(result).toMatchObject({ queriesAttempted: 2, queriesSucceeded: 1 });
-    expect(result.candidates).toHaveLength(1);
-    await expect(generateCandidates(provider(async () => { throw new Error("down"); }), input))
-      .rejects.toMatchObject({ code: "PROVIDER_ERROR", retryable: true });
-  });
 });
 
 describe("scoring and filters", () => {
@@ -104,29 +81,29 @@ describe("scoring and filters", () => {
 
   it("scores relevant books higher and keeps missing data neutral", () => {
     const input = recommendationInputSchema.parse({ interests: ["mythology"], preferences: { romance: "low" } });
-    const matching = scoreCandidate(candidate(book("match", "Greek Myths", "A", { subjects: ["Mythology"] }), ["mythology"]), input, []);
+    const matching = scoreCandidate(curated(book("match", "Greek Myths", "A", { subjects: ["Mythology"] })), input, []);
     const unrelated = scoreCandidate(candidate(book("other", "Cooking", "B", { subjects: ["Cooking"] })), input, []);
     expect(matching.matchScore).toBeGreaterThan(unrelated.matchScore);
-    const unknown = scoreCandidate(candidate(book("unknown", "Greek Myths", "A", { subjects: ["Mythology"] }), ["mythology"]), input, []);
-    const knownRomance = scoreCandidate(candidate(book("known", "Greek Myths", "A", { subjects: ["Mythology"], content: { romance: 70 } }), ["mythology"]), input, []);
+    const unknown = scoreCandidate(curated(book("unknown", "Greek Myths", "A", { subjects: ["Mythology"] })), input, []);
+    const knownRomance = scoreCandidate(curated(book("known", "Greek Myths", "A", { subjects: ["Mythology"], content: { romance: 70 } })), input, []);
     expect(unknown.matchScore).toBeGreaterThan(knownRomance.matchScore);
     expect(unknown.reasons.some((reason) => reason.code === "preference_match")).toBe(false);
-    expect(unknown.matchScore).toBe(scoreCandidate(candidate(book("unknown", "Greek Myths", "A", { subjects: ["Mythology"] }), ["mythology"]), input, []).matchScore);
+    expect(unknown.matchScore).toBe(scoreCandidate(curated(book("unknown", "Greek Myths", "A", { subjects: ["Mythology"] })), input, []).matchScore);
   });
 
   it("allows scoring weights to be configured", () => {
     const input = recommendationInputSchema.parse({ interests: ["mythology"] });
-    const item = candidate(book("a", "Greek Myths", "Author", { subjects: ["Mythology"] }), ["mythology"]);
+    const item = curated(book("a", "Greek Myths", "Author", { subjects: ["Mythology"] }));
     const standard = scoreCandidate(item, input, []).matchScore;
     const custom = { ...defaultRecommendationConfig, weights: {
       ...defaultRecommendationConfig.weights,
       interestMatch: 35,
       popularity: 0,
     } };
-    const service = new BookScoutRecommendationService(provider(async () => [item.book]), custom);
+    const service = new BookScoutRecommendationService(custom);
     expect(service).toBeDefined();
     expect(scoreCandidate(item, input, [], custom).matchScore).toBeGreaterThan(standard);
-    expect(() => new BookScoutRecommendationService(provider(async () => []), {
+    expect(() => new BookScoutRecommendationService({
       ...custom, weights: { ...custom.weights, interestMatch: 100 },
     })).toThrow(/weights/);
   });
@@ -153,31 +130,9 @@ describe("diversification and service", () => {
     expect(diversifyCandidates(scored, { ...input, preferSeries: true }, defaultRecommendationConfig).map((item) => item.book.id)).toEqual(["a", "b"]);
   });
 
-  it("returns structured recommendations from one deterministic pipeline", async () => {
-    const liked = book("liked", "Percy Jackson", "Rick Riordan", { subjects: ["Mythology"] });
-    const books: Record<string, Book[]> = {
-      "Greek mythology": [liked, book("a", "The Lightning Thief", "Rick Riordan", { subjects: ["Greek mythology", "Adventure"] }), book("c", "Aru Shah", "Roshani Chokshi", { subjects: ["Mythology"] })],
-      history: [book("d", "The False Prince", "Jennifer Nielsen", { subjects: ["History", "Adventure"] }), book("e", "History Tales", "Jane Author", { subjects: ["History"] })],
-      "funny books": [book("f", "Funny Stories", "Sam Writer", { subjects: ["Humor"] })],
-      "Percy Jackson": [liked, book("b", "The Red Pyramid", "Rick Riordan", { subjects: ["Mythology"] })],
-      "Harry Potter": [book("g", "Wizard School", "Other Writer", { subjects: ["Fantasy"] })],
-    };
-    const search = vi.fn(async (query: string) => books[query] ?? []);
-    const service = new BookScoutRecommendationService(provider(search));
-    const result = await service.recommend(profile);
-    expect(search).toHaveBeenCalledTimes(5);
-    expect(result.recommendations.length).toBeLessThanOrEqual(5);
-    expect(recommendationResultSchema.safeParse(result).success).toBe(true);
-    expect(result.recommendations.map((item) => item.book.id)).not.toContain("liked");
-    expect(new Set(result.recommendations.map((item) => item.book.id)).size).toBe(result.recommendations.length);
-    expect(result.recommendations.every((item) => item.reasons.length > 0 && item.matchScore >= 0 && item.matchScore <= 100)).toBe(true);
-    expect(result.recommendations.every((item) => item.bookScoutUrl.startsWith("https://k4connect.vercel.app/book/"))).toBe(true);
-  });
-
   it("rejects invalid input before provider calls", async () => {
-    const search = vi.fn(async () => []);
-    const service = new BookScoutRecommendationService(provider(search));
+    const service = new BookScoutRecommendationService(undefined,
+      new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] }));
     await expect(service.recommend({ interests: [], childName: "Sam" })).rejects.toMatchObject({ code: "INVALID_INPUT" });
-    expect(search).not.toHaveBeenCalled();
   });
 });

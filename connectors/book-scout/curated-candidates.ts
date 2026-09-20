@@ -8,7 +8,8 @@ export async function generateCuratedCandidates(
   repository: CuratedCatalogRepository,
   input: RecommendationInput,
 ): Promise<Candidate[]> {
-  const approved = await repository.listApproved();
+  const approved = (await repository.listApproved()).filter((profile) =>
+    Boolean(profile.audit.approvedAt && profile.audit.approvedBy));
   const anchors = approved.filter((profile) => input.likedBooks.some((liked) => {
     if (sameWorkTitle(profile.book.title, liked)) return true;
     const normalized = normalizeBookText(liked);

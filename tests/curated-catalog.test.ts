@@ -1,9 +1,8 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import type { Book } from "../connectors/book-scout/book";
 import { FileCuratedCatalogRepository } from "../connectors/book-scout/curation/file-repository";
 import { CuratedCatalogService } from "../connectors/book-scout/curation/service";
 import { BookScoutRecommendationService } from "../connectors/book-scout/service";
-import type { BookProvider } from "../connectors/book-scout/provider";
 
 const now = new Date("2026-01-01T00:00:00.000Z");
 const book: Book = { id: "google-books:volume-1", title: "A Book", authors: ["A Writer"], subjects: [], pageCount: 200 };
@@ -73,8 +72,7 @@ describe("curated catalog foundation", () => {
     }] }, "system:developer", now);
     const approved = service.build(service.approve(pending, pending.submissions[0].id, "human:reviewer_001", now));
     const repository = new FileCuratedCatalogRepository(approved);
-    const provider: BookProvider = { search: vi.fn(async () => [book]), getById: vi.fn(), getByISBN: vi.fn(), getByTitle: vi.fn() };
-    const result = await new BookScoutRecommendationService(provider, undefined, repository).recommend({ interests: ["mythology"] });
+    const result = await new BookScoutRecommendationService(undefined, repository).recommend({ interests: ["mythology"] });
     expect(result.recommendations[0].book.subjects).toEqual([]);
     expect(result.recommendations[0].reasons.some((reason) => reason.code === "interest_match")).toBe(true);
   });

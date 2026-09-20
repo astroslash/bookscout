@@ -1,8 +1,6 @@
-import type { Book } from "./book";
-import type { Candidate } from "./candidates";
 import type { CuratedBookProfile } from "./curation/schemas";
 import { normalizeTopic } from "./curation/taxonomy";
-import { normalizeBookText, sameWork } from "./identity";
+import { normalizeBookText } from "./identity";
 import type { RecommendationInput } from "./schemas";
 
 const genericInterests = new Set(["adventure", "fantasy", "mystery", "science", "history", "sports", "funny", "humor"]);
@@ -44,43 +42,4 @@ export function curatedCandidateEligible(profile: CuratedBookProfile, input: Rec
     if (profile.book.pageCount !== undefined && profile.book.pageCount < 80) return false;
   }
   return true;
-}
-
-function phraseIn(text: string, phrase: string): boolean {
-  const normalized = normalizeBookText(text);
-  const value = normalizeBookText(phrase);
-  return Boolean(value && ` ${normalized} `.includes(` ${value} `));
-}
-
-export function providerInterestEvidence(book: Book, interest: string): number {
-  if (book.subjects.some((subject) => phraseIn(subject, interest))) return 1;
-  if (book.description && phraseIn(book.description, interest)) return 0.85;
-  const term = normalizeBookText(interest);
-  const description = normalizeBookText(book.description ?? "");
-  if (term === "greek mythology" && /\bgreek(?:\s+\w+){0,3}\s+(?:mythology|myths|gods)\b/.test(description)) return 0.8;
-  return 0;
-}
-
-export function fallbackEligible(candidate: Candidate, input: RecommendationInput, likedReferences: Book[]): boolean {
-  const book = candidate.book;
-  if (genericInterests.has(normalizeBookText(book.title))) return false;
-  if (book.language && book.language.toLowerCase() !== input.language) return false;
-  if (!book.authors.length || !book.description || book.description.length < 60 ||
-    !(book.isbn13 || book.isbn10) || !book.subjects.length) return false;
-  if (input.age !== undefined && input.age >= 10 && input.readingAbility === "advanced") {
-    if (book.pageCount !== undefined && book.pageCount < 80) return false;
-    if (/\b(little kids|preschool|kindergarten|toddlers|first big book)\b/i.test(book.title)) return false;
-  }
-  const juvenile = book.subjects.some((subject) =>
-    /juvenile|young adult|children|middle grade/i.test(subject));
-  if (!juvenile && input.age !== undefined && input.age < 18) return false;
-  const specificMatch = input.interests.some((term) => !genericInterests.has(normalizeBookText(term)) &&
-    providerInterestEvidence(book, term) >= 0.7);
-  const genericMatches = input.interests.filter((term) =>
-    book.subjects.some((subject) => phraseIn(subject, term)) &&
-    phraseIn(book.description!, term)).length;
-  const likedAuthor = likedReferences.some((reference) => !sameWork(reference, book) &&
-    reference.authors.some((author) => book.authors.some((other) =>
-      normalizeBookText(author) === normalizeBookText(other))));
-  return specificMatch || genericMatches >= 2 || likedAuthor;
 }

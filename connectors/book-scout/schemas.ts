@@ -26,11 +26,12 @@ export const recommendationInputSchema = z.object({
 export type RecommendationInput = z.infer<typeof recommendationInputSchema>;
 
 export const recommendationReasonSchema = z.object({
-  code: z.enum(["interest_match", "liked_book_similarity", "age_fit", "reading_fit", "preference_match", "popularity_signal", "catalog_match"]),
+  code: z.enum(["interest_match", "liked_book_similarity", "read_next_relationship", "age_fit", "reading_fit", "preference_match", "popularity_signal", "catalog_match"]),
   message: z.string().min(1),
 });
 
 export const recommendationResultSchema = z.object({
+  coverage: z.object({ status: z.literal("insufficient_curated_match") }).optional(),
   recommendations: z.array(z.object({
     book: bookSchema,
     matchScore: z.number().int().min(0).max(100),

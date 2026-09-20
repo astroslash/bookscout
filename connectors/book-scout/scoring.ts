@@ -3,7 +3,7 @@ import { normalizeWords } from "./candidates";
 import type { Book } from "./book";
 import type { RecommendationInput, RecommendationReason } from "./schemas";
 import { sameWorkTitle } from "./identity";
-import { curatedInterestEvidence, providerInterestEvidence } from "./quality";
+import { curatedInterestEvidence } from "./quality";
 
 export type ScoreWeights = {
   likedBookSimilarity: number;
@@ -19,7 +19,6 @@ export type RecommendationConfig = {
   weights: ScoreWeights;
   lowContentThreshold: number;
   minimumCuratedScore: number;
-  minimumFallbackScore: number;
   lexileBands: Record<NonNullable<RecommendationInput["readingAbility"]>, readonly [number, number]>;
 };
 
@@ -34,9 +33,8 @@ export const defaultRecommendationConfig: RecommendationConfig = {
     diversity: 5,
   },
   lowContentThreshold: 75,
-  // Old one-word results clustered around 59; evidence gates screen the higher-scoring false matches.
+  // Curated relevance and hard eligibility gates apply before this score threshold.
   minimumCuratedScore: 60,
-  minimumFallbackScore: 54,
   // Broad scoring bands, used only when a provider supplies a real Lexile value.
   lexileBands: { beginner: [0, 650], average: [550, 1100], advanced: [900, 2000] },
 };
@@ -48,7 +46,6 @@ export function validateRecommendationConfig(config: RecommendationConfig): void
       config.weights.diversity >= 100 ||
       !Number.isFinite(config.lowContentThreshold) || config.lowContentThreshold < 0 || config.lowContentThreshold > 100 ||
       !Number.isFinite(config.minimumCuratedScore) || config.minimumCuratedScore < 0 || config.minimumCuratedScore > 100 ||
-      !Number.isFinite(config.minimumFallbackScore) || config.minimumFallbackScore < 0 || config.minimumFallbackScore > 100 ||
       Object.values(config.lexileBands).some(([minimum, maximum]) => !Number.isFinite(minimum) || !Number.isFinite(maximum) || minimum > maximum)) {
     throw new Error("Recommendation weights must be non-negative, sum to 100, and use a valid content threshold.");
   }
@@ -88,7 +85,7 @@ function interestSignal(candidate: Candidate, input: RecommendationInput): { sco
   if (input.interests.length === 0) return undefined;
   const matches = input.interests.map((term) => ({
     term,
-    score: candidate.curated ? curatedInterestEvidence(candidate.curated, term) : providerInterestEvidence(candidate.book, term),
+    score: candidate.curated ? curatedInterestEvidence(candidate.curated, term) : 0,
   }));
   matches.sort((a, b) => b.score - a.score);
   const score = 0.7 * matches[0].score + 0.3 * (matches.reduce((sum, match) => sum + match.score, 0) / matches.length);
@@ -174,15 +171,17 @@ export function scoreCandidate(candidate: Candidate, input: RecommendationInput,
   ];
   const matchWeight = signals.reduce((sum, [weight]) => sum + weight, 0);
   const total = signals.reduce((sum, [weight, value]) => sum + weight * (value ?? 0.5), 0);
-  const matchScore = Math.max(0, Math.round(100 * total / matchWeight) -
-    (!candidate.curated && candidate.book.language === undefined ? 5 : 0));
+  const matchScore = Math.max(0, Math.round(100 * total / matchWeight));
   const reasons: RecommendationReason[] = [];
   if (interest && interest.score >= 0.6) reasons.push({ code: "interest_match", message: `Matches your interest in ${interest.term}.` });
-  if (liked !== undefined && liked >= 0.6) reasons.push({ code: "liked_book_similarity", message: "Found through or similar to a book you liked." });
+  if (liked !== undefined && liked >= 0.6) reasons.push(candidate.relationshipType === "read_next"
+    ? { code: "read_next_relationship", message: "Approved as a read-next match for a book you liked." }
+    : { code: "liked_book_similarity", message: candidate.relationshipType === "similar_to"
+      ? "Approved as similar to a book you liked." : "Shares known characteristics with a book you liked." });
   if (age !== undefined && age >= 0.9) reasons.push({ code: "age_fit", message: "Available age guidance fits the reader." });
   if (reading !== undefined && reading >= 0.8) reasons.push({ code: "reading_fit", message: "Available reading-level data fits the stated ability." });
   if (preference !== undefined && preference >= 0.7) reasons.push({ code: "preference_match", message: "Known book attributes fit a stated preference." });
   if (candidate.book.popularity !== undefined && candidate.book.popularity >= 70) reasons.push({ code: "popularity_signal", message: "Has a strong catalog popularity signal." });
-  if (!reasons.length) reasons.push({ code: "catalog_match", message: "Relevant to a catalog search from the reader profile." });
+  if (!reasons.length) reasons.push({ code: "catalog_match", message: "Matches approved curated catalog evidence." });
   return { ...candidate, matchScore, reasons };
 }

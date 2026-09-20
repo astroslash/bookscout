@@ -1,5 +1,9 @@
 # K4 Connect — North Star
 
+## Current V1 product decision (supersedes earlier recommendation-source guidance)
+
+The public book connector is now **Book Beacon** (`book-beacon`); the old `book-scout` routes remain aliases. V1 recommendations come exclusively from approved curated catalog profiles. Google Books supplies bibliographic metadata, enrichment, and book details, but Google Books search results are not recommendation candidates. The requested limit is a maximum, including a valid zero-result success. The 60/100 curated score threshold follows reader-fit and relevance checks. Commerce availability is not currently verified; the existing Amazon Associates search link remains a paid link, not an availability claim. The older phase plan below is retained as historical architecture context where it differs from this decision.
+
 > K4 Connect exists to turn useful data into useful conversations. Every connector should solve one narrow problem exceptionally well. The platform owns infrastructure. The connector owns domain intelligence. The AI owns conversation. External providers own raw data. Book Scout is Connector #1. Its job is to help a parent answer: “What book will my kid actually want to read next?” Ship the smallest system that answers that question exceptionally well, then use the same factory to ship the next connector.
 
 This document records the supplied North Star and build specification. The current implementation covers **Phases 1 through 6 and the Phase 6.5 curated catalog foundation**. Later-phase requirements below remain design targets, not claims of implemented behavior.

@@ -1,29 +1,21 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { ConnectorRegistry } from "../platform/registry";
 import { handleRestTool } from "../platform/rest";
 import { invokeTool } from "../platform/connector";
 import { createConnectorMcpHandler } from "../platform/mcp";
 import { createBookScoutConnector } from "../connectors/book-scout";
-import type { BookProvider } from "../connectors/book-scout/provider";
 import { FileCuratedCatalogRepository } from "../connectors/book-scout/curation/file-repository";
 import { GET as connectorStatus } from "../app/api/[connector]/route";
 
 const input = { interests: ["mythology"], limit: 1 };
 
 function setup() {
-  const search = vi.fn(async () => [{
-    id: "book-1",
-    title: "Greek Myths",
-    authors: ["Example Author"],
-    subjects: ["Mythology"],
-  }]);
-  const provider: BookProvider = { search, getByISBN: vi.fn(), getById: vi.fn(), getByTitle: vi.fn() };
-  const connector = createBookScoutConnector(provider,
+  const connector = createBookScoutConnector(
     new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] }));
   const registry = new ConnectorRegistry();
   registry.register(connector);
   registry.registerAlias("book-scout", connector.manifest.id);
-  return { connector, registry, search };
+  return { connector, registry };
 }
 
 describe("Book Beacon tool routes", () => {
@@ -34,12 +26,12 @@ describe("Book Beacon tool routes", () => {
     expect(response.status).toBe(200);
     expect(body.data.manifest).toMatchObject({ id: "book-beacon", name: "Book Beacon" });
     expect(body.data.diagnostics).toMatchObject({ catalogSchemaVersion: 1, approvedCuratedBooks: expect.any(Number),
-      catalogChecksum: expect.stringMatching(/^[a-f0-9]{16}$/) });
+      catalogChecksum: expect.stringMatching(/^[a-f0-9]{16}$/), recommendationMode: "CURATED_ONLY" });
     expect(body.data).not.toHaveProperty("GOOGLE_BOOKS_API_KEY");
   });
 
   it("uses the same recommendation service for MCP's tool name and the REST path", async () => {
-    const { connector, registry, search } = setup();
+    const { connector, registry } = setup();
     const mcpResult = await invokeTool(connector, "recommend_books", input, { logger: { log() {} } });
     const response = await handleRestTool(new Request("http://localhost/api/book-beacon/recommend", {
       method: "POST",
@@ -47,22 +39,21 @@ describe("Book Beacon tool routes", () => {
     }), registry, "book-beacon", "recommend");
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ success: true, data: mcpResult });
-    expect(search).toHaveBeenCalledTimes(2);
+    expect(mcpResult).toEqual({ recommendations: [], coverage: { status: "insufficient_curated_match" } });
   });
 
   it("rejects malformed recommendation requests before accessing the catalog", async () => {
-    const { registry, search } = setup();
+    const { registry } = setup();
     const response = await handleRestTool(new Request("http://localhost/api/book-scout/recommend", {
       method: "POST",
       body: JSON.stringify({ interests: [], childName: "Sam" }),
     }), registry, "book-scout", "recommend");
     expect(response.status).toBe(400);
     expect(await response.json()).toMatchObject({ success: false, error: { code: "INVALID_INPUT" } });
-    expect(search).not.toHaveBeenCalled();
   });
 
   it("advertises recommend_books over MCP", async () => {
-    const { connector, search } = setup();
+    const { connector } = setup();
     const handler = createConnectorMcpHandler(connector);
     const response = await handler.fetch(new Request("http://localhost/mcp/book-scout", {
       method: "POST",
@@ -78,6 +69,5 @@ describe("Book Beacon tool routes", () => {
     }));
     expect(call.status).toBe(200);
     expect(await call.text()).toContain("recommendations");
-    expect(search).toHaveBeenCalledOnce();
   });
 });

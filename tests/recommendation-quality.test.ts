@@ -1,6 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import type { Book } from "../connectors/book-scout/book";
-import type { BookProvider } from "../connectors/book-scout/provider";
 import { FileCuratedCatalogRepository } from "../connectors/book-scout/curation/file-repository";
 import type { CuratedBookProfile } from "../connectors/book-scout/curation/schemas";
 import { normalizedWorkTitle, sameWorkTitle } from "../connectors/book-scout/identity";
@@ -26,10 +25,8 @@ function profile(index: number, title: string, topics: string[], extras: Partial
   };
 }
 
-function service(books: CuratedBookProfile[], results: Book[]): BookScoutRecommendationService {
-  const provider: BookProvider = { search: vi.fn(async () => results), getById: vi.fn(),
-    getByISBN: vi.fn(), getByTitle: vi.fn() };
-  return new BookScoutRecommendationService(provider, undefined,
+function service(books: CuratedBookProfile[]): BookScoutRecommendationService {
+  return new BookScoutRecommendationService(undefined,
     new FileCuratedCatalogRepository({ schemaVersion: 1, books }));
 }
 
@@ -51,31 +48,29 @@ describe("quality-first recommendations", () => {
       matchedInterests: [], matchedLikedBooks: [] }, input, defaultRecommendationConfig)).toBe(false);
   });
 
-  it("collapses separate ISBN editions of the same literary work", async () => {
-    const first = fallback("myths-one", "Greek Myths");
-    const second = { ...fallback("myths-two", "Greek Myths (Illustrated Edition)"), isbn13: "9780141346816" };
-    const result = await service([], [first, second]).recommend({ interests: ["Greek mythology"], limit: 5 });
+  it("collapses curated editions of the same literary work", async () => {
+    const first = profile(10, "Greek Myths", ["mythology", "adventure"]);
+    const second = profile(11, "Greek Myths (Illustrated Edition)", ["mythology", "adventure"],
+      { authors: first.book.authors });
+    const result = await service([first, second]).recommend({ interests: ["Greek mythology", "adventure"], limit: 5 });
     expect(result.recommendations).toHaveLength(1);
   });
 
   it("excludes the liked work and its Lightning Thief editions while preferring curated mythology", async () => {
     const curated = profile(1, "Aru Shah and the End of Time", ["mythology", "adventure"]);
-    const editions = [fallback("lightning-a", "The Lightning Thief"),
-      fallback("lightning-b", "The Lightning Thief (Illustrated Edition)"),
-      fallback("lightning-c", "Percy Jackson and the Lightning Thief")];
-    const result = await service([curated], editions).recommend({ age: 11, grade: 6,
+    const result = await service([curated]).recommend({ age: 11, grade: 6,
       readingAbility: "advanced", interests: ["Greek mythology", "adventure"],
       likedBooks: ["The Lightning Thief"], limit: 5 });
     expect(result.recommendations.map((item) => item.book.title)).toEqual([curated.book.title]);
+    expect(result.recommendations.every((item) => item.book.id === curated.book.id)).toBe(true);
     expect(result.recommendations[0].reasons.some((reason) => reason.code === "interest_match")).toBe(true);
   });
 
   it("filters non-English editions and rejects a generic fantasy keyword", async () => {
     const magical = profile(2, "Nevermoor", ["magic", "adventure"]);
-    const results = [fallback("italian", "Harry Potter e la pietra filosofale", "it"),
-      fallback("spanish", "Harry Potter y la piedra filosofal", "es"),
-      fallback("football", "Fantasy Football and Mathematics", "en", ["Juvenile Fiction", "Mathematics"])];
-    const result = await service([magical], results).recommend({ age: 11, readingAbility: "advanced",
+    const foreign = profile(17, "Harry Potter e la pietra filosofale", ["magic", "adventure"], { language: "it" });
+    const football = profile(18, "Fantasy Football and Mathematics", ["sports"]);
+    const result = await service([magical, foreign, football]).recommend({ age: 11, readingAbility: "advanced",
       interests: ["fantasy", "adventure"], likedBooks: ["Harry Potter"], limit: 5 });
     expect(result.recommendations.map((item) => item.book.title)).toEqual(["Nevermoor"]);
   });
@@ -83,10 +78,9 @@ describe("quality-first recommendations", () => {
   it("keeps little-kids books and adult works out of an advanced eleven-year-old's dinosaur results", async () => {
     const tooYoung = { ...profile(3, "Little Kids Dinosaurs", ["dinosaurs"]),
       readingFit: { maximumAge: { value: 8, provenance }, difficulty: { value: "beginner" as const, provenance } } };
-    const results = [fallback("little", "National Geographic Little Kids First Big Book of Dinosaurs"),
-      fallback("memoir", "Villiers; Five Decades of Adventure", "en", ["Biography"]),
-      fallback("collector", "Collector's Edition Complete Adventures", "en", ["Adult Fiction"])];
-    const result = await service([tooYoung], results).recommend({ age: 11, readingAbility: "advanced",
+    const adult = profile(19, "Collector's Dinosaur Memoir", ["dinosaurs", "adventure"]);
+    adult.readingFit = { minimumAge: { value: 16, provenance } };
+    const result = await service([tooYoung, adult]).recommend({ age: 11, readingAbility: "advanced",
       interests: ["dinosaurs", "adventure"], limit: 5 });
     expect(result.recommendations).toEqual([]);
   });
@@ -95,7 +89,7 @@ describe("quality-first recommendations", () => {
     const books = [profile(4, "Myth Quest One", ["mythology", "adventure"]),
       profile(5, "Myth Quest Two", ["mythology", "adventure"]),
       profile(6, "Myth Quest Three", ["mythology", "adventure"])];
-    const result = await service(books, [fallback("weak", "Adventure")]).recommend({
+    const result = await service(books).recommend({
       age: 11, readingAbility: "advanced", interests: ["mythology", "adventure"], limit: 5,
     });
     expect(result.recommendations).toHaveLength(3);
@@ -105,16 +99,52 @@ describe("quality-first recommendations", () => {
   });
 
   it("does not call Google Books when curated results fill the requested maximum", async () => {
-    const search = vi.fn(async () => []);
-    const provider: BookProvider = { search, getById: vi.fn(), getByISBN: vi.fn(), getByTitle: vi.fn() };
     const repository = new FileCuratedCatalogRepository({ schemaVersion: 1, books: [
       profile(7, "First Myth", ["mythology", "adventure"]),
       profile(8, "Second Myth", ["mythology", "adventure"]),
     ] });
-    const result = await new BookScoutRecommendationService(provider, undefined, repository).recommend({
+    const result = await new BookScoutRecommendationService(undefined, repository).recommend({
       age: 11, readingAbility: "advanced", interests: ["mythology", "adventure"], limit: 2,
     });
     expect(result.recommendations).toHaveLength(2);
-    expect(search).not.toHaveBeenCalled();
+  });
+
+  it("returns a successful coverage signal without Google Books-only results", async () => {
+    const result = await service([]).recommend({
+      age: 11, readingAbility: "advanced", interests: ["Greek mythology", "adventure"], limit: 5,
+    });
+    expect(result).toEqual({ recommendations: [], coverage: { status: "insufficient_curated_match" } });
+  });
+
+  it("never recommends a profile lacking approval", async () => {
+    const pending = profile(13, "Unapproved Mythology", ["mythology", "adventure"]);
+    delete pending.audit.approvedAt;
+    delete pending.audit.approvedBy;
+    const result = await service([pending]).recommend({ interests: ["mythology", "adventure"] });
+    expect(result.recommendations).toEqual([]);
+  });
+
+  it("uses approved read-next relationships and still applies hard age filters", async () => {
+    const anchor = profile(14, "The Myth Quest", ["mythology"]);
+    const next = profile(15, "The Next Quest", ["ancient-history"]);
+    const tooOld = profile(16, "The Adult Quest", ["ancient-history"]);
+    tooOld.readingFit = { minimumAge: { value: 16, provenance } };
+    anchor.relationships = [next, tooOld].map((target) => ({
+      sourceBookId: anchor.id, targetBookId: target.id, type: "read_next" as const,
+      strength: 0.95, reasons: [], provenance,
+    }));
+    const result = await service([anchor, next, tooOld]).recommend({
+      age: 11, readingAbility: "advanced", interests: ["ancient history"], likedBooks: [anchor.book.title],
+    });
+    expect(result.recommendations.map((item) => item.book.title)).toEqual([next.book.title]);
+    expect(result.recommendations[0].reasons.some((reason) => reason.code === "read_next_relationship")).toBe(true);
+  });
+
+  it("keeps a narrow commerce eligibility hook without asserting availability", async () => {
+    const approved = profile(12, "Aru Shah and the End of Time", ["mythology", "adventure"]);
+    const repository = new FileCuratedCatalogRepository({ schemaVersion: 1, books: [approved] });
+    const service = new BookScoutRecommendationService(undefined, repository, () => false);
+    const result = await service.recommend({ interests: ["mythology", "adventure"] });
+    expect(result.recommendations).toEqual([]);
   });
 });

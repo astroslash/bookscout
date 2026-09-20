@@ -139,17 +139,15 @@ describe("relationships, similarity, and ranking integration", () => {
     expect(compareCuratedBooks(knownA, knownB)).toEqual(compared);
   });
 
-  it("uses approved traits and topics while preserving long-tail provider fallback", async () => {
-    const book = volume("a");
-    const provider: BookProvider = { search: vi.fn(async () => [book]), getById: vi.fn(), getByISBN: vi.fn(), getByTitle: vi.fn() };
+  it("uses approved traits and topics without provider recommendations", async () => {
     const profile = approved(curatedBookProfileSchema.parse({ ...draft("a"),
       topics: [{ value: "greek-mythology", provenance }],
       traits: { humor: { value: 5, provenance } },
     }));
     const repository = new FileCuratedCatalogRepository({ schemaVersion: 1, books: [profile] });
     const input = { interests: ["Greek myths"], preferences: { humor: "high" } };
-    const curated = await new BookScoutRecommendationService(provider, undefined, repository).recommend(input);
-    const longTail = await new BookScoutRecommendationService(provider, undefined,
+    const curated = await new BookScoutRecommendationService(undefined, repository).recommend(input);
+    const longTail = await new BookScoutRecommendationService(undefined,
       new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] })).recommend(input);
     expect(curated.recommendations).toHaveLength(1);
     expect(curated.recommendations[0].book.subjects).toEqual([]);
