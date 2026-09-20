@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { bookSchema, type Book } from "../book";
 import type { BookProvider } from "../provider";
-import { matchProviderCandidates, type MatchThresholds } from "./matching";
+import { matchProviderCandidates, scoreProviderCandidate, type MatchThresholds } from "./matching";
 import { catalogWords } from "./repository";
 import { actorIdSchema, catalogSourceSchema, curatedBookProfileSchema, runtimeCatalogSchema,
   type CatalogSource, type CuratedBookProfile, type RuntimeCatalog } from "./schemas";
@@ -81,6 +81,31 @@ export class CuratedCatalogService {
         state: match.status === "matched" ? "enriched" : match.status === "ambiguous" ? "needs_review" : "seeded",
         book,
         match: diagnostic,
+        audit: { ...item.audit, updatedAt: now.toISOString(), updatedBy: "system:developer" },
+      } : item),
+    });
+  }
+
+  async selectSeedEdition(source: unknown, seedId: string, providerId: string,
+    provider: BookProvider, now = new Date()): Promise<CatalogSource> {
+    const catalog = this.validate(source);
+    const seed = catalog.seeds.find((item) => item.id === seedId);
+    if (!seed || seed.state !== "needs_review" || seed.match?.status !== "ambiguous" ||
+      !seed.match.candidateIds.includes(providerId)) {
+      throw new Error("Select a listed candidate for an ambiguous seed.");
+    }
+    const book = await provider.getById(providerId);
+    if (!book || book.id !== providerId ||
+      catalogWords(book.title) !== catalogWords(seed.title) ||
+      !book.authors.some((author) => catalogWords(author) === catalogWords(seed.author))) {
+      throw new Error("Selected edition does not match the seed title and author.");
+    }
+    return this.validate({
+      ...catalog,
+      seeds: catalog.seeds.map((item) => item.id === seedId ? {
+        ...item, state: "enriched", book,
+        match: { status: "matched", confidence: scoreProviderCandidate(seed, book),
+          candidateIds: [providerId] },
         audit: { ...item.audit, updatedAt: now.toISOString(), updatedBy: "system:developer" },
       } : item),
     });

@@ -38,6 +38,11 @@ async function main() {
     }
     await saveSource(updated);
     process.stdout.write(`Searched ${searched} seeds.\n`);
+  } else if (command === "select-edition") {
+    if (args.length !== 2) throw new Error("Usage: npm run catalog:select-edition -- <seed-id> <listed-google-books-id>");
+    const updated = await service.selectSeedEdition(source, args[0], args[1], createGoogleBooksProviderFromEnv());
+    await saveSource(updated);
+    process.stdout.write(`Selected normalized Google Books edition ${args[1]} for seed ${args[0]}; still unapproved.\n`);
   } else if (command === "validate") {
     const catalog = service.validate(source);
     process.stdout.write(`Catalog valid: ${catalog.seeds.length} seeds, ${catalog.approved.length} approved books.\n`);
@@ -55,8 +60,13 @@ async function main() {
     const approved = service.approve(submitted, submitted.submissions.at(-1)!.id, "system:developer");
     await saveSource(approved);
     process.stdout.write(`Approved factual catalog record ${seed.id}. Run npm run catalog:build.\n`);
+  } else if (command === "approve-submission") {
+    if (args.length !== 2) throw new Error("Usage: npm run catalog:approve-submission -- <submission-id> <reviewer-id>");
+    const approved = service.approve(source, args[0], args[1]);
+    await saveSource(approved);
+    process.stdout.write(`Approved reviewed submission ${args[0]}. Run npm run catalog:build.\n`);
   } else {
-    throw new Error("Commands: add, enrich, validate, build, stats, approve.");
+    throw new Error("Commands: add, enrich, select-edition, validate, stats, approve, approve-submission.");
   }
 }
 

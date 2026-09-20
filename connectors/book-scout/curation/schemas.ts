@@ -21,12 +21,15 @@ export const provenanceSchema = z.object({
   sourceType: z.enum(["external", "book_scout_classification", "derived"]),
   source: z.string().trim().min(1).max(120).optional(),
   contributorId: actorIdSchema.optional(),
+  assistance: z.literal("ai_assisted").optional(),
   reviewed: z.boolean().optional(),
   reviewerId: actorIdSchema.optional(),
 }).strict().refine((item) => item.sourceType !== "external" || Boolean(item.source), {
   message: "External values require a source.",
 }).refine((item) => !item.reviewerId || item.reviewed === true, {
   message: "A field reviewer requires reviewed: true.",
+}).refine((item) => !item.assistance || item.sourceType === "book_scout_classification", {
+  message: "AI assistance applies only to Book Scout classifications.",
 });
 
 export const classificationProvenanceSchema = provenanceSchema.refine(
@@ -34,15 +37,15 @@ export const classificationProvenanceSchema = provenanceSchema.refine(
   { message: "Expected Book Scout classification provenance." },
 );
 
-const topicSchema = z.object({ value: z.enum(topicIds), provenance: classificationProvenanceSchema }).strict();
-const readerFitTagSchema = z.object({ value: z.enum(readerFitTagIds), provenance: classificationProvenanceSchema }).strict();
+export const topicSchema = z.object({ value: z.enum(topicIds), provenance: classificationProvenanceSchema }).strict();
+export const readerFitTagSchema = z.object({ value: z.enum(readerFitTagIds), provenance: classificationProvenanceSchema }).strict();
 
 export const traitIds = [
   "adventure", "action", "humor", "fantasy", "scienceFiction", "mystery",
   "romance", "scary", "violence", "educational", "emotionalIntensity", "reluctantReader",
 ] as const;
 export const traitIdSchema = z.enum(traitIds);
-const classifiedTraitSchema = z.object({
+export const classifiedTraitSchema = z.object({
   value: z.number().min(0).max(5),
   provenance: classificationProvenanceSchema,
 }).strict();
@@ -56,16 +59,18 @@ const sourcedLexileSchema = z.object({
   }),
 }).strict();
 
+export const difficultySchema = z.object({
+  value: z.enum(["beginner", "average", "advanced"]),
+  provenance: classificationProvenanceSchema,
+}).strict();
+
 export const readingFitSchema = z.object({
   minimumAge: sourcedAgeSchema.optional(),
   maximumAge: sourcedAgeSchema.optional(),
   minimumGrade: sourcedGradeSchema.optional(),
   maximumGrade: sourcedGradeSchema.optional(),
   lexile: sourcedLexileSchema.optional(),
-  difficulty: z.object({
-    value: z.enum(["beginner", "average", "advanced"]),
-    provenance: classificationProvenanceSchema,
-  }).strict().optional(),
+  difficulty: difficultySchema.optional(),
 }).strict().refine((fit) => !fit.minimumAge || !fit.maximumAge || fit.minimumAge.value <= fit.maximumAge.value, {
   message: "Minimum age must not exceed maximum age.",
 }).refine((fit) => !fit.minimumGrade || !fit.maximumGrade || fit.minimumGrade.value <= fit.maximumGrade.value, {
@@ -99,6 +104,12 @@ export const curatedBookSchema = bookSchema.refine((book) =>
   message: "Provider ID or ISBN is malformed.",
 });
 
+export const seriesSchema = z.object({
+  name: z.string().trim().min(1).max(120),
+  position: z.number().int().positive().optional(),
+  provenance: classificationProvenanceSchema,
+}).strict();
+
 export const curatedBookProfileSchema = z.object({
   id: catalogIdSchema,
   book: curatedBookSchema,
@@ -107,11 +118,7 @@ export const curatedBookProfileSchema = z.object({
   readerFitTags: z.array(readerFitTagSchema).max(20).default([]),
   traits: z.partialRecord(traitIdSchema, classifiedTraitSchema).default({}),
   readingFit: readingFitSchema.optional(),
-  series: z.object({
-    name: z.string().trim().min(1).max(120),
-    position: z.number().int().positive().optional(),
-    provenance: classificationProvenanceSchema,
-  }).strict().optional(),
+  series: seriesSchema.optional(),
   relationships: z.array(relationshipSchema).max(30).default([]),
   audit: auditSchema,
 }).strict();

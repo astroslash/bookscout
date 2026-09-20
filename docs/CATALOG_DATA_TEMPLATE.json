@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "ref": "example-quest-one",
+      "title": "Example Quest One",
+      "author": "Example Author",
+      "tier": "golden",
+      "topics": [
+        { "value": "greek-mythology", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } },
+        { "value": "adventure", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "readerFitTags": [
+        { "value": "fast-paced", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "traits": {
+        "adventure": { "value": 5, "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } },
+        "humor": { "value": 3, "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      },
+      "readingFit": {
+        "difficulty": { "value": "advanced", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      },
+      "series": {
+        "name": "Example Quest Series",
+        "position": 1,
+        "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false }
+      },
+      "relationships": [
+        {
+          "targetRef": "example-quest-two",
+          "type": "read_next",
+          "strength": 1,
+          "reasons": ["Next volume in the example series"],
+          "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false }
+        },
+        {
+          "targetRef": "example-history-book",
+          "type": "similar_to",
+          "strength": 0.7,
+          "reasons": ["Shared adventure topic"],
+          "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false }
+        }
+      ]
+    },
+    {
+      "ref": "example-quest-two",
+      "title": "Example Quest Two",
+      "author": "Example Author",
+      "tier": "golden",
+      "topics": [
+        { "value": "mythology", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "readerFitTags": [
+        { "value": "series-reader", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "traits": {
+        "fantasy": { "value": 4, "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      },
+      "series": {
+        "name": "Example Quest Series",
+        "position": 2,
+        "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "example-history-book",
+      "title": "Example History Book",
+      "author": "Sample Writer",
+      "tier": "core",
+      "topics": [
+        { "value": "ancient-history", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "readerFitTags": [
+        { "value": "history-lover", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "traits": {
+        "educational": { "value": 5, "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "example-mystery-book",
+      "title": "Example Mystery Book",
+      "author": "Sample Writer",
+      "tier": "core",
+      "topics": [
+        { "value": "puzzles", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "readerFitTags": [
+        { "value": "puzzle-lover", "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      ],
+      "traits": {
+        "mystery": { "value": 5, "provenance": { "sourceType": "book_scout_classification", "assistance": "ai_assisted", "reviewed": false } }
+      },
+      "relationships": []
+    }
+  ]
+}

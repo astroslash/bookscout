@@ -13,9 +13,14 @@
     "catalog:check": "tsx scripts/build-catalog.ts --check",
     "catalog:add": "tsx scripts/catalog.ts add",
     "catalog:enrich": "node --env-file=.env.local --import tsx scripts/catalog.ts enrich",
+    "catalog:select-edition": "node --env-file=.env.local --import tsx scripts/catalog.ts select-edition",
     "catalog:validate": "tsx scripts/catalog.ts validate",
     "catalog:stats": "tsx scripts/catalog.ts stats",
-    "catalog:approve": "tsx scripts/catalog.ts approve"
+    "catalog:approve": "tsx scripts/catalog.ts approve",
+    "catalog:approve-submission": "tsx scripts/catalog.ts approve-submission",
+    "catalog:check-import": "tsx scripts/import-catalog.ts check",
+    "catalog:stage-import": "tsx scripts/import-catalog.ts stage",
+    "catalog:submit-import": "tsx scripts/import-catalog.ts submit"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",

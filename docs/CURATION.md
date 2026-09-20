@@ -1,5 +1,7 @@
 # Curated Book Scout catalog
 
+For external Golden/Core data creation, use the exact [data contract](CATALOG_DATA_CONTRACT.md) and [proposal JSON template](CATALOG_DATA_TEMPLATE.json). The template is fictional and must not be staged as real book data.
+
 Google Books remains the live bibliographic source. A separate `CuratedBookProfile` stores Book Scout classifications, sourced reading fit, series information, relationships, and audit metadata. The normalized `Book` model stays provider focused. Unknown editorial values are absent rather than zero. No subjective classifications are inferred from Google categories or descriptions.
 
 `data/books/catalog.source.json` is the version controlled working source. It contains seeds, proposals, and approved profiles. `data/books/catalog.json` is the deterministic generated runtime artifact and contains **only approved profiles**. `FileCuratedCatalogRepository` imports that artifact into the Vercel server bundle and implements `CuratedCatalogRepository` (`getById`, `getByIsbn`, `findByTitleAuthor`, `listApproved`). The recommendation service depends on this interface and works with an empty catalog or a future database adapter.
@@ -11,6 +13,7 @@ Run commands from the repository root:
 ```sh
 npm run catalog:add -- "The Lightning Thief" "Rick Riordan"
 npm run catalog:enrich
+npm run catalog:select-edition -- <seed-id> <listed-google-books-id>
 npm run catalog:validate
 npm run catalog:build
 npm run catalog:stats
