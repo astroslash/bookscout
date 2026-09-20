@@ -1,0 +1,3428 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "ref": "matilda",
+      "title": "Matilda",
+      "author": "Roald Dahl",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "tales-of-a-fourth-grade-nothing",
+      "title": "Tales of a Fourth Grade Nothing",
+      "author": "Judy Blume",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-lemonade-war",
+      "title": "The Lemonade War",
+      "author": "Jacqueline Davies",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-phantom-tollbooth",
+      "title": "The Phantom Tollbooth",
+      "author": "Norton Juster",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "frindle",
+      "title": "Frindle",
+      "author": "Andrew Clements",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-miraculous-journey-of-edward-tulane",
+      "title": "The Miraculous Journey of Edward Tulane",
+      "author": "Kate DiCamillo",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "savvy",
+      "title": "Savvy",
+      "author": "Ingrid Law",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "clean-getaway",
+      "title": "Clean Getaway",
+      "author": "Nic Stone",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "civil-rights",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "finally-seen",
+      "title": "Finally Seen",
+      "author": "Kelly Yang",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-smartest-kid-in-the-universe",
+      "title": "The Smartest Kid in the Universe",
+      "author": "Chris Grabenstein",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-great-peach-experiment-when-life-gives-you-lemons-m",
+      "title": "The Great Peach Experiment: When Life Gives You Lemons, Make Peach Pie",
+      "author": "Erin Soderberg Downing",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "echo-mountain",
+      "title": "Echo Mountain",
+      "author": "Lauren Wolk",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "man-analand",
+      "title": "Mañanaland",
+      "author": "Pam Muñoz Ryan",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "a-million-views",
+      "title": "A Million Views",
+      "author": "Aaron Starmer",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "art",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-one-and-only-ivan",
+      "title": "The One and Only Ivan",
+      "author": "Katherine Applegate",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "because-of-winn-dixie",
+      "title": "Because of Winn-Dixie",
+      "author": "Kate DiCamillo",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "pax",
+      "title": "Pax",
+      "author": "Sara Pennypacker",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "dog-trouble",
+      "title": "Dog Trouble",
+      "author": "Kristin Varner",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-tapper-twins-go-to-war-with-each-other",
+      "title": "The Tapper Twins Go to War (With Each Other)",
+      "author": "Geoff Rodkey",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "pickle-the-formerly-anonymous-prank-club-of-fountain-po",
+      "title": "Pickle: The (Formerly) Anonymous Prank Club of Fountain Point Middle School",
+      "author": "Kim Baker",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "home-sweet-motel",
+      "title": "Home Sweet Motel",
+      "author": "Chris Grabenstein",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "we-re-not-from-here",
+      "title": "We're Not from Here",
+      "author": "Geoff Rodkey",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science-fiction",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fourth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "walk-two-moons",
+      "title": "Walk Two Moons",
+      "author": "Sharon Creech",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "number-the-stars",
+      "title": "Number the Stars",
+      "author": "Lois Lowry",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "world-war-ii",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "merci-sua-rez-changes-gears",
+      "title": "Merci Suárez Changes Gears",
+      "author": "Meg Medina",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "one-crazy-summer",
+      "title": "One Crazy Summer",
+      "author": "Rita Williams-Garcia",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "civil-rights",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "when-you-reach-me",
+      "title": "When You Reach Me",
+      "author": "Rebecca Stead",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "time-travel",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "front-desk",
+      "title": "Front Desk",
+      "author": "Kelly Yang",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "fish-in-a-tree",
+      "title": "Fish in a Tree",
+      "author": "Lynda Mullaly Hunt",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-unteachables",
+      "title": "The Unteachables",
+      "author": "Gordon Korman",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "harbor-me",
+      "title": "Harbor Me",
+      "author": "Jacqueline Woodson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "impossible-creatures",
+      "title": "Impossible Creatures",
+      "author": "Katherine Rundell",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "escape-from-mr-lemoncello-s-library",
+      "title": "Escape from Mr. Lemoncello's Library",
+      "author": "Chris Grabenstein",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-swifts-a-dictionary-of-scoundrels",
+      "title": "The Swifts: A Dictionary of Scoundrels",
+      "author": "Beth Lincoln",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-mystery-of-locked-rooms",
+      "title": "The Mystery of Locked Rooms",
+      "author": "Lindsay Currie",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "high-score",
+      "title": "High Score",
+      "author": "Destiny Howell",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "best-nerds-forever",
+      "title": "Best Nerds Forever",
+      "author": "James Patterson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "city-spies",
+      "title": "City Spies",
+      "author": "James Ponti",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-academy",
+      "title": "The Academy",
+      "author": "T. Z. Layton",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "soccer",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-crossover",
+      "title": "The Crossover",
+      "author": "Kwame Alexander",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "basketball",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "poetry",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "ghost",
+      "title": "Ghost",
+      "author": "Jason Reynolds",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "track-and-field",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "swim-team",
+      "title": "Swim Team",
+      "author": "Johnnie Christmas",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "swimming",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "flora-ulysses",
+      "title": "Flora & Ulysses",
+      "author": "Kate DiCamillo",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "superheroes",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-strange-case-of-origami-yoda",
+      "title": "The Strange Case of Origami Yoda",
+      "author": "Tom Angleberger",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "when-stars-are-scattered",
+      "title": "When Stars Are Scattered",
+      "author": "Victoria Jamieson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-cardboard-kingdom",
+      "title": "The Cardboard Kingdom",
+      "author": "Chad Sell",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "art",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/fifth-grade-chapter-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "lies-i-tell-myself",
+      "title": "Lies I Tell Myself",
+      "author": "Beth Vrabel",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-6th-grade-nickname-game",
+      "title": "The 6th Grade Nickname Game",
+      "author": "Gordon Korman",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "wayward-creatures",
+      "title": "Wayward Creatures",
+      "author": "Dayna Lorentz",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "lunch-money",
+      "title": "Lunch Money",
+      "author": "Andrew Clements",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "smile",
+      "title": "Smile",
+      "author": "Raina Telgemeier",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "thirst",
+      "title": "Thirst",
+      "author": "Varsha Bajaj",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "environment",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "holler-of-the-fireflies",
+      "title": "Holler of the Fireflies",
+      "author": "David Barclay Moore",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-fort",
+      "title": "The Fort",
+      "author": "Gordon Korman",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "book-96-miles",
+      "title": "96 Miles",
+      "author": "J. L. Esplin",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "hundred-percent",
+      "title": "Hundred Percent",
+      "author": "Karen Romano Young",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "attack-of-the-black-rectangles",
+      "title": "Attack of the Black Rectangles",
+      "author": "Amy Sarig King",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "two-degrees",
+      "title": "Two Degrees",
+      "author": "Alan Gratz",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "climate",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-secret-sheriff-of-sixth-grade",
+      "title": "The Secret Sheriff of Sixth Grade",
+      "author": "Jordan Sonnenblick",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "tumble",
+      "title": "Tumble",
+      "author": "Celia C. Pérez",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "middle-school-the-worst-years-of-my-life",
+      "title": "Middle School: The Worst Years of My Life",
+      "author": "James Patterson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "witchlings",
+      "title": "Witchlings",
+      "author": "Claribel A. Ortega",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "ravenfall",
+      "title": "Ravenfall",
+      "author": "Kalyn Josephson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "president-of-the-whole-sixth-grade",
+      "title": "President of the Whole Sixth Grade",
+      "author": "Sherri Winston",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "entrepreneurship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-door-of-no-return",
+      "title": "The Door of No Return",
+      "author": "Kwame Alexander",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "modern-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "poetry",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "wildoak",
+      "title": "Wildoak",
+      "author": "C. C. Harrington",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "environment",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "iceberg",
+      "title": "Iceberg",
+      "author": "Jennifer A. Nielsen",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "oceans",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-night-diary",
+      "title": "The Night Diary",
+      "author": "Veera Hiranandani",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "modern-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-marvellers",
+      "title": "The Marvellers",
+      "author": "Dhonielle Clayton",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-elephant-girl",
+      "title": "The Elephant Girl",
+      "author": "James Patterson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "environment",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "simon-sort-of-says",
+      "title": "Simon Sort of Says",
+      "author": "Erin Bow",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-lost-year",
+      "title": "The Lost Year",
+      "author": "Katherine Marsh",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "ancient-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/books-for-6th-graders/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "all-thirteen-the-incredible-cave-rescue-of-the-thai-boy",
+      "title": "All Thirteen: The Incredible Cave Rescue of the Thai Boys' Soccer Team",
+      "author": "Christina Soontornvat",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "soccer",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "rez-ball",
+      "title": "Rez Ball",
+      "author": "Byron Graves",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "basketball",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "brock",
+      "title": "Brock",
+      "author": "Anthony McGowan",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "ghost-boys",
+      "title": "Ghost Boys",
+      "author": "Jewell Parker Rhodes",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "civil-rights",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "gracefully-grayson",
+      "title": "Gracefully Grayson",
+      "author": "Ami Polonsky",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-benefits-of-being-an-octopus",
+      "title": "The Benefits of Being an Octopus",
+      "author": "Ann Braden",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "kareem-between",
+      "title": "Kareem Between",
+      "author": "Shifa Saltagi Safadi",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "wait-till-helen-comes",
+      "title": "Wait Till Helen Comes",
+      "author": "Mary Downing Hahn",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "ellen-outside-the-lines",
+      "title": "Ellen Outside the Lines",
+      "author": "A. J. Sass",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "everything-sad-is-untrue",
+      "title": "Everything Sad Is Untrue",
+      "author": "Daniel Nayeri",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "gather",
+      "title": "Gather",
+      "author": "Kenneth M. Cadow",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "stella-by-starlight",
+      "title": "Stella by Starlight",
+      "author": "Sharon M. Draper",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "civil-rights",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-probability-of-everything",
+      "title": "The Probability of Everything",
+      "author": "Sarah Everett",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "math",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "dust-of-eden",
+      "title": "Dust of Eden",
+      "author": "Mariko Nagai",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "world-war-ii",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "a-long-walk-to-water",
+      "title": "A Long Walk to Water",
+      "author": "Linda Sue Park",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "brown-girl-dreaming",
+      "title": "Brown Girl Dreaming",
+      "author": "Jacqueline Woodson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "poetry",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "full-cicada-moon",
+      "title": "Full Cicada Moon",
+      "author": "Marilyn Hilton",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "poetry",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "out-of-my-mind",
+      "title": "Out of My Mind",
+      "author": "Sharon M. Draper",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "disability",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "in-the-key-of-us",
+      "title": "In the Key of Us",
+      "author": "Mariama J. Lockington",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "jawbreaker",
+      "title": "Jawbreaker",
+      "author": "Christina Wyman",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "return-to-sender",
+      "title": "Return to Sender",
+      "author": "Julia Alvarez",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "immigration",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "revolution-is-not-a-dinner-party",
+      "title": "Revolution Is Not a Dinner Party",
+      "author": "Ying Chang Compestine",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "modern-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-breadwinner",
+      "title": "The Breadwinner",
+      "author": "Deborah Ellis",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-middle-school-books/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-kid-who-only-hit-homers",
+      "title": "The Kid Who Only Hit Homers",
+      "author": "Matt Christopher",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "baseball",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "roller-girl",
+      "title": "Roller Girl",
+      "author": "Victoria Jamieson",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "football-genius",
+      "title": "Football Genius",
+      "author": "Tim Green",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "football",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "becoming-muhammad-ali",
+      "title": "Becoming Muhammad Ali",
+      "author": "Kwame Alexander",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "poetry",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "gabby-garcia-s-ultimate-playbook",
+      "title": "Gabby Garcia's Ultimate Playbook",
+      "author": "Iva-Marie Palmer",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "baseball",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "sports",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/best-sports-books-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "trapped-in-a-video-game",
+      "title": "Trapped in a Video Game",
+      "author": "Dustin Brady",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "a-girl-a-raccoon-and-the-midnight-moon",
+      "title": "A Girl, a Raccoon, and the Midnight Moon",
+      "author": "Karen Romano Young",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "hide-and-seeker",
+      "title": "Hide and Seeker",
+      "author": "Daka Hermon",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "just-south-of-home",
+      "title": "Just South of Home",
+      "author": "Karen Strong",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "ghost-squad",
+      "title": "Ghost Squad",
+      "author": "Claribel A. Ortega",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "premeditated-myrtle",
+      "title": "Premeditated Myrtle",
+      "author": "Elizabeth C. Bunce",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "spirit-hunters",
+      "title": "Spirit Hunters",
+      "author": "Ellen Oh",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/mystery-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "see-you-in-the-cosmos",
+      "title": "See You in the Cosmos",
+      "author": "Jack Cheng",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "space",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "girls-who-code-the-friendship-code",
+      "title": "Girls Who Code: The Friendship Code",
+      "author": "Stacia Deutsch",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "coding",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "eye-to-eye-how-animals-see-the-world",
+      "title": "Eye to Eye: How Animals See the World",
+      "author": "Steve Jenkins",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "smithsonian-ocean-our-water-our-world",
+      "title": "Smithsonian Ocean: Our Water, Our World",
+      "author": "Deborah Cramer",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "oceans",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "calling-all-minds-how-to-think-and-create-like-an-inven",
+      "title": "Calling All Minds: How to Think and Create Like an Inventor",
+      "author": "Temple Grandin",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "engineering",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-way-things-work-now",
+      "title": "The Way Things Work Now",
+      "author": "David Macaulay",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "engineering",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "women-in-science-50-fearless-pioneers-who-changed-the-w",
+      "title": "Women in Science: 50 Fearless Pioneers Who Changed the World",
+      "author": "Rachel Ignotofsky",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "what-is-climate-change",
+      "title": "What Is Climate Change?",
+      "author": "Gail Herman",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "climate",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "environment",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "where-is-our-solar-system",
+      "title": "Where Is Our Solar System?",
+      "author": "Stephanie Sabol",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "space",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "maker-lab",
+      "title": "Maker Lab",
+      "author": "Jack Challoner",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "engineering",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "girls-who-code",
+      "title": "Girls Who Code",
+      "author": "Reshma Saujani",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "coding",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "technology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "how-to-be-a-math-genius",
+      "title": "How to Be a Math Genius",
+      "author": "Mike Goldsmith",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "math",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzles",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/stem-books-classroom-library/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "seventh-grade-vs-the-galaxy",
+      "title": "Seventh Grade vs. the Galaxy",
+      "author": "Joshua S. Levy",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science-fiction",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "space",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "cleopatra-in-space",
+      "title": "Cleopatra in Space",
+      "author": "Mike Maihack",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science-fiction",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "space",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-area-51-files",
+      "title": "The Area 51 Files",
+      "author": "Julie Buxbaum",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science-fiction",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "space",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "animorphs-the-invasion",
+      "title": "Animorphs: The Invasion",
+      "author": "K. A. Applegate",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "science-fiction",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/science-fiction-books-for-teens/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "almost-american-girl",
+      "title": "Almost American Girl",
+      "author": "Robin Ha",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "art",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/art-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.weareteachers.com/art-books-for-kids/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "speak-up",
+      "title": "Speak Up!",
+      "author": "Rebecca Burgess",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "the-horne-section-make-some-noise",
+      "title": "The Horne Section: Make Some Noise",
+      "author": "Alex Horne",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "kofi-and-the-rap-battle-summer",
+      "title": "Kofi and the Rap Battle Summer",
+      "author": "Jeffrey Boakye",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "kidglovz",
+      "title": "KidGlovz",
+      "author": "Julie Hunt",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "can-you-feel-the-noise",
+      "title": "Can You Feel the Noise",
+      "author": "Stewart Foster",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "disability",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "skylar-and-the-k-pop-headteacher",
+      "title": "Skylar and the K-Pop Headteacher",
+      "author": "Luan Goldie",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "barakah-beats",
+      "title": "Barakah Beats",
+      "author": "Maleeha Siddiqui",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    },
+    {
+      "ref": "secrets-of-a-rebel-rock-star",
+      "title": "Secrets of a Rebel Rock Star",
+      "author": "Nat Amoore",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "music",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "source": "https://www.booktrust.org.uk/book-recommendations/booklists/books-about-music-for-8/",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ]
+    }
+  ]
+}

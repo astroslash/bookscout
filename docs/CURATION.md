@@ -13,7 +13,7 @@ Run commands from the repository root:
 ```sh
 npm run catalog:add -- "The Lightning Thief" "Rick Riordan"
 npm run catalog:enrich
-npm run catalog:select-edition -- <seed-id> <listed-google-books-id>
+npm run catalog:select-edition -- <seed-id> <verified-google-books-id>
 npm run catalog:validate
 npm run catalog:build
 npm run catalog:stats
@@ -24,7 +24,7 @@ npm run catalog:check
 
 `npm run catalog:approve -- <seed-id>` is a developer command for an **already inspected**, high confidence enriched seed. It approves a factual provider record with an AI curator identity and makes no human-review claim. For imported AI-assisted editorial proposals, preview `npm run catalog:approve-ready-ai -- <dataset.json> ai:book-scout-curator`, then add `--apply` to approve ready records. The report lists every approved and skipped ref. A later human review uses `npm run catalog:mark-human-reviewed -- <catalog-id> human:<opaque-id>`. Run `catalog:build` after approval.
 
-The current catalog began with a 200-book Golden/Core proposal. A focused expansion for Percy Jackson and dinosaur requests is documented in [COVERAGE_CURATION.md](COVERAGE_CURATION.md). Approved records alone enter the runtime catalog; staged or unresolved seeds do not.
+The current catalog began with a 200-book Golden/Core proposal. A focused expansion for Percy Jackson and dinosaur requests is documented in [COVERAGE_CURATION.md](COVERAGE_CURATION.md). A broader teacher-led expansion and its deferred candidates are documented in [TEACHER_CATALOG_EXPANSION.md](TEACHER_CATALOG_EXPANSION.md). Approved records alone enter the runtime catalog; staged or unresolved seeds do not.
 
 ## Model and review rules
 

@@ -4,6 +4,10 @@ export const topicIds = [
   "dragons", "magic", "sports", "basketball", "baseball", "football",
   "animals", "dinosaurs", "survival", "mystery", "puzzles", "adventure",
   "friendship", "school", "family", "superheroes",
+  "art", "music", "coding", "engineering", "oceans", "environment", "climate",
+  "soccer", "track-and-field", "swimming", "science-fiction", "time-travel",
+  "civil-rights", "modern-history", "immigration", "poetry", "math",
+  "entrepreneurship", "disability",
 ] as const;
 
 export const readerFitTagIds = [
@@ -24,6 +28,13 @@ const topicAliases: Record<string, TopicId> = {
   "wwii": "world-war-ii",
   "world war 2": "world-war-ii",
   "world war ii": "world-war-ii",
+  "sci fi": "science-fiction",
+  "sci-fi": "science-fiction",
+  "climate change": "climate",
+  "ocean": "oceans",
+  "track": "track-and-field",
+  "track and field": "track-and-field",
+  "football soccer": "soccer",
 };
 
 const readerFitAliases: Record<string, ReaderFitTagId> = {

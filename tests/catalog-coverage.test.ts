@@ -50,4 +50,17 @@ describe("approved catalog coverage", () => {
     expect(result.coverage).toMatchObject({ status: "insufficient_curated_match",
       availableCatalogTopics: expect.arrayContaining(["adventure"]) });
   });
+
+  it("covers newly curated interests using approved, on-topic books", async () => {
+    for (const [interest, topic] of [
+      ["music", "music"], ["coding", "coding"], ["engineering", "engineering"],
+      ["track and field", "track-and-field"], ["climate change", "climate"],
+    ]) {
+      const result = await service.recommend({ age: 11, grade: 6, readingAbility: "average",
+        interests: [interest], limit: 5 });
+      expect(result.recommendations.length, interest).toBeGreaterThan(0);
+      expect(result.recommendations.every((item) => approved.get(item.book.id)?.topics.some((entry) =>
+        entry.value === topic)), interest).toBe(true);
+    }
+  });
 });
