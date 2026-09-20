@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 3 are implemented:** the shared factory, normalized Google Books catalog adapter, and a deterministic recommendation service. Public recommendation tools and book pages are later phases.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 4 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, and public REST/MCP recommendation routes. Book pages are a later phase.
 
 ## Local setup
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGLE_BOOKS_API_KEY` when you want live Google Books requests. The catalog and recommendation service have no public route yet; both can be tested with an injected provider or fetch function. The key stays server-side and must never use a `NEXT_PUBLIC_` name.
+Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGLE_BOOKS_API_KEY` for live recommendations. The key stays server-side and must never use a `NEXT_PUBLIC_` name.
 
 ## Architecture
 
@@ -32,9 +32,19 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 
 ## Current endpoints
 
-- `GET /api/book-scout` returns the registered manifest, tool list, and stub health result.
-- `POST /api/[connector]/[tool]` is the generic REST tool route. It returns `NOT_FOUND` for Book Scout tools until Phase 4 registers them. `POST /api/book-scout/recommend` will use this route when `recommend` is registered.
-- `/mcp/book-scout` is the generic MCP Streamable HTTP route. It currently exposes no tools.
+- `GET /api/book-scout` returns the registered manifest, tool list, and whether the catalog key is configured.
+- `POST /api/book-scout/recommend` calls the `recommend_books` tool through the generic REST adapter.
+- `/mcp/book-scout` is the generic MCP Streamable HTTP route. It advertises and calls `recommend_books`.
+
+Try REST locally or against the deployed site:
+
+```sh
+curl -X POST https://bookscout-iota.vercel.app/api/book-scout/recommend \
+  -H "Content-Type: application/json" \
+  -d '{"age":11,"readingAbility":"advanced","interests":["Greek mythology","history","funny books"],"likedBooks":["Percy Jackson","Harry Potter"],"preferences":{"romance":"low"},"limit":5}'
+```
+
+The response is `{ "success": true, "data": { "recommendations": [...] } }`. MCP clients connect to `https://bookscout-iota.vercel.app/mcp/book-scout` and call `recommend_books` with the same input object. REST and MCP share the same validated tool and service. Canonical book URLs belong to Phase 5.
 
 ## Google Books configuration
 
@@ -59,4 +69,4 @@ The Google Books tests use mocked HTTP and need no key. To run the optional live
 
 ## Vercel
 
-Import this repository as a Next.js project and use the standard npm install/build commands. The current app builds without a Google Books key because the recommendation service is not invoked by a route yet. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable when live catalog tools are added. Never commit `.env.local`.
+Import this repository as a Next.js project and use the standard npm install/build commands. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable in Vercel, then deploy. The build does not require the key, but live recommendations do. Never commit `.env.local`.

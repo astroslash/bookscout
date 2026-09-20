@@ -6,6 +6,7 @@ import { consoleLogger, type Logger } from "./logging";
 
 export interface ConnectorTool {
   name: string;
+  restPath?: string;
   description: string;
   inputSchema: z.ZodObject<z.ZodRawShape>;
   outputSchema?: z.ZodType;
