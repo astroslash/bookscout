@@ -42,7 +42,13 @@ function titleAuthorKey(title: string, author: string): string {
 function editorialSignature(profile: CuratedBookProfile): string {
   return JSON.stringify([profile.tier, profile.topics, profile.readerFitTags,
     profile.traits, profile.readingFit, profile.series, profile.relationships],
-  (key, value: unknown) => key === "reviewed" || key === "reviewerId" ? undefined : value);
+  (key, value: unknown) => {
+    if (key === "reviewed" || key === "reviewerId") return undefined;
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      return Object.fromEntries(Object.entries(value).sort(([left], [right]) => left.localeCompare(right)));
+    }
+    return value;
+  });
 }
 
 function classificationProvenances(book: ProposedCatalog["books"][number] | CuratedBookProfile) {

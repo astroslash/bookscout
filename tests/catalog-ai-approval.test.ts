@@ -78,6 +78,7 @@ describe("truthful catalog approval", () => {
     expect(relationships.approved).toHaveLength(1);
     expect(relationships.source.approved.find((item) => item.id === batch.approved[0].catalogId)?.relationships)
       .toMatchObject([{ type: "read_next", targetBookId: batch.approved[1].catalogId }]);
+    expect(submitImport(relationships.source, proposal, service, now).submitted).toBe(0);
   });
 
   it("skips a conflicting approval without corrupting the batch", () => {

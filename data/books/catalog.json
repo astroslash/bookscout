@@ -276,10 +276,10 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T04:07:22.595Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -872,10 +872,10 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T13:12:15.476Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -1830,6 +1830,109 @@
       }
     },
     {
+      "id": "bs_4055f931-f09a-4874-b8a3-549ebbe94c48",
+      "book": {
+        "id": "google-books:L9b1DQAAQBAJ",
+        "title": "Sideways Stories from Wayside School",
+        "authors": [
+          "Louis Sachar"
+        ],
+        "isbn10": "0062383183",
+        "isbn13": "9780062383181",
+        "description": "Bestselling and Newbery Medal-winning author Louis Sachar knows how to make readers laugh. And there are laughs galore in perennial favorite Sideways Stories from Wayside School, the first book in the series! Accidentally built sideways and standing thirty stories high (the builder said he was very sorry for the mistake), Wayside School has some of the wackiest classes in town, especially on the thirtieth floor. That’s where you’ll meet Bebe, the fastest draw in art class; John, who only reads upside down; Myron, the best class president ever; and Sammy, the new kid—he’s a real rat. More than fifteen million readers have laughed at the clever and hilarious stories of Wayside School. So what are you waiting for? Come visit Wayside School! Kids 7 to 13 will zoom through these chapter books—laughing their way through the fast, funny, silly but relatable stories. This funny chapter book series includes: Sideways Stories from Wayside School Wayside School Is Falling Down Wayside School Gets a Little Stranger And now also Wayside School Beneath the Cloud of Doom, the brand-new, fourth installment in the series, and the first in twenty-five years!",
+        "subjects": [
+          "Juvenile Fiction / Humorous Stories",
+          "Juvenile Fiction / School & Education",
+          "Juvenile Fiction / Classics",
+          "Juvenile Fiction / Short Stories",
+          "Juvenile Fiction / Animals / Baby Animals",
+          "Juvenile Fiction / Activity Books / General",
+          "Juvenile Fiction / Girls & Women",
+          "Juvenile Fiction / Stories in Verse",
+          "Juvenile Fiction / Ghost Stories",
+          "Juvenile Fiction / Animals / Pets"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 128,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=L9b1DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73QbJJs2EBHImpX6DqPE5OLHH0IJg4THvWJmvmwLV0eBtvB8X1ID4DK2pxGHVICuiH9S_1fXSR7syWPTJoPU0e6o1Cinyjnk4inblUA54ytFgCJbXpDy8OK-6StpLjbehJroFz2&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_40c82b94-0935-45d9-acd1-565601371778",
       "book": {
         "id": "google-books:hIjJDwAAQBAJ",
@@ -2216,6 +2319,150 @@
       }
     },
     {
+      "id": "bs_48e6a228-15f4-4b65-bb27-c01aa0c8ca53",
+      "book": {
+        "id": "google-books:bmERDgAAQBAJ",
+        "title": "Nevermoor: The Trials of Morrigan Crow",
+        "authors": [
+          "Jessica Townsend"
+        ],
+        "isbn10": "0316508861",
+        "isbn13": "9780316508865",
+        "description": "A breathtaking, enchanting series from Jessica Townsend, about a cursed girl who escapes death and finds herself in a magical world—but is then tested beyond her wildest imagination. Morrigan Crow is cursed. Having been born on Eventide, the unluckiest day for any child to be born, she's blamed for all local misfortunes, from hailstorms to heart attacks—and, worst of all, the curse means that Morrigan is doomed to die at midnight on her eleventh birthday. But as Morrigan awaits her fate, a strange and remarkable man named Jupiter North appears. Chased by black-smoke hounds and shadowy hunters on horseback, he whisks her away into the safety of a secret, magical city called Nevermoor. It's then that Morrigan discovers Jupiter has chosen her to contend for a place in the city's most prestigious organization: the Wundrous Society. In order to join, she must compete in four difficult and dangerous trials against hundreds of other children, each with an extraordinary talent that sets them apart—an extraordinary talent that Morrigan insists she does not have. To stay in the safety of Nevermoor for good, Morrigan will need to find a way to pass the tests—or she'll have to leave the city to confront her deadly fate. Perfect for fans of the Harry Potter series and Neil Gaiman, this fast-paced plot and imaginative world has a fresh new take on magic that will appeal to a new generation of readers. “A Harry Potter-esque adventure.” — Time Magazine​",
+        "subjects": [
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Mysteries & Detective Stories"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 480,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=bmERDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73dZpYe8laoIQ3G2H_o6wdw9LlaIHTcQCoC8B8I7rCkQ8bKPfnZotkCwj8ptUnE26TrMkS0tR-BCr2tFxkPnoU2VVHquDPIdK7Z0TiJoMdP0YkVzPYBNA4q6PVI-SCSsuZ_JfgM&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Nevermoor",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_48e6a228-15f4-4b65-bb27-c01aa0c8ca53",
+          "targetBookId": "bs_6164e1f9-78e6-4d02-9b6c-09d447ede215",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared adventure, magic appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_49cf6fa4-6d28-4d3c-9305-e456fbfcbd93",
       "book": {
         "id": "google-books:qAkLCwwTwHoC",
@@ -2553,10 +2800,139 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T04:07:22.595Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_6101d070-1d56-4598-97b7-98b66c261ff0",
+      "book": {
+        "id": "google-books:LgcDPAAACAAJ",
+        "title": "Diary of a Wimpy Kid",
+        "subtitle": "Do-it Yourself Book",
+        "authors": [
+          "Jeff Kinney"
+        ],
+        "isbn10": "0143304569",
+        "isbn13": "9780143304562",
+        "description": "'First of all, let mw get something straight- This is a JOURNAL, not a diary.' NOW EVERYONE CAN WRITE LIKE A WIMPY KID! Packed with original are and all-new material, this Do-It-Yourself Book features ruled pages and empty word balloons so you can create your own stories and comics, list your favourite and least faces, and keep your own daily journal. But whatever you do, make sure you put this book someplace safe after you finish it. Because when you're rich and famous, this thing is going to be worth a fortune. BONUS! INCLUDES COLOUR SECTION OF COMICS",
+        "subjects": [
+          "Juvenile Nonfiction / Humor / Comic Strips & Cartoons",
+          "Juvenile Nonfiction / Language Arts / Composition & Creative Writing",
+          "Juvenile Fiction / Humorous Stories"
+        ],
+        "publicationYear": 2009,
+        "pageCount": 228,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=LgcDPAAACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73JWWK_6Ku6tAf5U8Vm3KCmiXX01OnlU3ycCpnh_D-4UQj7ZPzhgxD9KtfWc65bPAop29OFPVfigcUy3TjupS-WR7OAlwDrLvRiCgFIl8UMq_bOKCRCW35kCOwEGnaFZb67Uuls&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Diary of a Wimpy Kid",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_6101d070-1d56-4598-97b7-98b66c261ff0",
+          "targetBookId": "bs_2437f5a9-1903-49d5-8266-54af50146977",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared friendship, school appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -2900,10 +3276,10 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T04:07:22.595Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -3058,6 +3434,336 @@
       }
     },
     {
+      "id": "bs_70be5efc-7378-4793-8d94-a78bd4eef471",
+      "book": {
+        "id": "google-books:99tGBAAAQBAJ",
+        "title": "The Adventures of Captain Underpants",
+        "authors": [
+          "Dav Pilkey"
+        ],
+        "isbn10": "1407144111",
+        "isbn13": "9781407144115",
+        "description": "Laugh out loud with Captain Underpants, from Dav Pilkey, the creator of Dog Man! When naughty George and Harold hypnotise their headteacher, they accidentally create the greatest superhero in the history of their school - Captain Underpants! His true identity is so secret that even HE doesn't know who he is... but he's fighting for truth, justice, and all things pre-shrunk and cottony!! If you're a naughty villain like the diabolical Dr Diaper, watch out! Captain Underpants has wedgie-power on his side, and he's coming your way. ABOUT THE SERIES Captain Underpants is now a feature-length animated film from DreamWorks & a series on NETFLIX The original Captain Underpants books are fully illustrated with black and white comic book drawings The books are also available in full-colour graphic novels Perfect for all children, but especially for those who are struggling to engage with reading Full of fun and laughs (and toilet humour)",
+        "subjects": [
+          "Juvenile Fiction / Humorous Stories",
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / School & Education"
+        ],
+        "publicationYear": 2013,
+        "pageCount": 144,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=99tGBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71hUKi3Wtt8Yv3BLLpMujsz3GfWQ2naTQwh21S5ygS-6mpiMm7-LsSjtMQ1-CB61il4D-AnBo04FUqvU6abq5uLmh02UcRWdrl2wPHzdO2Mnak3bt2-6GL-JEUXKNq9_5r2TuiQ&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Captain Underpants",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_70be5efc-7378-4793-8d94-a78bd4eef471",
+          "targetBookId": "bs_40c82b94-0935-45d9-acd1-565601371778",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared friendship appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_70d3546d-2fef-48e4-87b3-30cfcec1d524",
+      "book": {
+        "id": "google-books:ZLq0swEACAAJ",
+        "title": "The Absent Author",
+        "authors": [
+          "Ron Roy"
+        ],
+        "isbn10": "0099401037",
+        "isbn13": "9780099401032",
+        "description": "Don't miss A to Z Mysteries--alphabetic adventures that are full of thrills, chills, and cases to crack A is for Author... In the first book of the A to Z Mysteries--an early chapter book mystery series featuring strong boy and girl characters--Dink writes to his favorite author, mystery writer Wallis Wallace, and invites him to visit Green lawn. Wonder of wonders, Wallace says yes In fact, the famous writers says the the only way he won't come is if he's kidnapped. But when the big day comes, Wallis Wallace is nowhere to be found. The police think he just missed his plane, but Dink knows better. It's up to Dink and his two best friends, Josh and Ruth Rose, to find Wallace - before it's too late Each book includes a map and a letter from the author. Parents, teachers, and librarians agree that these highly collectible chapter books are perfect for emerging readers and any kid who love mysteries \"From the Trade Paperback edition.\"",
+        "subjects": [
+          "Juvenile Fiction / Mysteries & Detective Stories"
+        ],
+        "publicationYear": 1999,
+        "pageCount": 96,
+        "language": "en"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "mystery",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "puzzle-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "mystery": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "A to Z Mysteries",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_7b4564bc-249c-445a-b4c1-f03a40bf7af5",
+      "book": {
+        "id": "google-books:uZJvo8nUTZ0C",
+        "title": "The Mouse and the Motorcycle",
+        "authors": [
+          "Beverly Cleary"
+        ],
+        "isbn10": "0590687336",
+        "isbn13": "9780590687331",
+        "description": "A reckless young mouse named Ralph makes friends with a boy in room 2 15 of the Mountain View Inn and discovers the joys of motorcycling.",
+        "subjects": [],
+        "publicationYear": 1965,
+        "pageCount": 158,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=uZJvo8nUTZ0C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70u2cAolSRJNvstYwdgOZuemdSRoZXuA3GqU2xxjvAxmete80BndrmcoPb9dlNYU1Wzs__YcbtXaBh_S6PrXBS_v2r0U99GXVZcg0YWPyL_bGMytgqjrb3GIh4DHkynJHJfZ_Fe&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_7bb08a4b-8c9e-46a3-9542-4fe55506742f",
       "book": {
         "id": "google-books:LFUNtAEACAAJ",
@@ -3173,6 +3879,80 @@
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
         "approvedAt": "2026-09-20T13:12:27.048Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_7d04b9a6-5319-4ae8-ac82-c8f99e2a2524",
+      "book": {
+        "id": "google-books:p5ozDwAAQBAJ",
+        "title": "Wonder",
+        "authors": [
+          "R. J. Palacio"
+        ],
+        "isbn10": "1524720194",
+        "isbn13": "9781524720193",
+        "description": "A special movie tie-in edition of R.J. Palacio's #1 New York Times bestseller. Over 8 million people have fallen in love with Wonder and Auggie Pullman, the ordinary boy with the extraordinary face, who inspired a movement to Choose Kind and an upcoming graphic novel White Bird - on sale 10/1/2019! This special movie tie-in edition features an eight-page full-color insert with photos from the film, a foreword by the director Stephen Chbosky, an afterword by R.J. Palacio, a behind-the-scenes look at the making of the movie with anecdotes from the cast and crew, and a family discussion guide. August Pullman was born with a facial difference that, up until now, has prevented him from going to a mainstream school. Starting 5th grade at Beecher Prep, he wants nothing more than to be treated as an ordinary kid--but his new classmates can't get past Auggie's extraordinary face. WONDER , now a #1 New York Times bestseller and included on the Texas Bluebonnet Award master list, begins from Auggie's point of view, but soon switches to include his classmates, his sister, her boyfriend, and others. These perspectives converge in a portrait of one community's struggle with empathy, compassion, and acceptance. \"Wonder is the best kids' book of the year,\" said Emily Bazelon, senior editor at Slate.com and author of Sticks and Stones: Defeating the Culture of Bullying and Rediscovering the Power of Character and Empathy . In a world where bullying among young people is an epidemic, this is a refreshing new narrative full of heart and hope. R.J. Palacio has called her debut novel \"a meditation on kindness\" --indeed, every reader will come away with a greater appreciation for the simple courage of friendship. Auggie is a hero to root for, a diamond in the rough who proves that you can't blend in when you were born to stand out. Join the conversation: #thewonderofwonder , #choosekind",
+        "subjects": [
+          "Juvenile Fiction / Family / General",
+          "Juvenile Fiction / Health & Daily Living / Diseases, Illnesses & Injuries",
+          "Juvenile Fiction / Media Tie-In",
+          "Juvenile Fiction / School & Education",
+          "Juvenile Fiction / Social Themes / Self-Esteem & Self-Reliance",
+          "Juvenile Fiction / Disability"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 315,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=p5ozDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE719fgWtuXRNDUO0ieKKMsM9C20cXhvJdIP04F7zexJLZyzAPvKKkHTaPAtAzd7m8k77dt8iwmQmyhfOymqZpfBT30-k2s1jFKo6lv3gMtIUpNtwzhAO1vK_JwncSRb3w3nRMVAG&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "family",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [],
+      "traits": {
+        "emotionalIntensity": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -3561,6 +4341,141 @@
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
         "approvedAt": "2026-09-20T13:12:27.048Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_8be39af0-4020-4cd3-8752-6233c60fc64e",
+      "book": {
+        "id": "google-books:pHE6zgEACAAJ",
+        "title": "Amari and the Night Brothers",
+        "authors": [
+          "B. B. Alston"
+        ],
+        "isbn10": "1405298197",
+        "isbn13": "9781405298193",
+        "description": "\"AMARI IS MAGICAL!\" ANGIE THOMAS An epic middle grade supernatural adventure series, soon to be a major movie starring Marsai Martin. Perfect for readers aged 8+ and fans of Percy Jackson, Skandar and the Unicorn Thief, Marvel and Onyeka. Amari Peters knows three things. Her big brother Quinton has gone missing. No one will talk about it. His mysterious job holds the secret... So when Amari gets an invitation to the Bureau of Supernatural Affairs, she's certain this is her chance to find Quinton. But first she has to get her head around the new world of the Bureau, where mermaids, aliens and magicians are real, and her roommate is a weredragon. Amari must compete against kids who've known about the supernatural world their whole lives, and when each trainee is awarded a special supernatural talent, Amari is given an illegal talent - one that the Bureau views as dangerous. With an evil magician threatening the whole supernatural world, and her own classmates thinking she is the enemy, Amari has never felt more alone. But if she doesn't pass the three tryouts, she may never find out what happened to Quinton ... B. B. Alston lives in Lexington, SC. Amari and the Night Brothers is his debut middle grade novel. When not writing, he can be found eating too many sweets and exploring country roads to see where they lead.",
+        "subjects": [
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / African American & Black",
+          "Juvenile Fiction / Family / Siblings",
+          "Juvenile Fiction / School & Education",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Fantasy / Magic",
+          "Juvenile Fiction / Monsters",
+          "Juvenile Fiction / Paranormal, Occult & Supernatural",
+          "Juvenile Fiction / Diversity & Multicultural"
+        ],
+        "publicationYear": 2021,
+        "pageCount": 374,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=pHE6zgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70WxKF2o-Q2JyeUF16W8sxoi0zo3CL4MNks1eDRvV-9ZPCXGgddV9OGOA2lxTUz894A1tO_VQDQtsmG3rCmS3putTO_j73Ih3hZb4kKpFYhCt2fteeMB6V-zwzNeVkyi8rbAMsM&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Supernatural Investigations",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -4081,6 +4996,131 @@
       }
     },
     {
+      "id": "bs_9c44bef4-61f2-4419-b3f7-ce476c839f58",
+      "book": {
+        "id": "google-books:5SXFzgEACAAJ",
+        "title": "My Father's Dragon",
+        "subtitle": "By Ruth Stiles Gannett with Original Illustrations Annotated",
+        "authors": [
+          "Ruth Stiles Gannett"
+        ],
+        "isbn13": "9798493707261",
+        "description": "My Father's Dragon is a 1948 children's novel by Ruth Stiles Gannett, with illustrations by her stepmother Ruth Chrisman Gannett. The novel is about a young boy, who runs away to Wild Island to rescue a baby dragon. Both a Newbery Honor Book and an ALA Notable Book, it is the first book of a trilogy whose other titles are Elmer and the Dragon and The Dragons of Blueland. All three were published in a 50-year anniversary edition as Three Tales of My Father's Dragon.",
+        "subjects": [
+          "Juvenile Fiction / Action & Adventure / General"
+        ],
+        "publicationYear": 2021,
+        "pageCount": 77,
+        "language": "en"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_aa8deb60-17c0-4c32-b062-4c905d12b46f",
       "book": {
         "id": "google-books:QlBW0QEACAAJ",
@@ -4176,6 +5216,222 @@
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
         "approvedAt": "2026-09-20T04:07:36.996Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_ac68f321-d01c-40a7-9028-85d76b9c8651",
+      "book": {
+        "id": "google-books:hKN9xV-xl2kC",
+        "title": "The Giver",
+        "authors": [
+          "Lois Lowry"
+        ],
+        "isbn10": "0547424779",
+        "isbn13": "9780547424774",
+        "description": "1994 Newbery Medal Winner The Giver, the 1994 Newbery Medal winner, has become one of the most influential novels of our time. The haunting story centers on twelve-year-old Jonas, who lives in a seemingly ideal, if colorless, world of conformity and contentment. Not until he is given his life assignment as the Receiver of Memory does he begin to understand the dark, complex secrets behind his fragile community. Lois Lowry has written three companion novels to The Giver, including Gathering Blue, Messenger, and Son.",
+        "subjects": [
+          "Juvenile Fiction / Science Fiction / General",
+          "Young Adult Fiction / Boys & Men",
+          "Young Adult Fiction / Dystopian",
+          "Young Adult Fiction / Fantasy / General"
+        ],
+        "publicationYear": 2011,
+        "pageCount": 197,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=hKN9xV-xl2kC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73I8mVaRRIglOgqiWo3JH5qmoXJ3GLN1XMWj3__DsiiTB6vNtk0YE_vxOaNHRT7AP9Devnk75NUoWP5bk92wTK_RHPKqpMzkV6cLpLfOjSad8e-X1BC7crfStpOWBvYFJH2xsmK&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "scienceFiction": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_aecdafc6-9727-4add-9b70-787adaa375bf",
+      "book": {
+        "id": "google-books:wb3CzgEACAAJ",
+        "title": "Charlotte's Web",
+        "authors": [
+          "E. B. White"
+        ],
+        "isbn10": "0241568811",
+        "isbn13": "9780241568811",
+        "description": "'From grammar to the tenderness in which this story is delivered, E. B. White's writing is so perfect... And Garth William's muted illustrations are entirely without fault. Whether read aloud or solo, this is a book well deserving of its \"classic\" status.' - The Children's Book Review Wilbur the pig's life has already been saved by Fern, but when he is sold to her uncle, he realises his life is in even more danger. Enter Charlotte A. Cavatica, a beautiful large grey spider. Charlotte is determined to keep Wilbur from the chopping block, and comes up with an ingenious way to do just that. Puffin Clothbound Classics are stunningly beautiful hardback editions of the most famous stories in the world, now including a beautiful 70th anniversary edition of Charlotte's Web, the poignant, humorous story of a pig, a spider and a little girl. Collect our Puffin Clothbound Classics: 9780241444313 The Little Prince 9780241663554 The Jungle Book 9780241568811 Charlotte's Web 9780241688243 Little Women 9780241688250 Peter Pan 9780241688267 The Railway Children 9780241688236 Chinese Cinderella 9780241411216 Treasure Island 9780241411209 The Wizard of Oz 9780241655702 Watership Down 9780241663578 The Worst Witch 9780241663547 David Copperfield 9780241663561 The Neverending Story 9780241623909 Stig of the Dump 9780241623916 The Dark is Rising 9780241411162 The Secret Garden 9780241411148 Black Beauty 9780241411155 Dracula 9780241425121 Frankenstein 9780241425138 Wuthering Heights 9780241425114 Tales from Shakespeare 9780241425107 Tales of the Greek Heroes 9780241411193 A Christmas Carol 9780241621196 Grimms' Fairy Tales 9780241425145 Hans Christian Andersen's Fairy Tales",
+        "subjects": [
+          "Comics & Graphic Novels / General",
+          "Juvenile Fiction / Animals / General",
+          "Juvenile Fiction / Animals / Farm Animals",
+          "Juvenile Fiction / Animals / Insects, Spiders, etc",
+          "Juvenile Fiction / Animals / Pigs",
+          "Juvenile Fiction / Classics",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Social Themes / Friendship",
+          "Nature / Animals / Insects & Spiders",
+          "Pets / Rabbits, Mice, Hamsters, Guinea Pigs, etc",
+          "Pets / Insects & Spiders"
+        ],
+        "publicationYear": 2022,
+        "pageCount": 256,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=wb3CzgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73odo8cmGbh0S--4ri_CoXZ9YBJindxajgoHXhanNf-J5UfUkMEumdgQrWuaeiNA1LvP3Q8yV6cSipxdAK05wG_a27iaO0tgWCUYS8SSQR2cQVxEmaLgDP_cEvpGKDST7WY3JMO&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "animals",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_aecdafc6-9727-4add-9b70-787adaa375bf",
+          "targetBookId": "bs_7b4564bc-249c-445a-b4c1-f03a40bf7af5",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared animals, friendship appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -4815,6 +6071,256 @@
       }
     },
     {
+      "id": "bs_d17caab9-4bb2-4783-96b0-567d15c01970",
+      "book": {
+        "id": "google-books:1ZrZCwAAQBAJ",
+        "title": "Holes",
+        "authors": [
+          "Louis Sachar"
+        ],
+        "isbn10": "044022859X",
+        "isbn13": "9780440228592",
+        "description": "This groundbreaking classic is now available in a special anniversary edition with bonus content. Winner of the Newbery Medal as well as the National Book Award, HOLES is a New York Times bestseller and one of the strongest-selling middle-grade books to ever hit shelves! Stanley Yelnats is under a curse. A curse that began with his no-good-dirty-rotten-pig-stealing-great-great-grandfather and has since followed generations of Yelnatses. Now Stanley has been unjustly sent to a boys' detention center, Camp Green Lake, where the boys build character by spending all day, every day digging holes exactly five feet wide and five feet deep. There is no lake at Camp Green Lake. But there are an awful lot of holes. It doesn't take long for Stanley to realize there's more than character improvement going on at Camp Green Lake. The boys are digging holes because the warden is looking for something. But what could be buried under a dried-up lake? Stanley tries to dig up the truth in this inventive and darkly humorous tale of crime and punishment —and redemption. Special anniversary edition bonus content includes: A New Note From the Author!; \"Ten Things You May Not Know About HOLES\" by Louis Sachar; and more!",
+        "subjects": [
+          "Juvenile Fiction / Mysteries & Detective Stories",
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / Social Themes / Friendship"
+        ],
+        "publicationYear": 2001,
+        "pageCount": 288,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=1ZrZCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72JbRl4fdHe7xv87Mhc6qV-zJ88JHciyr0RYA21zJ0F1Bgr3JCbczyyPwZJ8ldCT5ulZNiBeMcwbP3gIqbTQXvosK_JcuWiDtU5-4PXFsXBxgiGyD6sKqWwCFc_QVZlYQWYU3q9&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "survival",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "scary": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "violence": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_d17caab9-4bb2-4783-96b0-567d15c01970",
+          "targetBookId": "bs_23b718b3-da99-4ec9-87f2-18e62b35e4ea",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared adventure, survival appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_d62390d9-d4a8-4733-8c7c-bf35e313c38c",
+      "book": {
+        "id": "google-books:U799AY3yfqcC",
+        "title": "The Hobbit",
+        "authors": [
+          "J. R. R. Tolkien"
+        ],
+        "isbn10": "0007322607",
+        "isbn13": "9780007322602",
+        "description": "This is the story of how a Baggins had an adventure, and found himself doing and saying things altogether unexpected... ‘A flawless masterpiece’ The Times Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon... The prelude to THE LORD OF THE RINGS, THE HOBBIT has sold many millions of copies since its publication in 1937, establishing itself as one of the most beloved and influential books of the twentieth century.",
+        "subjects": [
+          "Fiction / Fantasy / Dragons & Mythical Creatures",
+          "Fiction / Classics",
+          "Fiction / Fantasy / Epic",
+          "Fiction / Fantasy / Historical",
+          "Fiction / Action & Adventure",
+          "Fiction / General"
+        ],
+        "publicationYear": 2009,
+        "pageCount": 320,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=U799AY3yfqcC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70xfMgPjA-M2eee37rsOuJdpDeP6bnzXxG_XpqCIfmcCSYgvOOVg7ipBfeC2hVG5gLm12BPOXbOXdkXvZAp4rSt4KTxm_G3QrduTPKF11XKqZ9QqiDgjnR4_jQS4QPTfyrmbe-a&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "advanced-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "advanced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_d6749ba7-af5f-4160-9c5c-67af50cb3b05",
       "book": {
         "id": "google-books:HbhccC9yumAC",
@@ -5230,13 +6736,42 @@
           "reviewed": false
         }
       },
-      "relationships": [],
+      "relationships": [
+        {
+          "sourceBookId": "bs_e1f958eb-4bc6-4de5-9937-3c9b3a0f9c31",
+          "targetBookId": "bs_8be39af0-4020-4cd3-8752-6233c60fc64e",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared adventure, magic appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_e1f958eb-4bc6-4de5-9937-3c9b3a0f9c31",
+          "targetBookId": "bs_fa453a08-356a-40a6-8e85-a2ce5b9cf55e",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared adventure, magic appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
       "audit": {
         "createdAt": "2026-09-20T03:30:29.006Z",
-        "updatedAt": "2026-09-20T04:07:36.996Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T04:07:36.996Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -5452,10 +6987,10 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T13:12:15.476Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
@@ -6113,6 +7648,119 @@
       }
     },
     {
+      "id": "bs_f0a304b9-b6bf-408f-9fb6-10f095e467df",
+      "book": {
+        "id": "google-books:WgNlrNinOk4C",
+        "title": "Junie B. Jones and the Stupid Smelly Bus",
+        "authors": [
+          "Barbara Park"
+        ],
+        "isbn10": "0375868410",
+        "isbn13": "9780375868412",
+        "description": "Hurray! Hurray! Celebrate 20 years of Junie B. Jones! Meet Junie B. Jones! The B. Stands for Beatrice. Except Junie B. doesn't like Beatrice. She just likes B and that's all. It's the first day of kindergarten. But Junie B. did not like riding the bus to school. Only guess what? Junie B. is an excellent hider. So, at the end of the day—when everyone lines up to go—home . . . Junie B. doesn't. With over 50 MILLION copies in print and translated into more than a dozen languages, the New York York Times Bestselling Junie B. Jones series has kept kids laughing—and reading—for 20 years! Now, for the first time ever, the book that started it all, Junie B. Jones and the Stupid Smelly Bus , is available in a full-color jacketed hardcover edition. With original, never before seen material—including full color artwork, photographs, a behind the scene peek at illustrator Denise Brunkus's sketch pad, and a conversation between Barbara Park and Junie B. Jones herself—this special collector's edition is a treat for both new readers and Junie B. fans of all ages!",
+        "subjects": [
+          "Juvenile Fiction / School & Education",
+          "Juvenile Fiction / Humorous Stories",
+          "Juvenile Fiction / Readers / Chapter Books"
+        ],
+        "publicationYear": 2012,
+        "pageCount": 96,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=WgNlrNinOk4C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73lrdQuGeJdvWX39yCf-BaUahvcRMdla9nim8cHNun0-PpNpT68x0Ez3YNqwKpXOtLQmZ0Ot43x1BeQgnSSSjKUowCJGUbqXjsRMcS_uEezo3TqAsm6NA95lqkuOdAPoV6lcgHo&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "school",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "reluctant-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "beginner",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Junie B. Jones",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:19:50.491Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:19:50.491Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
       "id": "bs_f46103b8-de96-4825-8b43-0692d8336045",
       "book": {
         "id": "google-books:aLJAnQEACAAJ",
@@ -6348,10 +7996,158 @@
       ],
       "audit": {
         "createdAt": "2026-09-20T13:12:15.476Z",
-        "updatedAt": "2026-09-20T13:12:37.556Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:37.556Z",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_fa453a08-356a-40a6-8e85-a2ce5b9cf55e",
+      "book": {
+        "id": "google-books:TZoyAAAAQBAJ",
+        "title": "Keeper of the Lost Cities",
+        "authors": [
+          "Shannon Messenger"
+        ],
+        "isbn10": "1442445947",
+        "isbn13": "9781442445949",
+        "description": "A New York Times bestselling series A USA TODAY bestselling series A California Young Reader Medal–winning series In this riveting series opener, a telepathic girl must figure out why she is the key to her brand-new world before the wrong person finds the answer first. Twelve-year-old Sophie has never quite fit into her life. She’s skipped multiple grades and doesn’t really connect with the older kids at school, but she’s not comfortable with her family, either. The reason? Sophie’s a Telepath, someone who can read minds. No one knows her secret—at least, that’s what she thinks… But the day Sophie meets Fitz, a mysterious (and adorable) boy, she learns she’s not alone. He’s a Telepath too, and it turns out the reason she has never felt at home is that, well…she isn’t. Fitz opens Sophie’s eyes to a shocking truth, and she is forced to leave behind her family for a new life in a place that is vastly different from what she has ever known. But Sophie still has secrets, and they’re buried deep in her memory for good reason: The answers are dangerous and in high-demand. What is her true identity, and why was she hidden among humans? The truth could mean life or death—and time is running out.",
+        "subjects": [
+          "FICTION / Fantasy / General",
+          "Juvenile Fiction / General",
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Fantasy / Faeries (Fairies, Pixies, Elves, etc.)",
+          "Juvenile Fiction / Social Themes / Friendship",
+          "Juvenile Fiction / Paranormal, Occult & Supernatural"
+        ],
+        "publicationYear": 2013,
+        "pageCount": 512,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/publisher/content?id=TZoyAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72ocCBoU9_1q3vPABgSIK1naPgGS7iyGK0AIcbnliw68yWlOCg6s9Moq_09MVuQSkVMGHMLwub0LSrRUVm5K48HKlNgLypib3Zy9zR8zyVyPLr-cxds4EuNasshbCwyb9ECg3uZ&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Keeper of the Lost Cities",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_fa453a08-356a-40a6-8e85-a2ce5b9cf55e",
+          "targetBookId": "bs_8be39af0-4020-4cd3-8752-6233c60fc64e",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Shared adventure, magic appeal"
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T13:19:45.462Z",
+        "updatedAt": "2026-09-20T13:22:58.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T13:22:58.460Z",
         "approvedBy": "ai:book-scout-curator"
       }
     },
