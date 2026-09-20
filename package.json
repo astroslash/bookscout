@@ -18,9 +18,11 @@
     "catalog:stats": "tsx scripts/catalog.ts stats",
     "catalog:approve": "tsx scripts/catalog.ts approve",
     "catalog:approve-submission": "tsx scripts/catalog.ts approve-submission",
+    "catalog:mark-human-reviewed": "tsx scripts/catalog.ts mark-human-reviewed",
     "catalog:check-import": "tsx scripts/import-catalog.ts check",
     "catalog:stage-import": "tsx scripts/import-catalog.ts stage",
-    "catalog:submit-import": "tsx scripts/import-catalog.ts submit"
+    "catalog:submit-import": "tsx scripts/import-catalog.ts submit",
+    "catalog:approve-ready-ai": "tsx scripts/import-catalog.ts approve-ai"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",

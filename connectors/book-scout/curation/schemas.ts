@@ -11,10 +11,16 @@ export const auditSchema = z.object({
   updatedAt: timestampSchema,
   createdBy: actorIdSchema,
   updatedBy: actorIdSchema,
+  approvedAt: timestampSchema.optional(),
+  approvedBy: actorIdSchema.optional(),
   reviewedAt: timestampSchema.optional(),
   reviewedBy: actorIdSchema.optional(),
-}).strict().refine((audit) => Boolean(audit.reviewedAt) === Boolean(audit.reviewedBy), {
+}).strict().refine((audit) => Boolean(audit.approvedAt) === Boolean(audit.approvedBy), {
+  message: "Approval timestamp and approver ID must be supplied together.",
+}).refine((audit) => Boolean(audit.reviewedAt) === Boolean(audit.reviewedBy), {
   message: "Review timestamp and reviewer ID must be supplied together.",
+}).refine((audit) => !audit.reviewedBy || audit.reviewedBy.startsWith("human:"), {
+  message: "Human review requires a human: actor ID.",
 });
 
 export const provenanceSchema = z.object({
@@ -28,6 +34,8 @@ export const provenanceSchema = z.object({
   message: "External values require a source.",
 }).refine((item) => !item.reviewerId || item.reviewed === true, {
   message: "A field reviewer requires reviewed: true.",
+}).refine((item) => !item.reviewerId || item.reviewerId.startsWith("human:"), {
+  message: "Human field review requires a human: actor ID.",
 }).refine((item) => !item.assistance || item.sourceType === "book_scout_classification", {
   message: "AI assistance applies only to Book Scout classifications.",
 });

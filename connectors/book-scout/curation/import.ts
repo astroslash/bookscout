@@ -45,7 +45,7 @@ function editorialSignature(profile: CuratedBookProfile): string {
   (key, value: unknown) => key === "reviewed" || key === "reviewerId" ? undefined : value);
 }
 
-function classificationProvenances(book: ProposedCatalog["books"][number]) {
+function classificationProvenances(book: ProposedCatalog["books"][number] | CuratedBookProfile) {
   return [
     ...book.topics.map((item) => item.provenance),
     ...book.readerFitTags.map((item) => item.provenance),
@@ -157,4 +157,58 @@ export function submitImport(source: unknown, value: unknown,
     submitted += 1;
   }
   return { source: catalog, submitted, skippedUnenriched, deferredRelationships };
+}
+
+export type AiApprovalReport = {
+  source: CatalogSource;
+  approved: Array<{ ref: string; catalogId: string; submissionId: string }>;
+  skipped: Array<{ ref: string; reason: string }>;
+};
+
+export function approveReadyAiImport(source: unknown, value: unknown, approverId: string,
+  service = new CuratedCatalogService(), now = new Date()): AiApprovalReport {
+  if (!/^ai:[a-z0-9:_-]{1,60}$/.test(approverId)) {
+    throw new Error("Bulk AI approver ID must start with ai:.");
+  }
+  const dataset = validateProposedCatalog(value);
+  let catalog = service.validate(source);
+  const approved: AiApprovalReport["approved"] = [];
+  const skipped: AiApprovalReport["skipped"] = [];
+  for (const entry of dataset.books) {
+    const key = titleAuthorKey(entry.title, entry.author);
+    const seed = catalog.seeds.find((item) => titleAuthorKey(item.title, item.author) === key);
+    if (!seed) {
+      skipped.push({ ref: entry.ref, reason: "Seed not staged" });
+      continue;
+    }
+    if (seed.match?.status !== "matched" || !seed.book ||
+      !seed.book.id.startsWith("google-books:") ||
+      !seed.match.candidateIds.includes(seed.book.id)) {
+      skipped.push({ ref: entry.ref, reason: "Google Books match unresolved or ambiguous" });
+      continue;
+    }
+    const submission = catalog.submissions.find((item) =>
+      item.proposed.id === seed.id && item.state === "needs_review");
+    if (!submission) {
+      skipped.push({ ref: entry.ref, reason: "No pending submission" });
+      continue;
+    }
+    if (JSON.stringify(submission.proposed.book) !== JSON.stringify(seed.book)) {
+      skipped.push({ ref: entry.ref, reason: "Submission provider book differs from selected seed edition" });
+      continue;
+    }
+    const classification = classificationProvenances(submission.proposed);
+    if (!classification.length || classification.some((item) =>
+      item.assistance !== "ai_assisted" || item.reviewed === true || item.reviewerId)) {
+      skipped.push({ ref: entry.ref, reason: "Submission contains non-AI or human-reviewed classification" });
+      continue;
+    }
+    try {
+      catalog = service.approve(catalog, submission.id, approverId, now);
+      approved.push({ ref: entry.ref, catalogId: seed.id, submissionId: submission.id });
+    } catch (error) {
+      skipped.push({ ref: entry.ref, reason: error instanceof Error ? error.message : "Approval validation failed" });
+    }
+  }
+  return { source: catalog, approved, skipped };
 }

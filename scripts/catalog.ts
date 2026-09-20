@@ -57,16 +57,21 @@ async function main() {
     }
     const draft = service.createDraft(seed.book, "system:developer", new Date(), seed.id);
     const submitted = service.submit(catalog, draft, "system:developer");
-    const approved = service.approve(submitted, submitted.submissions.at(-1)!.id, "system:developer");
+    const approved = service.approve(submitted, submitted.submissions.at(-1)!.id, "ai:book-scout-curator");
     await saveSource(approved);
     process.stdout.write(`Approved factual catalog record ${seed.id}. Run npm run catalog:build.\n`);
   } else if (command === "approve-submission") {
-    if (args.length !== 2) throw new Error("Usage: npm run catalog:approve-submission -- <submission-id> <reviewer-id>");
+    if (args.length !== 2) throw new Error("Usage: npm run catalog:approve-submission -- <submission-id> <ai:actor|human:actor>");
     const approved = service.approve(source, args[0], args[1]);
     await saveSource(approved);
-    process.stdout.write(`Approved reviewed submission ${args[0]}. Run npm run catalog:build.\n`);
+    process.stdout.write(`Approved submission ${args[0]} by ${args[1]}. Run npm run catalog:build.\n`);
+  } else if (command === "mark-human-reviewed") {
+    if (args.length !== 2) throw new Error("Usage: npm run catalog:mark-human-reviewed -- <catalog-id> <human:actor>");
+    const reviewed = service.markHumanReviewed(source, args[0], args[1]);
+    await saveSource(reviewed);
+    process.stdout.write(`Recorded human review of ${args[0]} by ${args[1]}. Run npm run catalog:build.\n`);
   } else {
-    throw new Error("Commands: add, enrich, select-edition, validate, stats, approve, approve-submission.");
+    throw new Error("Commands: add, enrich, select-edition, validate, stats, approve, approve-submission, mark-human-reviewed.");
   }
 }
 

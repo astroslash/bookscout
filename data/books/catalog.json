@@ -29,8 +29,8 @@
         "updatedAt": "2026-09-20T03:30:30.409Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer",
-        "reviewedAt": "2026-09-20T03:30:30.409Z",
-        "reviewedBy": "system:developer"
+        "approvedAt": "2026-09-20T03:30:30.409Z",
+        "approvedBy": "system:developer"
       }
     },
     {
@@ -61,8 +61,8 @@
         "updatedAt": "2026-09-20T03:30:29.952Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer",
-        "reviewedAt": "2026-09-20T03:30:29.952Z",
-        "reviewedBy": "system:developer"
+        "approvedAt": "2026-09-20T03:30:29.952Z",
+        "approvedBy": "system:developer"
       }
     },
     {
@@ -93,8 +93,8 @@
         "updatedAt": "2026-09-20T03:30:30.879Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer",
-        "reviewedAt": "2026-09-20T03:30:30.879Z",
-        "reviewedBy": "system:developer"
+        "approvedAt": "2026-09-20T03:30:30.879Z",
+        "approvedBy": "system:developer"
       }
     },
     {
@@ -125,8 +125,8 @@
         "updatedAt": "2026-09-20T03:30:29.483Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer",
-        "reviewedAt": "2026-09-20T03:30:29.483Z",
-        "reviewedBy": "system:developer"
+        "approvedAt": "2026-09-20T03:30:29.483Z",
+        "approvedBy": "system:developer"
       }
     },
     {
@@ -157,8 +157,8 @@
         "updatedAt": "2026-09-20T03:30:29.012Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer",
-        "reviewedAt": "2026-09-20T03:30:29.012Z",
-        "reviewedBy": "system:developer"
+        "approvedAt": "2026-09-20T03:30:29.012Z",
+        "approvedBy": "system:developer"
       }
     }
   ]

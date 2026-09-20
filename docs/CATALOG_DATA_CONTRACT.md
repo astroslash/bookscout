@@ -69,7 +69,7 @@ The `id` and timestamps above illustrate the **internal shape**; the external da
 }
 ```
 
-These identifiers and book facts are fictional schema examples. `book` is the existing normalized provider `Book`, not a freeform editorial object. Its required fields are `id`, `title`, `authors` (array), and `subjects` (array). Optional provider facts are `subtitle`, `isbn10`, `isbn13`, `description`, `publicationYear`, `pageCount`, `language`, `coverUrl`, `popularity`, `readingLevel`, `content`, and `attributes`; the provider or a verified manual edition selection supplies them. ISBN-10 and ISBN-13 must have valid checksums. The seed `match` may have status `matched`, `ambiguous`, or `unresolved`, confidence 0–1, and up to five candidate IDs. Google enrichment generates these diagnostics; ambiguous results do not receive a `book` automatically. `audit` may additionally have paired `reviewedAt` and `reviewedBy`.
+These identifiers and book facts are fictional schema examples. `book` is the existing normalized provider `Book`, not a freeform editorial object. Its required fields are `id`, `title`, `authors` (array), and `subjects` (array). Optional provider facts are `subtitle`, `isbn10`, `isbn13`, `description`, `publicationYear`, `pageCount`, `language`, `coverUrl`, `popularity`, `readingLevel`, `content`, and `attributes`; the provider or a verified manual edition selection supplies them. ISBN-10 and ISBN-13 must have valid checksums. The seed `match` may have status `matched`, `ambiguous`, or `unresolved`, confidence 0–1, and up to five candidate IDs. Google enrichment generates these diagnostics; ambiguous results do not receive a `book` automatically. `audit` may additionally have paired `approvedAt`/`approvedBy` for production approval and paired `reviewedAt`/`reviewedBy` only for human review.
 
 ## 3. Curated profile and review envelope
 
@@ -235,20 +235,21 @@ The import checker validates every target and detects duplicate/symmetric links.
 
 ## 9. Provenance, review, and identity
 
-Provenance is a strict object with `sourceType` **required** and optional `source` (1–120 characters), `contributorId` (opaque actor ID), `assistance` (only `ai_assisted`), `reviewed` (boolean), and `reviewerId` (opaque actor ID). Actor IDs follow `^[a-z][a-z0-9:_-]{2,63}$`. `reviewerId` requires `reviewed: true`. `assistance` is allowed only on Book Scout classifications. For a classification in an external proposal, `reviewed: true` and `reviewerId` are forbidden; the review service sets these after approval.
+Provenance is a strict object with `sourceType` **required** and optional `source` (1–120 characters), `contributorId` (opaque actor ID), `assistance` (only `ai_assisted`), `reviewed` (boolean), and `reviewerId` (opaque actor ID). Actor IDs follow `^[a-z][a-z0-9:_-]{2,63}$`. `reviewed` means **human-reviewed**; `reviewerId` requires `reviewed: true` and a `human:` actor ID. `assistance` is allowed only on Book Scout classifications. For a classification in an external proposal, `reviewed: true` and `reviewerId` are forbidden. Production approval is recorded separately in the profile/submission audit as `approvedAt` and `approvedBy`.
 
 | Situation | Encoding |
 | --- | --- |
 | Google Books bibliographic fact | Keep it in provider-supplied `book` after enrichment; do not copy it as a Book Scout classification. The `google-books:` ID identifies its provider. |
 | Verified external age/grade fact | `{ "sourceType":"external", "source":"Specific authoritative citation", "reviewed":true }` only after actual verification. |
 | AI-assisted editorial judgment before review | `{ "sourceType":"book_scout_classification", "assistance":"ai_assisted", "reviewed":false }`. `contributorId` may be omitted. |
-| Same judgment after human approval | The service retains `assistance:"ai_assisted"` and sets `reviewed:true` and `reviewerId` to the opaque reviewer ID. |
+| Same judgment after AI-curator production approval | Field provenance remains `{ "sourceType":"book_scout_classification", "assistance":"ai_assisted", "reviewed":false }`; profile audit has `approvedBy:"ai:book-scout-curator"` and `approvedAt`, with no `reviewedAt`/`reviewedBy`. |
+| Same judgment after later human review | The service retains `assistance:"ai_assisted"` and the original AI `approvedBy`, then sets field `reviewed:true`, `reviewerId:"human:<opaque-id>"`, and audit `reviewedAt`/`reviewedBy`. |
 | Unknown | Omit the field or trait key. Do not emit `null` or `0` as unknown. |
 | Derived value | `{ "sourceType":"derived", "source":"Named derivation" }` where a field's schema permits generic provenance; no current automatic catalog derivation is implied. |
 
 For externally researched but **unverified** claims, omit the value until verified; `external` with a source string alone records a source but does not certify its accuracy. The current normalized `Book` model does not carry field-level provenance for each Google value. Do not claim it does.
 
-Seed and submission states are exactly `seeded`, `enriched`, `needs_review`, `approved`, and `rejected`. `seeded` means a title/author awaits a provider match; `enriched` means a confident provider book was attached; `needs_review` means an ambiguous match or an open proposal; `approved` means a reviewed record is in the approved source array; `rejected` means a proposal was declined. A proposed AI-assisted classification must be in a **`needs_review` submission** with its field provenance `reviewed: false`. `CuratedBookProfile` itself has no `state` property. Approval adds paired `audit.reviewedAt`/`audit.reviewedBy` on the profile; `reviewerId` and review timestamps are generated by the review operation, not by the dataset creator. The generated runtime includes only approved profiles.
+Seed and submission states are exactly `seeded`, `enriched`, `needs_review`, `approved`, and `rejected`. `seeded` means a title/author awaits a provider match; `enriched` means a confident provider book was attached; `needs_review` means an ambiguous match or an open proposal; `approved` means authorized for production, without implying a human reviewed it; `rejected` means a proposal was declined. A proposed AI-assisted classification is a **`needs_review` submission** with field `reviewed: false`. `CuratedBookProfile` itself has no `state` property. Production approval adds paired `audit.approvedAt`/`audit.approvedBy`. Human approval additionally sets paired `audit.reviewedAt`/`audit.reviewedBy` and field `reviewed:true`/`reviewerId`; AI approval does not. The generated runtime includes only approved profiles.
 
 ## 10. Safe import and validation workflow
 
@@ -266,13 +267,16 @@ npm run catalog:stats
 
 `catalog:stage-import` adds only missing title/author seeds to `data/books/catalog.source.json`, preserving existing IDs. It does not approve data or change `catalog.json`. `catalog:enrich` uses the existing Google Books provider and requires `GOOGLE_BOOKS_API_KEY` in `.env.local`. It may mark an edition ambiguous and leave `book` unset. Inspect the listed candidate Google IDs and select a correct edition with `npm run catalog:select-edition -- <seed-id> <listed-google-books-id>`. The command fetches and normalizes that specific edition through the existing provider, requires the seed title and author to match, and leaves the record unapproved. If no listed candidate is correct, leave the seed pending rather than force a match. `catalog:submit-import` submits ready profiles; it reports and skips entries without a selected provider book. It creates `needs_review` submissions only. It defers links to unapproved targets and reports their count. Both staging and submission are repeatable; rerunning them preserves stable IDs and skips unchanged/open proposals.
 
-For each submitted profile, a human reviews the provider edition, each editorial classification, sources, tier, and proposed relationships. Then the local developer/reviewer may run:
+For the initial catalog, the owner has delegated editorial production approval to an AI curator. The AI curator may approve only submissions tied to a resolved Google Books seed. Preview a proposal-scoped batch first; preview makes no changes and reports each approval and skip:
 
 ```sh
-npm run catalog:approve-submission -- <submission-uuid> <opaque-reviewer-id>
+npm run catalog:approve-ready-ai -- path/to/proposed-catalog.json ai:book-scout-curator
+npm run catalog:approve-ready-ai -- path/to/proposed-catalog.json ai:book-scout-curator --apply
 ```
 
-The command invokes the existing domain approval method; it does **not** authenticate or prove a human reviewed anything. It must only be run after actual review. The older `catalog:approve -- <seed-id>` approves a factual high-confidence seed without editorial classifications and is **not** a shortcut for this workflow. Once target books are approved, rerun `catalog:submit-import` to create proposals for deferred relationships, review those proposals, and approve them. Then run:
+The `--apply` form writes approved records to `catalog.source.json`. It skips ambiguous/unresolved matches, missing submissions, changed provider editions, non-AI classifications, and validation failures; the JSON report identifies every approved and skipped proposal ref. It never changes `reviewed:false` to true. For one submission, use `npm run catalog:approve-submission -- <submission-uuid> ai:book-scout-curator`. The older `catalog:approve -- <seed-id>` approves a factual high-confidence seed without editorial classifications. Neither command authenticates the actor; the owner controls local command execution.
+
+Once target books are approved, rerun `catalog:submit-import` to create proposals for deferred relationships, preview and apply AI approval again, and inspect the report. If a human later reviews an already AI-approved record, use `npm run catalog:mark-human-reviewed -- <catalog-id> human:<opaque-id>`. This preserves the original AI approver and records the human reviewer separately. A human can also approve a pending submission directly with `npm run catalog:approve-submission -- <submission-uuid> human:<opaque-id>` after actual review. Then run:
 
 ```sh
 npm run catalog:validate
@@ -285,4 +289,4 @@ Review the source diff before committing. `catalog:build` writes deterministic `
 
 ## 11. Current starter records and schema limits
 
-The current source has 12 starter seeds; five factual records are approved and seven have ambiguous Google edition matches. Existing matching by normalized title/author lets an incoming proposal reuse those seeds; the external creator should not assign new IDs to them. The proposal checker catches duplicate title/author pairs **within its own file**. Staging handles overlap with existing seeds. It cannot detect that two different editions with different titles are the same literary work; edition review remains necessary. Series name normalization is comparison-only, and known standalone versus unknown series is not representable. No curator UI, auth, database, bulk approval, or automatic human-review claim exists.
+The current source has 12 starter seeds; five factual records are approved and seven have ambiguous Google edition matches. Their legacy `system:developer` approval identity was preserved when the audit fields were separated; no human review is claimed for them. Existing matching by normalized title/author lets an incoming proposal reuse those seeds; the external creator should not assign new IDs to them. The proposal checker catches duplicate title/author pairs **within its own file**. Staging handles overlap with existing seeds. It cannot detect that two different editions with different titles are the same literary work; edition review remains necessary. Series name normalization is comparison-only, and known standalone versus unknown series is not representable. There is no curator UI, auth, database, or automatic human-review claim.

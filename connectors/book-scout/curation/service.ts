@@ -30,6 +30,21 @@ function setFieldReview(profile: CuratedBookProfile, reviewerId?: string): Curat
   return curatedBookProfileSchema.parse(copy);
 }
 
+function classificationProvenances(profile: CuratedBookProfile) {
+  return [
+    ...profile.topics.map((item) => item.provenance),
+    ...profile.readerFitTags.map((item) => item.provenance),
+    ...Object.values(profile.traits).filter((item) => item !== undefined).map((item) => item.provenance),
+    ...profile.relationships.map((item) => item.provenance),
+    profile.series?.provenance,
+    profile.readingFit?.difficulty?.provenance,
+    ...[profile.readingFit?.minimumAge, profile.readingFit?.maximumAge,
+      profile.readingFit?.minimumGrade, profile.readingFit?.maximumGrade]
+      .filter((item) => item?.provenance.sourceType === "book_scout_classification")
+      .map((item) => item!.provenance),
+  ].filter((item) => item !== undefined);
+}
+
 function titleAuthorKey(title: string, author: string): string {
   return `${catalogWords(title)}|${catalogWords(author)}`;
 }
@@ -153,16 +168,30 @@ export class CuratedCatalogService {
     });
   }
 
-  approve(source: unknown, submissionId: string, reviewerId: string, now = new Date()): CatalogSource {
+  approve(source: unknown, submissionId: string, approverId: string, now = new Date()): CatalogSource {
     const catalog = this.validate(source);
-    const reviewer = actorIdSchema.parse(reviewerId);
+    const approver = actorIdSchema.parse(approverId);
+    if (!approver.startsWith("ai:") && !approver.startsWith("human:")) {
+      throw new Error("Approver ID must start with ai: or human:.");
+    }
+    const human = approver.startsWith("human:");
     const submission = catalog.submissions.find((item) => item.id === submissionId);
     if (!submission || submission.state !== "needs_review") throw new Error("Submission is not ready for approval.");
+    if (!human) {
+      const seed = catalog.seeds.find((item) => item.id === submission.proposed.id);
+      if (!seed?.book || seed.match?.status !== "matched" ||
+        !seed.book.id.startsWith("google-books:") ||
+        !seed.match.candidateIds.includes(seed.book.id) ||
+        JSON.stringify(seed.book) !== JSON.stringify(submission.proposed.book)) {
+        throw new Error("AI approval requires a resolved Google Books seed matching the submission.");
+      }
+    }
     const timestamp = now.toISOString();
     const approved = curatedBookProfileSchema.parse({
-      ...setFieldReview(submission.proposed, reviewer),
-      audit: { ...submission.proposed.audit, updatedAt: timestamp, updatedBy: reviewer,
-        reviewedAt: timestamp, reviewedBy: reviewer },
+      ...setFieldReview(submission.proposed, human ? approver : undefined),
+      audit: { ...submission.proposed.audit, updatedAt: timestamp, updatedBy: approver,
+        approvedAt: timestamp, approvedBy: approver,
+        ...(human ? { reviewedAt: timestamp, reviewedBy: approver } : {}) },
     });
     return this.validate({
       ...catalog,
@@ -170,10 +199,27 @@ export class CuratedCatalogService {
       approved: [...catalog.approved.filter((item) => item.id !== approved.id), approved],
       submissions: catalog.submissions.map((item) => item.id === submissionId ? {
         ...item, state: "approved",
-        audit: { ...item.audit, updatedAt: timestamp, updatedBy: reviewer,
-          reviewedAt: timestamp, reviewedBy: reviewer },
+        audit: { ...item.audit, updatedAt: timestamp, updatedBy: approver,
+          approvedAt: timestamp, approvedBy: approver,
+          ...(human ? { reviewedAt: timestamp, reviewedBy: approver } : {}) },
       } : item),
     });
+  }
+
+  markHumanReviewed(source: unknown, catalogId: string, reviewerId: string, now = new Date()): CatalogSource {
+    const catalog = this.validate(source);
+    const reviewer = actorIdSchema.parse(reviewerId);
+    if (!reviewer.startsWith("human:")) throw new Error("Human reviewer ID must start with human:.");
+    const profile = catalog.approved.find((item) => item.id === catalogId);
+    if (!profile) throw new Error("Approved catalog record not found.");
+    const timestamp = now.toISOString();
+    const reviewed = curatedBookProfileSchema.parse({
+      ...setFieldReview(profile, reviewer),
+      audit: { ...profile.audit, updatedAt: timestamp, updatedBy: reviewer,
+        reviewedAt: timestamp, reviewedBy: reviewer },
+    });
+    return this.validate({ ...catalog, approved: catalog.approved.map((item) =>
+      item.id === catalogId ? reviewed : item) });
   }
 
   reject(source: unknown, submissionId: string, reviewerId: string, now = new Date()): CatalogSource {
@@ -189,7 +235,7 @@ export class CuratedCatalogService {
       submissions: catalog.submissions.map((item) => item.id === submissionId ? {
         ...item, state: "rejected",
         audit: { ...item.audit, updatedAt: timestamp, updatedBy: reviewer,
-          reviewedAt: timestamp, reviewedBy: reviewer },
+          ...(reviewer.startsWith("human:") ? { reviewedAt: timestamp, reviewedBy: reviewer } : {}) },
       } : item),
     });
   }
@@ -214,8 +260,20 @@ export class CuratedCatalogService {
     for (const profile of catalog.approved) {
       if (approvedIds.has(profile.id)) throw new Error(`Duplicate approved catalog ID: ${profile.id}`);
       approvedIds.add(profile.id);
-      if (!profile.audit.reviewedAt || !profile.audit.reviewedBy) {
-        throw new Error(`Approved catalog record lacks review metadata: ${profile.id}`);
+      if (!profile.audit.approvedAt || !profile.audit.approvedBy) {
+        throw new Error(`Approved catalog record lacks approval metadata: ${profile.id}`);
+      }
+      if (profile.audit.approvedBy.startsWith("human:") &&
+        profile.audit.reviewedBy !== profile.audit.approvedBy) {
+        throw new Error(`Human-approved record lacks matching human review: ${profile.id}`);
+      }
+      if (profile.audit.approvedBy.startsWith("ai:") && !profile.audit.reviewedAt &&
+        classificationProvenances(profile).some((item) => item.reviewed === true || item.reviewerId)) {
+        throw new Error(`AI-approved record falsely claims human review: ${profile.id}`);
+      }
+      if (profile.audit.reviewedBy && classificationProvenances(profile).some((item) =>
+        item.reviewed !== true || !item.reviewerId?.startsWith("human:"))) {
+        throw new Error(`Human-reviewed record has unreviewed classifications: ${profile.id}`);
       }
       for (const isbn of [profile.book.isbn13, profile.book.isbn10]) {
         if (!isbn) continue;

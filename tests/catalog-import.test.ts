@@ -39,7 +39,7 @@ describe("proposed catalog import gate", () => {
       } }] } : book) })).toThrow();
     expect(() => validateProposedCatalog({ ...dataset, books: dataset.books.map((book, index) =>
       index === 0 ? { ...book, topics: [{ ...book.topics[0], provenance: {
-        ...book.topics[0].provenance, reviewed: true, reviewerId: "reviewer_001",
+        ...book.topics[0].provenance, reviewed: true, reviewerId: "human:reviewer_001",
       } }] } : book) })).toThrow(/unreviewed/);
   });
 

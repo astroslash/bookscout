@@ -24,7 +24,7 @@ const draft = (id: string, title?: string, author?: string) =>
   service.createDraft(volume(id, title, author), "system:developer", now);
 const approved = (profile: ReturnType<typeof draft>) => {
   const submitted = service.submit(source, profile, "system:developer", now);
-  return service.approve(submitted, submitted.submissions[0].id, "reviewer_001", now).approved[0];
+  return service.approve(submitted, submitted.submissions[0].id, "human:reviewer_001", now).approved[0];
 };
 
 describe("catalog taxonomy and validation", () => {
@@ -114,7 +114,7 @@ describe("relationships, similarity, and ranking integration", () => {
     const first = approved(draft("a"));
     const second = approved(draft("b", "Hatchet", "Gary Paulsen"));
     const relation = { sourceBookId: first.id, targetBookId: second.id, type: "similar_to" as const,
-      reasons: [], provenance };
+      reasons: [], provenance: { ...provenance, reviewed: true, reviewerId: "human:reviewer_001" } };
     expect(() => service.build({ ...source, approved: [{ ...first, relationships: [{ ...relation, targetBookId: draft("x").id }] }, second] }))
       .toThrow(/Broken relationship/);
     expect(() => service.build({ ...source, approved: [{ ...first, relationships: [{ ...relation, targetBookId: first.id }] }, second] }))

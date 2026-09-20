@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 and the Phase 6.5 curated catalog foundation are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, optional commerce link boundary, and a small reviewed catalog layer.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 and the Phase 6.5 curated catalog foundation are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, optional commerce link boundary, and a small curated catalog layer.
 
 ## Local setup
 
@@ -62,9 +62,9 @@ Set `AMAZON_ASSOCIATES_TAG` to your **Amazon.com** Associates tracking ID in `.e
 
 ## Curated catalog foundation
 
-`data/books/catalog.source.json` holds 12 starter seeds, approved profiles, and separate submissions; `npm run catalog:build` validates it and generates `data/books/catalog.json`. `npm run catalog:check` verifies that the generated file is current. Five factual records are approved; seven seeds await edition selection because Google Books returned ambiguous matches. Subjective traits, age fit, topics, tiers, and relationships remain unknown until reviewed. Approved intelligence attaches to live Google Books candidates through a narrow repository interface and can improve the existing score and series diversification. The engine never reads files directly and keeps long-tail Google Books recommendations working. See [docs/CURATION.md](docs/CURATION.md) for commands, source format, and review workflow.
+`data/books/catalog.source.json` holds 12 starter seeds, approved profiles, and separate submissions; `npm run catalog:build` validates it and generates `data/books/catalog.json`. `npm run catalog:check` verifies that the generated file is current. Five factual records are approved; seven seeds await edition selection because Google Books returned ambiguous matches. Subjective traits, age fit, topics, tiers, and relationships are currently absent. Approved intelligence attaches to live Google Books candidates through a narrow repository interface and can improve the existing score and series diversification. The engine never reads files directly and keeps long-tail Google Books recommendations working. See [docs/CURATION.md](docs/CURATION.md) for commands, source format, and review workflow.
 
-For an external initial dataset, use the [catalog data contract](docs/CATALOG_DATA_CONTRACT.md) and [JSON template](docs/CATALOG_DATA_TEMPLATE.json). `npm run catalog:check-import -- <path>` validates a proposal without modifying files or calling Google. `catalog:stage-import` adds seeds; `catalog:submit-import` creates unapproved editorial submissions after enrichment. AI-assisted judgments carry explicit unreviewed provenance until a human reviews and approves each submission.
+For an external initial dataset, use the [catalog data contract](docs/CATALOG_DATA_CONTRACT.md) and [JSON template](docs/CATALOG_DATA_TEMPLATE.json). `npm run catalog:check-import -- <path>` validates a proposal without modifying files or calling Google. `catalog:stage-import` adds seeds; `catalog:submit-import` creates unapproved editorial submissions after enrichment. An AI curator can approve resolved submissions for production while their AI-assisted classifications remain explicitly **not human-reviewed**; later human review is recorded separately.
 
 ## Future recommendation catalog
 
