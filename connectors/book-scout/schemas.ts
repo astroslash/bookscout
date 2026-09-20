@@ -34,6 +34,7 @@ export const recommendationResultSchema = z.object({
     book: bookSchema,
     matchScore: z.number().int().min(0).max(100),
     reasons: z.array(recommendationReasonSchema).min(1),
+    bookScoutUrl: z.url(),
   })),
 });
 

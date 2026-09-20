@@ -15,7 +15,7 @@ function setup() {
     authors: ["Example Author"],
     subjects: ["Mythology"],
   }]);
-  const provider: BookProvider = { search, getByISBN: vi.fn(), getByTitle: vi.fn() };
+  const provider: BookProvider = { search, getByISBN: vi.fn(), getById: vi.fn(), getByTitle: vi.fn() };
   const connector = createBookScoutConnector(provider);
   const registry = new ConnectorRegistry();
   registry.register(connector);

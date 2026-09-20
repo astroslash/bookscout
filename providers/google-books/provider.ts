@@ -3,7 +3,7 @@ import type { BookProvider } from "@/connectors/book-scout/provider";
 import type { Cache } from "@/platform/cache";
 import { InvalidInputError, ProviderError, RateLimitError } from "@/platform/errors";
 import { normalizeGoogleVolume } from "./normalize";
-import { googleVolumesResponseSchema } from "./schemas";
+import { googleVolumeSchema, googleVolumesResponseSchema } from "./schemas";
 
 const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
 const SEARCH_TTL_SECONDS = 24 * 60 * 60;
@@ -59,6 +59,31 @@ export class GoogleBooksProvider implements BookProvider {
     });
   }
 
+  async getById(id: string): Promise<Book | null> {
+    const volumeId = id.startsWith("google-books:") ? id.slice("google-books:".length) : "";
+    if (!/^[A-Za-z0-9_-]{1,100}$/.test(volumeId)) {
+      throw new InvalidInputError("Book ID is invalid.");
+    }
+    return this.cached(`id:${volumeId}`, LOOKUP_TTL_SECONDS, async () => {
+      const url = new URL(`${BASE_URL}/${encodeURIComponent(volumeId)}`);
+      url.searchParams.set("key", this.apiKey);
+      const response = await this.fetchResponse(url);
+      if (response.status === 404) return null;
+      if (!response.ok) throw new ProviderError("Google Books is unavailable.");
+      let data: unknown;
+      try {
+        data = await response.json();
+      } catch {
+        throw new ProviderError("Google Books returned an invalid response.");
+      }
+      const parsed = googleVolumeSchema.safeParse(data);
+      if (!parsed.success || parsed.data.id !== volumeId) {
+        throw new ProviderError("Google Books returned an invalid response.");
+      }
+      return normalizeGoogleVolume(parsed.data);
+    });
+  }
+
   async getByTitle(title: string, author?: string): Promise<Book | null> {
     const searchTitle = boundedText(title, "Title");
     const searchAuthor = author === undefined ? undefined : boundedText(author, "Author");
@@ -83,13 +108,7 @@ export class GoogleBooksProvider implements BookProvider {
     url.searchParams.set("projection", "full");
     url.searchParams.set("key", this.apiKey);
 
-    let response: Response;
-    try {
-      response = await this.fetcher(url);
-    } catch {
-      throw new ProviderError("Google Books is unavailable.");
-    }
-    if (response.status === 429) throw new RateLimitError("Google Books rate limit exceeded.");
+    const response = await this.fetchResponse(url);
     if (!response.ok) throw new ProviderError("Google Books is unavailable.");
 
     let data: unknown;
@@ -103,6 +122,17 @@ export class GoogleBooksProvider implements BookProvider {
     return (parsed.data.items ?? [])
       .map(normalizeGoogleVolume)
       .filter((book): book is Book => book !== null);
+  }
+
+  private async fetchResponse(url: URL): Promise<Response> {
+    try {
+      const response = await this.fetcher(url);
+      if (response.status === 429) throw new RateLimitError("Google Books rate limit exceeded.");
+      return response;
+    } catch (error) {
+      if (error instanceof RateLimitError) throw error;
+      throw new ProviderError("Google Books is unavailable.");
+    }
   }
 }
 

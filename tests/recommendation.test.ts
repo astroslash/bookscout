@@ -16,7 +16,7 @@ function candidate(item: Book, matchedInterests: string[] = [], matchedLikedBook
 }
 
 function provider(search: (query: string) => Promise<Book[]>): BookProvider {
-  return { search, getByISBN: vi.fn(), getByTitle: vi.fn() };
+  return { search, getByISBN: vi.fn(), getById: vi.fn(), getByTitle: vi.fn() };
 }
 
 const profile = recommendationInputSchema.parse({
@@ -171,6 +171,7 @@ describe("diversification and service", () => {
     expect(result.recommendations.map((item) => item.book.id)).not.toContain("liked");
     expect(new Set(result.recommendations.map((item) => item.book.id)).size).toBe(5);
     expect(result.recommendations.every((item) => item.reasons.length > 0 && item.matchScore >= 0 && item.matchScore <= 100)).toBe(true);
+    expect(result.recommendations.every((item) => item.bookScoutUrl.startsWith("https://bookscout-iota.vercel.app/book/"))).toBe(true);
   });
 
   it("rejects invalid input before provider calls", async () => {

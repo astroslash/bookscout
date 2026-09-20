@@ -4,6 +4,7 @@ import { diversifyCandidates } from "./diversify";
 import { recommendationInputSchema, recommendationResultSchema, type RecommendationResult } from "./schemas";
 import { defaultRecommendationConfig, passesHardFilters, scoreCandidate, validateRecommendationConfig, type RecommendationConfig } from "./scoring";
 import { InvalidInputError } from "@/platform/errors";
+import { bookScoutUrl } from "./links";
 
 export class BookScoutRecommendationService {
   constructor(
@@ -21,7 +22,7 @@ export class BookScoutRecommendationService {
     const scored = generated.candidates
       .filter((candidate) => passesHardFilters(candidate, input, this.config))
       .map((candidate) => scoreCandidate(candidate, input, generated.likedReferences, this.config));
-    const recommendations = diversifyCandidates(scored, input, this.config).map(({ book, matchScore, reasons }) => ({ book, matchScore, reasons }));
+    const recommendations = diversifyCandidates(scored, input, this.config).map(({ book, matchScore, reasons }) => ({ book, matchScore, reasons, bookScoutUrl: bookScoutUrl(book) }));
     return recommendationResultSchema.parse({ recommendations });
   }
 }

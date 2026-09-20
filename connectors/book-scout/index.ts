@@ -1,16 +1,14 @@
 import type { Connector } from "@/platform/connector";
-import { MemoryCache } from "@/platform/cache";
-import { createGoogleBooksProviderFromEnv } from "@/providers/google-books/provider";
 import { bookScoutManifest } from "./manifest";
+import { createBookScoutCatalog } from "./catalog";
+import { BookScoutDetailsService } from "./details";
 import type { BookProvider } from "./provider";
 import { BookScoutRecommendationService } from "./service";
 import { createBookScoutTools } from "./tools";
 
-const cache = new MemoryCache();
-
 export function createBookScoutConnector(provider?: BookProvider): Connector {
   const getService = () => new BookScoutRecommendationService(
-    provider ?? createGoogleBooksProviderFromEnv({ cache }),
+    provider ?? createBookScoutCatalog(),
   );
   return {
     manifest: bookScoutManifest,
@@ -22,3 +20,7 @@ export function createBookScoutConnector(provider?: BookProvider): Connector {
 }
 
 export const bookScoutConnector = createBookScoutConnector();
+
+export function createBookScoutDetailsService(provider?: BookProvider): BookScoutDetailsService {
+  return new BookScoutDetailsService(provider ?? createBookScoutCatalog());
+}

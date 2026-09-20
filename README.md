@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 4 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, and public REST/MCP recommendation routes. Book pages are a later phase.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 5 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, and canonical book pages.
 
 ## Local setup
 
@@ -33,8 +33,9 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 ## Current endpoints
 
 - `GET /api/book-scout` returns the registered manifest, tool list, and whether the catalog key is configured.
-- `POST /api/book-scout/recommend` calls the `recommend_books` tool through the generic REST adapter.
+- `POST /api/book-scout/recommend` calls the `recommend_books` tool through the generic REST adapter. Each recommendation includes `bookScoutUrl`.
 - `/mcp/book-scout` is the generic MCP Streamable HTTP route. It advertises and calls `recommend_books`.
+- `GET /book/[isbn]` displays normalized book metadata. Links use ISBN-13 when available, ISBN-10 next, and an encoded catalog ID for books without either ISBN.
 
 Try REST locally or against the deployed site:
 
@@ -44,11 +45,11 @@ curl -X POST https://bookscout-iota.vercel.app/api/book-scout/recommend \
   -d '{"age":11,"readingAbility":"advanced","interests":["Greek mythology","history","funny books"],"likedBooks":["Percy Jackson","Harry Potter"],"preferences":{"romance":"low"},"limit":5}'
 ```
 
-The response is `{ "success": true, "data": { "recommendations": [...] } }`. MCP clients connect to `https://bookscout-iota.vercel.app/mcp/book-scout` and call `recommend_books` with the same input object. REST and MCP share the same validated tool and service. Canonical book URLs belong to Phase 5.
+The response is `{ "success": true, "data": { "recommendations": [...] } }`. Each result has a `bookScoutUrl` you can open in a browser. MCP clients connect to `https://bookscout-iota.vercel.app/mcp/book-scout` and call `recommend_books` with the same input object. REST and MCP share the same validated tool and service.
 
 ## Google Books configuration
 
-Create a Google Cloud API key for the Books API and put it in `.env.local` as `GOOGLE_BOOKS_API_KEY`. Restrict the key to the Books API and set it as a server environment variable in Vercel before deploying live catalog calls. The provider validates input, requests `https://www.googleapis.com/books/v1/volumes`, and returns normalized books. It uses a 24-hour search TTL and a seven-day lookup TTL when a cache is injected. The current `MemoryCache` is process-local, so entries are not shared across Vercel instances.
+Create a Google Cloud API key for the Books API and put it in `.env.local` as `GOOGLE_BOOKS_API_KEY`. Restrict the key to the Books API and set it as a server environment variable in Vercel before deploying live catalog calls. `BOOK_SCOUT_BASE_URL` is optional; it sets the canonical origin in recommendation links and defaults to `https://bookscout-iota.vercel.app`. The provider validates input, requests `https://www.googleapis.com/books/v1/volumes`, and returns normalized books. It uses a 24-hour search TTL and a seven-day lookup TTL when a cache is injected. The current `MemoryCache` is process-local, so entries are not shared across Vercel instances.
 
 ## Adding a connector or provider
 

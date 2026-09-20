@@ -103,11 +103,19 @@ describe("GoogleBooksProvider", () => {
     expect(await provider.getByTitle("A Different Book")).toBeNull();
   });
 
+  it("fetches a volume by its normalized ID and handles missing volumes", async () => {
+    const { provider, fetcher } = providerWith(Response.json(completeVolume));
+    expect((await provider.getById("google-books:abc123"))?.title).toBe("The Lightning Thief");
+    expect(new URL(fetcher.mock.calls[0][0] as URL).pathname).toBe("/books/v1/volumes/abc123");
+    expect(await providerWith(new Response("", { status: 404 })).provider.getById("google-books:missing")).toBeNull();
+  });
+
   it("validates inputs before calling Google", async () => {
     const { provider, fetcher } = providerWith(volumeResponse());
     await expect(provider.search("  ")).rejects.toMatchObject({ code: "INVALID_INPUT" });
     await expect(provider.getByISBN("123")).rejects.toMatchObject({ code: "INVALID_INPUT" });
     await expect(provider.getByTitle(" ")).rejects.toMatchObject({ code: "INVALID_INPUT" });
+    await expect(provider.getById("other:abc123")).rejects.toMatchObject({ code: "INVALID_INPUT" });
     expect(fetcher).not.toHaveBeenCalled();
   });
 
