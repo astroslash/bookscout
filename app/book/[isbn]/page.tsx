@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createBookScoutDetailsService } from "@/connectors/book-scout";
+import { getBookCommerceLink } from "@/connectors/book-scout/commerce";
 import styles from "./page.module.css";
 
 export const runtime = "nodejs";
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BookPage({ params }: Props) {
   const book = await loadBook(params);
   if (!book) notFound();
+  const amazonLink = await getBookCommerceLink(book);
 
   return (
     <main className={styles.page}>
@@ -47,6 +49,15 @@ export default async function BookPage({ params }: Props) {
           </dl>
           {book.description && <section><h2>About this book</h2><p className={styles.description}>{book.description}</p></section>}
           {book.subjects.length > 0 && <section><h2>Subjects</h2><p>{book.subjects.join(" · ")}</p></section>}
+          {amazonLink && (
+            <section className={styles.commerce}>
+              <a href={amazonLink} target="_blank" rel="sponsored noopener noreferrer" className={styles.amazonLink}>
+                Search for this book on Amazon (paid link)
+              </a>
+              <p>Amazon results may include different editions. Check the title and ISBN before buying.</p>
+              <p>As an Amazon Associate I earn from qualifying purchases.</p>
+            </section>
+          )}
         </div>
       </article>
     </main>

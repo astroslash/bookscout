@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 5 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, and canonical book pages.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, and an optional commerce link boundary.
 
 ## Local setup
 
@@ -17,10 +17,11 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 
 | Path | Responsibility |
 | --- | --- |
-| `platform/` | Connector contract, manifest schema, registry, MCP and REST adapters, cache, errors, logging |
+| `platform/` | Connector contract, manifest schema, registry, MCP and REST adapters, cache, errors, logging, generic commerce contract |
 | `connectors/book-scout/` | Book domain model, provider contract, candidate pipeline, scoring, diversification, and recommendation service |
 | `connectors/index.ts` | Composition root where connectors are registered |
 | `providers/google-books/` | Google Books response schema, normalization, and HTTP adapter |
+| `providers/amazon/` | Optional Amazon.com search link provider; no book-data or pricing dependency |
 | `app/` | Thin Next.js routes and UI |
 | `tests/` | Factory, Google Books adapter, and recommendation pipeline tests |
 
@@ -37,6 +38,8 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 - `/mcp/book-scout` is the generic MCP Streamable HTTP route. It advertises and calls `recommend_books`.
 - `GET /book/[isbn]` displays normalized book metadata. Links use ISBN-13 when available, ISBN-10 next, and an encoded catalog ID for books without either ISBN.
 
+Book pages show a paid Amazon search link only when `AMAZON_ASSOCIATES_TAG` is configured. The link goes directly to Amazon; it is not a redirect through Book Scout. It searches Amazon Books using the ISBN where possible, or title and author otherwise. It does not assert that a particular Amazon listing or edition matches the Google Books record.
+
 Try REST locally or against the deployed site:
 
 ```sh
@@ -50,6 +53,14 @@ The response is `{ "success": true, "data": { "recommendations": [...] } }`. Eac
 ## Google Books configuration
 
 Create a Google Cloud API key for the Books API and put it in `.env.local` as `GOOGLE_BOOKS_API_KEY`. Restrict the key to the Books API and set it as a server environment variable in Vercel before deploying live catalog calls. `BOOK_SCOUT_BASE_URL` is optional; it sets the canonical origin in recommendation links and defaults to `https://bookscout-iota.vercel.app`. The provider validates input, requests `https://www.googleapis.com/books/v1/volumes`, and returns normalized books. It uses a 24-hour search TTL and a seven-day lookup TTL when a cache is injected. The current `MemoryCache` is process-local, so entries are not shared across Vercel instances.
+
+## Amazon Associates configuration
+
+Set `AMAZON_ASSOCIATES_TAG` to your **Amazon.com** Associates tracking ID in `.env.local` and in Vercel's server environment variables, then redeploy. If it is unset, book pages omit the commerce link and disclosure. The commerce provider builds tagged Amazon book-search URLs; no Amazon API key, scraping, product data, or pricing is involved. The page labels the link as paid and displays the Associates disclosure. Amazon notes that ISBNs do not reliably equal ASINs, so we do not construct direct product links from ISBNs. [Amazon link guidance](https://affiliate-program.amazon.com/help/node/topic/GP38PJ6EUR6PFBEC), [disclosure guidance](https://affiliate-program.amazon.com/help/node/topic/GPXFHVYZMTGPUMPE).
+
+## Future recommendation catalog
+
+A browseable catalog of **Book Scout recommendations** is a separate product feature from the Google Books source catalog. Start with a small set of curated themes or reading situations, such as mythology for advanced middle-grade readers, and store only the theme definitions and selected normalized book IDs or ISBNs. Resolve current metadata from providers and use the existing scoring service where a visitor supplies preferences. This avoids copying a giant book database or storing child profiles. A browse/search UI and any persistence for curated collections can be designed when we build that feature.
 
 ## Adding a connector or provider
 
@@ -70,4 +81,4 @@ The Google Books tests use mocked HTTP and need no key. To run the optional live
 
 ## Vercel
 
-Import this repository as a Next.js project and use the standard npm install/build commands. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable in Vercel, then deploy. The build does not require the key, but live recommendations do. Never commit `.env.local`.
+Import this repository as a Next.js project and use the standard npm install/build commands. Set `GOOGLE_BOOKS_API_KEY` as a server environment variable in Vercel, then deploy. The build does not require the key, but live recommendations do. `AMAZON_ASSOCIATES_TAG` is optional. Never commit `.env.local`.
