@@ -13,8 +13,9 @@ export async function generateCuratedCandidates(
   const anchors = approved.filter((profile) => input.likedBooks.some((liked) => {
     if (sameWorkTitle(profile.book.title, liked)) return true;
     const normalized = normalizeBookText(liked);
-    return normalized.split(" ").length >= 2 &&
-      normalizeBookText(profile.book.title).startsWith(`${normalized} `);
+    if (normalized.split(" ").length < 2) return false;
+    return normalizeBookText(profile.book.title).startsWith(`${normalized} `) ||
+      normalizeBookText(profile.series?.name ?? "").startsWith(normalized);
   }));
   const anchorIds = new Set(anchors.map((profile) => profile.id));
   return approved.flatMap((profile) => {

@@ -68,7 +68,7 @@ describe("proposed catalog import gate", () => {
     expect(submitImport(result.source, example, service, now).submitted).toBe(0);
   });
 
-  it("requires explicit listed edition selection and keeps it unapproved", async () => {
+  it("requires explicit verified edition selection and keeps it unapproved", async () => {
     const service = new CuratedCatalogService();
     const source = stageImportSeeds(empty, example, service, now).source;
     const seed = source.seeds[0];
@@ -83,9 +83,14 @@ describe("proposed catalog import gate", () => {
         authors: [seed.author], subjects: [] })),
     };
     await expect(service.selectSeedEdition(ambiguous, seed.id, "google-books:Other", provider, now))
-      .rejects.toThrow(/listed candidate/);
+      .rejects.toThrow(/does not match/);
     const selected = await service.selectSeedEdition(ambiguous, seed.id, candidateId, provider, now);
     expect(selected.seeds[0]).toMatchObject({ state: "enriched", book: { id: candidateId } });
     expect(selected.approved).toEqual([]);
+    const betterId = "google-books:VerifiedTradeEdition";
+    provider.getById = vi.fn(async () => ({ id: betterId, title: `The Series and ${seed.title}`,
+      authors: [seed.author], subjects: [] }));
+    const verified = await service.selectSeedEdition(ambiguous, seed.id, betterId, provider, now);
+    expect(verified.seeds[0]).toMatchObject({ state: "enriched", book: { id: betterId } });
   });
 });

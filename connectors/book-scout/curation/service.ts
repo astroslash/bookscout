@@ -6,6 +6,7 @@ import { catalogWords } from "./repository";
 import { actorIdSchema, catalogSourceSchema, curatedBookProfileSchema, runtimeCatalogSchema,
   type CatalogSource, type CuratedBookProfile, type RuntimeCatalog } from "./schemas";
 import { normalizeReaderFitTag, normalizeTopic } from "./taxonomy";
+import { sameWorkTitle } from "../identity";
 
 function setFieldReview(profile: CuratedBookProfile, reviewerId?: string): CuratedBookProfile {
   const copy = structuredClone(profile);
@@ -105,13 +106,12 @@ export class CuratedCatalogService {
     provider: BookProvider, now = new Date()): Promise<CatalogSource> {
     const catalog = this.validate(source);
     const seed = catalog.seeds.find((item) => item.id === seedId);
-    if (!seed || seed.state !== "needs_review" || seed.match?.status !== "ambiguous" ||
-      !seed.match.candidateIds.includes(providerId)) {
-      throw new Error("Select a listed candidate for an ambiguous seed.");
+    if (!seed || seed.state !== "needs_review" || seed.match?.status !== "ambiguous") {
+      throw new Error("Select an edition for an ambiguous seed.");
     }
     const book = await provider.getById(providerId);
     if (!book || book.id !== providerId ||
-      catalogWords(book.title) !== catalogWords(seed.title) ||
+      !sameWorkTitle(book.title, seed.title) ||
       !book.authors.some((author) => catalogWords(author) === catalogWords(seed.author))) {
       throw new Error("Selected edition does not match the seed title and author.");
     }

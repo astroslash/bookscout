@@ -113,7 +113,29 @@ describe("quality-first recommendations", () => {
     const result = await service([]).recommend({
       age: 11, readingAbility: "advanced", interests: ["Greek mythology", "adventure"], limit: 5,
     });
-    expect(result).toEqual({ recommendations: [], coverage: { status: "insufficient_curated_match" } });
+    expect(result).toEqual({ recommendations: [], coverage: {
+      status: "insufficient_curated_match", availableCatalogTopics: [],
+    } });
+  });
+
+  it("lets a strong approved topic drive an interests-only recommendation", async () => {
+    const fantasy = profile(20, "The Enchanted House", ["magic", "adventure"]);
+    const result = await service([fantasy]).recommend({ interests: ["fantasy"], limit: 5 });
+    expect(result.recommendations.map((item) => item.book.title)).toEqual([fantasy.book.title]);
+    expect(result.recommendations[0].reasons.some((reason) => reason.code === "interest_match")).toBe(true);
+  });
+
+  it("excludes a liked series while using it as a relationship anchor", async () => {
+    const anchor = profile(21, "The Lightning Thief", ["greek-mythology", "adventure"]);
+    anchor.series = { name: "Percy Jackson and the Olympians", position: 1, provenance };
+    const next = profile(22, "Who Let the Gods Out?", ["greek-mythology", "adventure"]);
+    anchor.relationships = [{ sourceBookId: anchor.id, targetBookId: next.id,
+      type: "read_next", strength: 0.95, reasons: [], provenance }];
+    const result = await service([anchor, next]).recommend({
+      age: 11, interests: ["Greek mythology"], likedBooks: ["Percy Jackson"],
+    });
+    expect(result.recommendations.map((item) => item.book.title)).toEqual([next.book.title]);
+    expect(result.recommendations[0].reasons.some((reason) => reason.code === "read_next_relationship")).toBe(true);
   });
 
   it("never recommends a profile lacking approval", async () => {

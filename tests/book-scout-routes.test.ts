@@ -39,7 +39,9 @@ describe("Book Beacon tool routes", () => {
     }), registry, "book-beacon", "recommend");
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ success: true, data: mcpResult });
-    expect(mcpResult).toEqual({ recommendations: [], coverage: { status: "insufficient_curated_match" } });
+    expect(mcpResult).toEqual({ recommendations: [], coverage: {
+      status: "insufficient_curated_match", availableCatalogTopics: [],
+    } });
   });
 
   it("rejects malformed recommendation requests before accessing the catalog", async () => {

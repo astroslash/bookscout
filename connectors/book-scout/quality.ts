@@ -17,7 +17,7 @@ export function curatedInterestEvidence(profile: CuratedBookProfile, interest: s
   if ((term === "mythology" || term === "greek mythology") && tags.has("mythology-lover")) return 0.8;
   if (term === "history" && tags.has("history-lover")) return 0.8;
   if ((term === "funny" || term === "funny books" || term === "humor") && tags.has("humor-lover")) return 0.8;
-  if (term === "fantasy" && (topics.has("magic") || topics.has("dragons"))) return 0.8;
+  if (term === "fantasy" && (topics.has("magic") || topics.has("dragons"))) return 1;
   const trait = term === "funny" || term === "funny books" || term === "humor" ? "humor" :
     term === "fantasy" ? "fantasy" : term === "adventure" ? "adventure" :
       term === "mystery" ? "mystery" : term === "science fiction" ? "scienceFiction" : undefined;
@@ -31,8 +31,13 @@ export function curatedInterestEvidence(profile: CuratedBookProfile, interest: s
 export function curatedRelevance(profile: CuratedBookProfile, input: RecommendationInput, relationshipStrength = 0): number {
   const evidence = input.interests.map((term) => curatedInterestEvidence(profile, term));
   const strong = evidence.filter((value) => value >= 0.7);
-  const specific = input.interests.some((term, index) => !genericInterests.has(normalizeBookText(term)) && evidence[index] >= 0.7);
-  return relationshipStrength >= 0.6 || specific || strong.length >= 2 ?
+  const specificInterests = input.interests.flatMap((term, index) =>
+    genericInterests.has(normalizeBookText(term)) ? [] : [evidence[index]]);
+  const specific = specificInterests.some((value) => value >= 0.7);
+  // A strong curated topic is sufficient even for a single broad interest.
+  // When a specific interest is supplied, generic adventure/fantasy alone cannot qualify a book.
+  return relationshipStrength >= 0.6 || specific ||
+    (specificInterests.length === 0 && (strong.some((value) => value >= 0.8) || strong.length >= 2)) ?
     Math.max(relationshipStrength, ...evidence, 0) : 0;
 }
 

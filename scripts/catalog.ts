@@ -27,22 +27,25 @@ async function main() {
     const seededOnly = args.includes("--seeded-only");
     const limitIndex = args.indexOf("--limit");
     const delayIndex = args.indexOf("--delay-ms");
+    const seedIdIndex = args.indexOf("--seed-id");
     const limit = limitIndex < 0 ? Number.POSITIVE_INFINITY : Number(args[limitIndex + 1]);
     const delayMs = delayIndex < 0 ? 0 : Number(args[delayIndex + 1]);
+    const seedId = seedIdIndex < 0 ? undefined : args[seedIdIndex + 1];
     const valueIndexes = new Set([limitIndex < 0 ? -1 : limitIndex + 1,
-      delayIndex < 0 ? -1 : delayIndex + 1]);
+      delayIndex < 0 ? -1 : delayIndex + 1, seedIdIndex < 0 ? -1 : seedIdIndex + 1]);
     if ((!Number.isInteger(limit) && limit !== Number.POSITIVE_INFINITY) || limit <= 0 ||
       !Number.isInteger(delayMs) || delayMs < 0 || delayMs > 10_000 ||
-      args.some((arg, index) => !["--seeded-only", "--limit", "--delay-ms"].includes(arg) &&
+      (seedIdIndex >= 0 && !/^bs_[0-9a-f-]{36}$/.test(seedId ?? "")) ||
+      args.some((arg, index) => !["--seeded-only", "--limit", "--delay-ms", "--seed-id"].includes(arg) &&
         !valueIndexes.has(index))) {
-      throw new Error("Usage: npm run catalog:enrich -- [--seeded-only] [--limit N] [--delay-ms N]");
+      throw new Error("Usage: npm run catalog:enrich -- [--seeded-only] [--limit N] [--delay-ms N] [--seed-id ID]");
     }
     const provider = createGoogleBooksProviderFromEnv();
     let updated = service.validate(source);
     let searched = 0;
     let rateLimited = false;
     for (const seed of updated.seeds.filter((item) => item.state === "seeded" ||
-      (!seededOnly && item.state === "needs_review")).slice(0, limit)) {
+      (!seededOnly && item.state === "needs_review")).filter((item) => !seedId || item.id === seedId).slice(0, limit)) {
       if (searched && delayMs) await new Promise((resolve) => setTimeout(resolve, delayMs));
       try {
         updated = await service.enrichSeed(updated, seed.id, provider);
@@ -60,7 +63,7 @@ async function main() {
     await saveSource(updated);
     process.stdout.write(`Searched ${searched} seeds${rateLimited ? "; stopped at provider rate limit" : ""}.\n`);
   } else if (command === "select-edition") {
-    if (args.length !== 2) throw new Error("Usage: npm run catalog:select-edition -- <seed-id> <listed-google-books-id>");
+    if (args.length !== 2) throw new Error("Usage: npm run catalog:select-edition -- <seed-id> <verified-google-books-id>");
     const updated = await service.selectSeedEdition(source, args[0], args[1], createGoogleBooksProviderFromEnv());
     await saveSource(updated);
     process.stdout.write(`Selected normalized Google Books edition ${args[1]} for seed ${args[0]}; still unapproved.\n`);

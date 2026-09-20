@@ -5,21 +5,38 @@
       "id": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
       "title": "The Lightning Thief",
       "author": "Rick Riordan",
-      "state": "needs_review",
+      "state": "approved",
+      "book": {
+        "id": "google-books:dzr9jwEACAAJ",
+        "title": "Percy Jackson and the Lightning Thief",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141381485",
+        "isbn13": "9780141381480",
+        "description": "The gods of Olympus are alive in the 21st Century. They still fall in love with mortals and have children who might become great heroes, but most of these children meet horrible fates at the hands of monsters by the age of twelve. Only a few learn the truth of their identity and make it to Half Blood Hill, a Long Island summer camp dedicated to training young demigods. Such is the revelation that launches young Percy Jackson on a quest to help his real father, Poseidon, avert a war among the gods. With the help of Grover the satyr and Annabeth the daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction - Zeus master bolt. Along the way, they face a host of mythological enemies determined to stop them. Most of all, Percy must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend. Follow the author on his blog",
+        "subjects": [
+          "Juvenile Fiction / Family / Parents",
+          "Juvenile Fiction / Legends, Myths, Fables / General",
+          "Juvenile Fiction / Sports & Recreation / Camping & Outdoor Activities",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Social Themes / Friendship"
+        ],
+        "publicationYear": 2005,
+        "pageCount": 374,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=dzr9jwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72AgqfYUkIJ65XxAmKRCgcKiEtBro06OFQuOtVFWNJ-PwWodYlzCx_nWVho4nbKG3vHhAQr3UeOxUHmJhIUEUK7pZbEOkiluUVSnnhBeuMWPQWp41GMBCbGBYy-Y3I8UO-GfUdi&source=gbs_api"
+      },
       "match": {
-        "status": "ambiguous",
-        "confidence": 1,
+        "status": "matched",
+        "confidence": 0.675,
         "candidateIds": [
-          "google-books:1uaMEAAAQBAJ",
-          "google-books:QAoCtAEACAAJ",
-          "google-books:dgGezgEACAAJ",
-          "google-books:Qng60AEACAAJ",
           "google-books:dzr9jwEACAAJ"
         ]
       },
       "audit": {
         "createdAt": "2026-09-20T03:29:18.968Z",
-        "updatedAt": "2026-09-20T04:06:10.262Z",
+        "updatedAt": "2026-09-20T17:38:05.293Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -3353,54 +3370,70 @@
       "author": "Roshani Chokshi",
       "state": "approved",
       "book": {
-        "id": "google-books:OSze0QEACAAJ",
-        "title": "Aru Shah and the End of Time",
-        "subtitle": "The Graphic Novel",
+        "id": "google-books:stTdtAEACAAJ",
+        "title": "Aru Shah and the End of Time (A Pandava Novel Book 1)",
         "authors": [
           "Roshani Chokshi"
         ],
-        "isbn13": "9798855023787",
-        "description": "\"Based on the novel by Roshani Chokshi.\"",
+        "isbn10": "1368012353",
+        "isbn13": "9781368012355",
+        "description": "Best-selling author Rick Riordan introduces this adventure by Roshani Chokshi about twelve-year-old Aru Shah, who has a tendency to stretch the truth in order to fit in at school. While her classmates are jetting off to family vacations in exotic locales, she'll be spending her autumn break at home, in the Museum of Ancient Indian Art and Culture, waiting for her mom to return from her latest archeological trip. Is it any wonder that Aru makes up stories about being royalty, traveling to Paris, and having a chauffeur? One day, three schoolmates show up at Aru's doorstep to catch her in a lie. They don't believe her claim that the museum's Lamp of Bharata is cursed, and they dare Aru to prove it. Just a quick light, Aru thinks. Then she can get herself out of this mess and never ever fib again. But lighting the lamp has dire consequences. She unwittingly frees the Sleeper, an ancient demon whose duty it is to awaken the God of Destruction. Her classmates and beloved mother are frozen in time, and it's up to Aru to save them. The only way to stop the demon is to find the reincarnations of the five legendary Pandava brothers, protagonists of the Hindu epic poem, the Mahabharata, and journey through the Kingdom of Death. But how is one girl in Spider-Man pajamas supposed to do all that?",
         "subjects": [
           "Juvenile Fiction"
         ],
-        "publicationYear": 2022,
+        "publicationYear": 2018,
+        "pageCount": 368,
         "language": "en",
-        "coverUrl": "https://books.google.com/books/content?id=OSze0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        "coverUrl": "https://books.google.com/books/content?id=stTdtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
       },
       "match": {
         "status": "matched",
         "confidence": 1,
         "candidateIds": [
-          "google-books:OSze0QEACAAJ"
+          "google-books:stTdtAEACAAJ"
         ]
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:09:23.884Z",
+        "updatedAt": "2026-09-20T17:39:52.424Z",
         "createdBy": "system:developer",
-        "updatedBy": "system:developer"
+        "updatedBy": "ai:book-scout-curator"
       }
     },
     {
       "id": "bs_24e47df7-ae7c-4ed1-8808-143722b57d97",
       "title": "Tristan Strong Punches a Hole in the Sky",
       "author": "Kwame Mbalia",
-      "state": "needs_review",
+      "state": "approved",
+      "book": {
+        "id": "google-books:IHy6vwEACAAJ",
+        "title": "Tristan Strong Punches a Hole in the Sky",
+        "authors": [
+          "Kwame Mbalia"
+        ],
+        "isbn10": "1368039936",
+        "isbn13": "9781368039932",
+        "description": "Best-selling author Rick Riordan presents Kwame Mbalia's epic fantasy, a middle grade American Gods set in a richly-imagined world populated with African American folk heroes and West African gods. Seventh grader Tristan Strong feels anything but strong ever since he failed to save his best friend when they were in a bus accident together. All he has left of Eddie is the journal his friend wrote stories in. Tristan is dreading the month he's going to spend on his grandparents' farm in Alabama, where he's being sent to heal from the tragedy. But on his first night there, a sticky creature shows up in his bedroom and steals Eddie's notebook. Tristan chases after it--is that a doll ?--and a tug-of-war ensues between them underneath a Bottle Tree. In a last attempt to wrestle the journal out of the creature's hands, Tristan punches the tree, accidentally ripping open a chasm into the MidPass, a volatile place with a burning sea, haunted bone ships, and iron monsters that are hunting the inhabitants of this world. Tristan finds himself in the middle of a battle that has left black American folk heroes John Henry and Brer Rabbit exhausted. In order to get back home, Tristan and these new allies will need to entice the god Anansi, the Weaver, to come out of hiding and seal the hole in the sky. But bartering with the trickster Anansi always comes at a price. Can Tristan save this world before he loses more of the things he loves?",
+        "subjects": [
+          "Juvenile Fiction / Legends, Myths, Fables / African",
+          "Juvenile Fiction / People & Places / United States / African American",
+          "Juvenile Fiction / Social Themes / Friendship"
+        ],
+        "publicationYear": 2019,
+        "pageCount": 496,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=IHy6vwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70UKfZ-vQp4--z2DeOPPr7EdDJtBFQvHr8x1kjJdE2r8En4cmi9nTYPdAfX0zvThygz8dupSeM4hFsTYBrvd7IAfvUWPWRypOssiEfv6jkGV5Z7qx9adzAgyf2fnQG_EzOlNJZ7&source=gbs_api"
+      },
       "match": {
-        "status": "ambiguous",
+        "status": "matched",
         "confidence": 1,
         "candidateIds": [
-          "google-books:AJiKzgEACAAJ",
-          "google-books:lujR0AEACAAJ",
-          "google-books:kCSuEQAAQBAJ",
-          "google-books:l9srzQEACAAJ",
-          "google-books:rZ3p0AEACAAJ"
+          "google-books:IHy6vwEACAAJ"
         ]
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:09:25.709Z",
+        "updatedAt": "2026-09-20T17:37:02.851Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -4517,7 +4550,7 @@
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:11:22.223Z",
+        "updatedAt": "2026-09-20T17:35:05.522Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -4576,7 +4609,7 @@
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:11:24.476Z",
+        "updatedAt": "2026-09-20T17:35:06.748Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -4823,7 +4856,7 @@
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:11:26.385Z",
+        "updatedAt": "2026-09-20T17:35:07.654Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -4878,7 +4911,7 @@
       },
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
-        "updatedAt": "2026-09-20T13:11:28.235Z",
+        "updatedAt": "2026-09-20T17:35:08.262Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -5511,6 +5544,334 @@
       "audit": {
         "createdAt": "2026-09-20T04:06:03.150Z",
         "updatedAt": "2026-09-20T13:12:02.416Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_f2877cd7-925b-4274-85c6-1842d55a6e28",
+      "title": "The Lost Hero (Heroes of Olympus Book 1)",
+      "author": "Rick Riordan",
+      "state": "approved",
+      "book": {
+        "id": "google-books:JeiGsRd4mywC",
+        "title": "The Lost Hero (Heroes of Olympus Book 1)",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "014196555X",
+        "isbn13": "9780141965550",
+        "description": "The first book in the bestselling spin off series from Percy Jackson and the Olympians, featuring the original hero – now in a brand-new look! Seven Heroes. One Prophecy. Destiny Calls. When Jason, Piper and Leo crash land at Camp Half-Blood, they have no idea what to expect. A haven for the children of the Greek Gods, like the famous Percy Jackson, they are apparently safe here – despite the monsters roaming the woods. . . But before they can settle into their new lives as demigods, the trio are thrown into a quest – to rescue Hera, Queen of the Gods, from the clutches of a new, and terrifying, enemy. If they fail? Demigods will turn on each other, the Giants will overrun Mount Olympus and it’ll be the end of them all. . . So, no big deal! Return to the World of Percy Jackson in the best-selling, brand-new adventure featuring the original hero in Percy Jackson and the Olympians: Wrath of the Triple Goddess – out now!",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2010,
+        "pageCount": 495,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=JeiGsRd4mywC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:JeiGsRd4mywC"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:35:08.824Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_7635b060-87a8-42ff-8d5c-ec82a05259a9",
+      "title": "The Red Pyramid (The Kane Chronicles Book 1)",
+      "author": "Rick Riordan",
+      "state": "approved",
+      "book": {
+        "id": "google-books:4zjrLRwM3mAC",
+        "title": "The Red Pyramid (The Kane Chronicles Book 1)",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141331585",
+        "isbn13": "9780141331584",
+        "description": "The Red Pyramid: the first book in Rick Riordan's The Kane Chronicles. Percy Jackson fought Greek Gods. Now the Gods of Egypt are waking in the modern world... 'I GUESS IT STARTED THE NIGHT OUR DAD BLEW UP THE BRITISH MUSEUM . . .' CARTER AND SADIE KANE'S dad is a brilliant Egyptologist with a secret plan that goes horribly wrong. An explosion shatters the ancient Rosetta stone and unleashes Set, the evil god of chaos . . . Set imprisons Dr Kane in a golden coffin and Carter and Sadie must run for their lives. To save their dad, they embark on a terrifying quest from Cairo to Paris to the American South-west and discover the truth about their family's connection to the House of Life: an Egyptian temple of magic that has existed for thousands of years. The pharaohs of ancient Egypt are far from dead and buried. And neither, unfortunately, are their gods . . . Rick Riordan has now sold an incredible 55 million copies of his books worldwide Praise for the Percy Jackson series: 'Witty and inspired. Gripping, touching and deliciously satirical...This is most likely to succeed Rowling. Puffin is on to a winner' - Amanda Craig, The Times 'Puns, jokes and subtle wit, alongside a gripping storyline' - Telegraph 'Perfectly paced, with electrifying moments chasing each other like heartbeats' - New York Times Rick Riordan is an award-winning mystery writer. He lives in San Antonio, Texas, with his wife and two sons. Percy Jackson and the Lightning Thief was the overall winner of the Red House Children's Book Award in 2006. The Percy Jackson series: The Lightning Thief; The Sea of Monsters; The Battle of the Labyrinth; The Titan's Curse; The Last Olympian Heroes of Olympus: The Lost Hero; The Son of Neptune; The Mark of Athena The Kane Chronicles: The Red Pyramid; The Throne of Fire; The Serpent's Shadow",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2010,
+        "pageCount": 452,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=4zjrLRwM3mAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:4zjrLRwM3mAC"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:35:09.997Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_ae7c4fdc-80cc-48b1-8122-6fdb0ab08193",
+      "title": "The Storm Runner",
+      "author": "J. C. Cervantes",
+      "state": "approved",
+      "book": {
+        "id": "google-books:jUicuAEACAAJ",
+        "title": "The Storm Runner",
+        "authors": [
+          "J. C. Cervantes"
+        ],
+        "isbn10": "1432856197",
+        "isbn13": "9781432856199",
+        "description": "Zane Obispo explores the sleeping volcano in his backyard to escape being teased because he walks with a cane. Then a mysterious girl reveals a prophecy, and soon Zane is on a quest that tests him to the very core in this fresh and funny take on Mayan mythology.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2018,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=jUicuAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:jUicuAEACAAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:35:10.869Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_60846c6e-5dc4-4e45-9115-67d51d2c549e",
+      "title": "Who Let the Gods Out?",
+      "author": "Maz Evans",
+      "state": "approved",
+      "book": {
+        "id": "google-books:WI7FDAAAQBAJ",
+        "title": "Who Let the Gods Out?",
+        "authors": [
+          "Maz Evans"
+        ],
+        "isbn10": "1338065629",
+        "isbn13": "9781338065626",
+        "description": "In the tradition of Chris Grabenstein, Stuart Gibbs, and Pseudonymous Bosch, a hilarious and action-packed romp involving one ordinary boy and a crazy cast of immortals. Elliot Hooper wants nothing more than a regular life for him and his mom. Then a Constellation of the Zodiac crashes from the sky into a pile of cow dung in front of him, and that wish explodes in a spray of...well...you know.Virgo, a 1,964-year-old girl, is on a routine mission to Earth and ABSOLUTELY FORBIDDEN from interacting with mortals. So of course she takes Elliot along with her. But when an evil daemon named Thanatos escapes to wreak terrible havoc, their routine mission turns not-so-routine. For if Elliot and Virgo don't track down the retired Zeus and the rest of the Olympians and help them catch Thanatos, mortals and gods alike won't be long for this earth.Elliot Hooper's life just got a whole lot more LEGENDARY.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 278,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=WI7FDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:WI7FDAAAQBAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:35:11.460Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_e368d673-4c26-41a1-a961-92369bc23c3a",
+      "title": "The Hidden Oracle",
+      "author": "Rick Riordan",
+      "state": "approved",
+      "book": {
+        "id": "google-books:4No_jgEACAAJ",
+        "title": "The Hidden Oracle",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141363932",
+        "isbn13": "9780141363936",
+        "description": "\"How do you punish an immortal? My name is Apollo. I used to be a god. But what was before I was cast down from Olympus (a terrible misunderstanding) and woke up in a New York dumpster. I persuaded Percy Jackson to give me a lift to Camp Half-Blood. But the place is in chaos. Demigods are going missing and the all-seeing Oracles have fallen to a mysterious enemy known only as 'the Beast'. I figured that regaining Zeu's favour would involve a series of harrowing trials, and I was right (I usually am). My first task? Protect the final Oracle, hidden away for millennia. If I fail, the Beast will control the future, but worse - I'll be stuck as a teenage boy, forever . . .\"",
+        "subjects": [
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / Legends, Myths, Fables / General",
+          "Juvenile Fiction / Fantasy / General"
+        ],
+        "publicationYear": 2016,
+        "pageCount": 432,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=4No_jgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE716BYAsBPeGDnQVq-W9x20aquatYMpRAb4oQcVAnATBWANrsVk2t9z27aKWcYuQ4nxRHDxrxA_sH8XKxjy4IXY6FMkDgGGeu1ZkwUKb4quUhOpqgg0-qhOfpki_ARbW9jdpDPXt&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:4No_jgEACAAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:37:04.339Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_1a441037-7e09-4eba-bd9d-baf26a2c79df",
+      "title": "Mythologica",
+      "author": "Dr. Stephen P. Kershaw",
+      "state": "approved",
+      "book": {
+        "id": "google-books:IWyoDwAAQBAJ",
+        "title": "Mythologica",
+        "subtitle": "An encyclopedia of gods, monsters and mortals from ancient Greece",
+        "authors": [
+          "Dr. Stephen P. Kershaw"
+        ],
+        "isbn10": "1786031930",
+        "isbn13": "9781786031938",
+        "description": "Amazon's No. 1 Children's Non-Fiction Book of the Year 2019 is an illustrated encyclopedia of Greek mythology like no other. Mythologica features startlingly beautiful and exquisitely otherworldly portraits of mythological characters in eye-popping color from artist Victoria Topping and authoritative text from Classics scholar and Greek mythology expert Dr. Stephen Kershaw. Uncover the colorful lives of 50 powerful gods and goddesses, earth-dwelling mortals, and terrifying monsters as you journey back in time to ancient Greece. From the fearless Athena and her meddlesome ways to the brave and bold Odysseus and his remarkable journey home, discover why these incredible stories are still a part of our culture today. Listed alphabetically, each boldly designed spread presents a figure from the myths, including their name in Greek, their defining attributes, and a summary of their story, along with multiple sidelights that provide additional facts. Interspersed with the profiles are summaries of famous mythological tales and historical events, like the Odyssey, the Trojan War, and the story of the Argonauts. An electrifying visual portrayal of each figure transports you directly into their wild world. Victoria Topping’s artwork is a fusion of technological and traditional techniques that combines photography, painting, and cut-paper collage to perfectly express the blending of human and fantastic traits from which mythical beings are made. The thrilling images and digestible text provide the perfect introduction to the lively world of Greek mythology and a beautiful display reference for the whole family. Prepare to be amazed as you uncover the epic, heroic, and sometimes terrible lives of mortals, monsters, and gods.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2019,
+        "pageCount": 115,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=IWyoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:IWyoDwAAQBAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:36:17.589Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_b1230da6-9234-45be-a07c-32e3cf9e2b5a",
+      "title": "The Age of Dinosaurs",
+      "author": "Steve Brusatte",
+      "state": "approved",
+      "book": {
+        "id": "google-books:uYnoDwAAQBAJ",
+        "title": "The Age of Dinosaurs",
+        "subtitle": "The Rise and Fall of the World's Most Remarkable Animals",
+        "authors": [
+          "Steve Brusatte"
+        ],
+        "isbn10": "0062930192",
+        "isbn13": "9780062930194",
+        "description": "The New York Times–bestselling author and paleontologist offers young readers a revealing look at dinosaurs and the new science used to learn about them. Even though the dinosaurs roamed the earth millions of years ago, we're still piecing together new information about these ancient animals. In fact, a new species of dinosaur is discovered just about every week! New York Times–bestselling author and acclaimed paleontologist Steve Brusatte writes about all the new discoveries he and his colleagues have made that help us better understand—and marvel at—these remarkable reptiles. Did you know that many dinosaurs had feathers? Or that there are even modern-day dinosaurs walking around right now? Brusatte covers all this and more in The Age of Dinosaurs, which also includes a glossary, pronunciation guide, and index, as well as photos throughout.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2021,
+        "pageCount": 233,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=uYnoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:uYnoDwAAQBAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:36:19.211Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_3070605b-28bd-40ad-8eb1-3e5d72ff065d",
+      "title": "Raising Rufus",
+      "author": "David Fulk",
+      "state": "approved",
+      "book": {
+        "id": "google-books:YD2JBAAAQBAJ",
+        "title": "Raising Rufus",
+        "authors": [
+          "David Fulk"
+        ],
+        "isbn10": "0385390726",
+        "isbn13": "9780385390729",
+        "description": "Readers of The Enormous Egg will dive right into this adventurous story about what happens when an average eleven-year-old boy becomes the parent of a giant T-rex! In the unremarkable town of Menominee Springs, Wisconsin, lives a twelve-year-old explorer named Martin, who one day stumbles across something remarkable. It’s an egg. But not just any egg—a dinosaur egg. And a week later, Martin becomes the proud parent of . . . a Tyrannosaurus rex! As the summer unfolds, Martin finds it harder and harder to keep Rufus hidden from rest of the world. And then it gets ugly. Can Martin save Rufus from his parents, his neighbors, and most importantly, the owner of the town carnival? With the help of his best friend, Audrey, and his science teacher, Mr. Ekhart, Martin must uncover his inner hero and find Rufus a home, even if it means losing the one thing he’s come to really care about. Praise for Raising Rufus: \"The premise of Fulk’s first children’s book has immediate appeal, and Martin’s difficulties with his father (who wishes his son was more into sports than science) and school bullies are handled well.\"--Publishers Weekly \"Fulk's debut novel is a poignant story of a boy's coming into his own. . . . Readers will cheer for Martin and Rufus in this funny twist on a boy-and-his-dog story.\"--Kirkus Reviews",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2015,
+        "pageCount": 211,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=YD2JBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:YD2JBAAAQBAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:36:20.939Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_4c23285b-f464-4f6b-9673-a4405d842f8a",
+      "title": "Dinosaur Empire! (Earth Before Us #1)",
+      "author": "Abby Howard",
+      "state": "approved",
+      "book": {
+        "id": "google-books:AGRgDgAAQBAJ",
+        "title": "Dinosaur Empire! (Earth Before Us #1)",
+        "subtitle": "Journey through the Mesozoic Era",
+        "authors": [
+          "Abby Howard"
+        ],
+        "isbn10": "1683351134",
+        "isbn13": "9781683351139",
+        "description": "Ronnie is just a normal fifth-grader trying to pass her science class’s impossible quiz on the history of dinosaurs . . . until she happens upon her neighbor—Ms. Lernin—a retired paleontologist. With the assistance of Science Magic, Ronnie and Ms. Lernin travel back through time and space to experience the Mesozoic Era firsthand. They visit three important time periods in the development of the Mesozoic Era: the Triassic, the Jurassic, and the Cretaceous. Along the way, Ronnie finds herself face-to-face with real-life dinosaurs and reptiles, like stegosauruses, velociraptors, and thalattosaurs. With the help of her neighbor’s trusty knowledge of prehistoric times, she learns the differences between herbivores, carnivores, and omnivores, as well as between dinosaurs, insects, and reptiles. This insightful and informative graphic novel uses engaging art to bring facts to life, giving kids the tools to understand the evolution of these prehistoric creatures and the important effects this era had on our world today.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 128,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=AGRgDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "match": {
+        "status": "matched",
+        "confidence": 1,
+        "candidateIds": [
+          "google-books:AGRgDgAAQBAJ"
+        ]
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:34:53.890Z",
+        "updatedAt": "2026-09-20T17:36:22.555Z",
         "createdBy": "system:developer",
         "updatedBy": "system:developer"
       }
@@ -8603,156 +8964,6 @@
       },
       "series": {
         "name": "Zita the Spacegirl",
-        "position": 1,
-        "provenance": {
-          "sourceType": "book_scout_classification",
-          "assistance": "ai_assisted",
-          "reviewed": false
-        }
-      },
-      "relationships": [],
-      "audit": {
-        "createdAt": "2026-09-20T13:12:15.476Z",
-        "updatedAt": "2026-09-20T13:12:27.048Z",
-        "createdBy": "system:developer",
-        "updatedBy": "ai:book-scout-curator",
-        "approvedAt": "2026-09-20T13:12:27.048Z",
-        "approvedBy": "ai:book-scout-curator"
-      }
-    },
-    {
-      "id": "bs_ff92107f-3bcd-4f95-8ee3-173177b7dc26",
-      "book": {
-        "id": "google-books:OSze0QEACAAJ",
-        "title": "Aru Shah and the End of Time",
-        "subtitle": "The Graphic Novel",
-        "authors": [
-          "Roshani Chokshi"
-        ],
-        "isbn13": "9798855023787",
-        "description": "\"Based on the novel by Roshani Chokshi.\"",
-        "subjects": [
-          "Juvenile Fiction"
-        ],
-        "publicationYear": 2022,
-        "language": "en",
-        "coverUrl": "https://books.google.com/books/content?id=OSze0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      },
-      "tier": "core",
-      "topics": [
-        {
-          "value": "mythology",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        {
-          "value": "magic",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        {
-          "value": "adventure",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        }
-      ],
-      "readerFitTags": [
-        {
-          "value": "fast-paced",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        {
-          "value": "series-reader",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        {
-          "value": "world-building",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        {
-          "value": "mythology-lover",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        }
-      ],
-      "traits": {
-        "adventure": {
-          "value": 4.5,
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        "action": {
-          "value": 3.5,
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        "fantasy": {
-          "value": 4.5,
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        "educational": {
-          "value": 2.5,
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        },
-        "reluctantReader": {
-          "value": 3,
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        }
-      },
-      "readingFit": {
-        "difficulty": {
-          "value": "average",
-          "provenance": {
-            "sourceType": "book_scout_classification",
-            "assistance": "ai_assisted",
-            "reviewed": false
-          }
-        }
-      },
-      "series": {
-        "name": "Pandava",
         "position": 1,
         "provenance": {
           "sourceType": "book_scout_classification",
@@ -13814,6 +14025,1448 @@
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
         "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_f2877cd7-925b-4274-85c6-1842d55a6e28",
+      "book": {
+        "id": "google-books:JeiGsRd4mywC",
+        "title": "The Lost Hero (Heroes of Olympus Book 1)",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "014196555X",
+        "isbn13": "9780141965550",
+        "description": "The first book in the bestselling spin off series from Percy Jackson and the Olympians, featuring the original hero – now in a brand-new look! Seven Heroes. One Prophecy. Destiny Calls. When Jason, Piper and Leo crash land at Camp Half-Blood, they have no idea what to expect. A haven for the children of the Greek Gods, like the famous Percy Jackson, they are apparently safe here – despite the monsters roaming the woods. . . But before they can settle into their new lives as demigods, the trio are thrown into a quest – to rescue Hera, Queen of the Gods, from the clutches of a new, and terrifying, enemy. If they fail? Demigods will turn on each other, the Giants will overrun Mount Olympus and it’ll be the end of them all. . . So, no big deal! Return to the World of Percy Jackson in the best-selling, brand-new adventure featuring the original hero in Percy Jackson and the Olympians: Wrath of the Triple Goddess – out now!",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2010,
+        "pageCount": 495,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=JeiGsRd4mywC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "roman-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "advanced-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "advanced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Heroes of Olympus",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_7635b060-87a8-42ff-8d5c-ec82a05259a9",
+      "book": {
+        "id": "google-books:4zjrLRwM3mAC",
+        "title": "The Red Pyramid (The Kane Chronicles Book 1)",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141331585",
+        "isbn13": "9780141331584",
+        "description": "The Red Pyramid: the first book in Rick Riordan's The Kane Chronicles. Percy Jackson fought Greek Gods. Now the Gods of Egypt are waking in the modern world... 'I GUESS IT STARTED THE NIGHT OUR DAD BLEW UP THE BRITISH MUSEUM . . .' CARTER AND SADIE KANE'S dad is a brilliant Egyptologist with a secret plan that goes horribly wrong. An explosion shatters the ancient Rosetta stone and unleashes Set, the evil god of chaos . . . Set imprisons Dr Kane in a golden coffin and Carter and Sadie must run for their lives. To save their dad, they embark on a terrifying quest from Cairo to Paris to the American South-west and discover the truth about their family's connection to the House of Life: an Egyptian temple of magic that has existed for thousands of years. The pharaohs of ancient Egypt are far from dead and buried. And neither, unfortunately, are their gods . . . Rick Riordan has now sold an incredible 55 million copies of his books worldwide Praise for the Percy Jackson series: 'Witty and inspired. Gripping, touching and deliciously satirical...This is most likely to succeed Rowling. Puffin is on to a winner' - Amanda Craig, The Times 'Puns, jokes and subtle wit, alongside a gripping storyline' - Telegraph 'Perfectly paced, with electrifying moments chasing each other like heartbeats' - New York Times Rick Riordan is an award-winning mystery writer. He lives in San Antonio, Texas, with his wife and two sons. Percy Jackson and the Lightning Thief was the overall winner of the Red House Children's Book Award in 2006. The Percy Jackson series: The Lightning Thief; The Sea of Monsters; The Battle of the Labyrinth; The Titan's Curse; The Last Olympian Heroes of Olympus: The Lost Hero; The Son of Neptune; The Mark of Athena The Kane Chronicles: The Red Pyramid; The Throne of Fire; The Serpent's Shadow",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2010,
+        "pageCount": 452,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=4zjrLRwM3mAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "ancient-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Kane Chronicles",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_ae7c4fdc-80cc-48b1-8122-6fdb0ab08193",
+      "book": {
+        "id": "google-books:jUicuAEACAAJ",
+        "title": "The Storm Runner",
+        "authors": [
+          "J. C. Cervantes"
+        ],
+        "isbn10": "1432856197",
+        "isbn13": "9781432856199",
+        "description": "Zane Obispo explores the sleeping volcano in his backyard to escape being teased because he walks with a cane. Then a mysterious girl reveals a prophecy, and soon Zane is on a quest that tests him to the very core in this fresh and funny take on Mayan mythology.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2018,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=jUicuAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Storm Runner",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_60846c6e-5dc4-4e45-9115-67d51d2c549e",
+      "book": {
+        "id": "google-books:WI7FDAAAQBAJ",
+        "title": "Who Let the Gods Out?",
+        "authors": [
+          "Maz Evans"
+        ],
+        "isbn10": "1338065629",
+        "isbn13": "9781338065626",
+        "description": "In the tradition of Chris Grabenstein, Stuart Gibbs, and Pseudonymous Bosch, a hilarious and action-packed romp involving one ordinary boy and a crazy cast of immortals. Elliot Hooper wants nothing more than a regular life for him and his mom. Then a Constellation of the Zodiac crashes from the sky into a pile of cow dung in front of him, and that wish explodes in a spray of...well...you know.Virgo, a 1,964-year-old girl, is on a routine mission to Earth and ABSOLUTELY FORBIDDEN from interacting with mortals. So of course she takes Elliot along with her. But when an evil daemon named Thanatos escapes to wreak terrible havoc, their routine mission turns not-so-routine. For if Elliot and Virgo don't track down the retired Zeus and the rest of the Olympians and help them catch Thanatos, mortals and gods alike won't be long for this earth.Elliot Hooper's life just got a whole lot more LEGENDARY.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 278,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=WI7FDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Who Let the Gods Out?",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_24e47df7-ae7c-4ed1-8808-143722b57d97",
+      "book": {
+        "id": "google-books:IHy6vwEACAAJ",
+        "title": "Tristan Strong Punches a Hole in the Sky",
+        "authors": [
+          "Kwame Mbalia"
+        ],
+        "isbn10": "1368039936",
+        "isbn13": "9781368039932",
+        "description": "Best-selling author Rick Riordan presents Kwame Mbalia's epic fantasy, a middle grade American Gods set in a richly-imagined world populated with African American folk heroes and West African gods. Seventh grader Tristan Strong feels anything but strong ever since he failed to save his best friend when they were in a bus accident together. All he has left of Eddie is the journal his friend wrote stories in. Tristan is dreading the month he's going to spend on his grandparents' farm in Alabama, where he's being sent to heal from the tragedy. But on his first night there, a sticky creature shows up in his bedroom and steals Eddie's notebook. Tristan chases after it--is that a doll ?--and a tug-of-war ensues between them underneath a Bottle Tree. In a last attempt to wrestle the journal out of the creature's hands, Tristan punches the tree, accidentally ripping open a chasm into the MidPass, a volatile place with a burning sea, haunted bone ships, and iron monsters that are hunting the inhabitants of this world. Tristan finds himself in the middle of a battle that has left black American folk heroes John Henry and Brer Rabbit exhausted. In order to get back home, Tristan and these new allies will need to entice the god Anansi, the Weaver, to come out of hiding and seal the hole in the sky. But bartering with the trickster Anansi always comes at a price. Can Tristan save this world before he loses more of the things he loves?",
+        "subjects": [
+          "Juvenile Fiction / Legends, Myths, Fables / African",
+          "Juvenile Fiction / People & Places / United States / African American",
+          "Juvenile Fiction / Social Themes / Friendship"
+        ],
+        "publicationYear": 2019,
+        "pageCount": 496,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=IHy6vwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70UKfZ-vQp4--z2DeOPPr7EdDJtBFQvHr8x1kjJdE2r8En4cmi9nTYPdAfX0zvThygz8dupSeM4hFsTYBrvd7IAfvUWPWRypOssiEfv6jkGV5Z7qx9adzAgyf2fnQG_EzOlNJZ7&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Tristan Strong",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_e368d673-4c26-41a1-a961-92369bc23c3a",
+      "book": {
+        "id": "google-books:4No_jgEACAAJ",
+        "title": "The Hidden Oracle",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141363932",
+        "isbn13": "9780141363936",
+        "description": "\"How do you punish an immortal? My name is Apollo. I used to be a god. But what was before I was cast down from Olympus (a terrible misunderstanding) and woke up in a New York dumpster. I persuaded Percy Jackson to give me a lift to Camp Half-Blood. But the place is in chaos. Demigods are going missing and the all-seeing Oracles have fallen to a mysterious enemy known only as 'the Beast'. I figured that regaining Zeu's favour would involve a series of harrowing trials, and I was right (I usually am). My first task? Protect the final Oracle, hidden away for millennia. If I fail, the Beast will control the future, but worse - I'll be stuck as a teenage boy, forever . . .\"",
+        "subjects": [
+          "Juvenile Fiction / Action & Adventure / General",
+          "Juvenile Fiction / Legends, Myths, Fables / General",
+          "Juvenile Fiction / Fantasy / General"
+        ],
+        "publicationYear": 2016,
+        "pageCount": 432,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=4No_jgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE716BYAsBPeGDnQVq-W9x20aquatYMpRAb4oQcVAnATBWANrsVk2t9z27aKWcYuQ4nxRHDxrxA_sH8XKxjy4IXY6FMkDgGGeu1ZkwUKb4quUhOpqgg0-qhOfpki_ARbW9jdpDPXt&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Trials of Apollo",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_1a441037-7e09-4eba-bd9d-baf26a2c79df",
+      "book": {
+        "id": "google-books:IWyoDwAAQBAJ",
+        "title": "Mythologica",
+        "subtitle": "An encyclopedia of gods, monsters and mortals from ancient Greece",
+        "authors": [
+          "Dr. Stephen P. Kershaw"
+        ],
+        "isbn10": "1786031930",
+        "isbn13": "9781786031938",
+        "description": "Amazon's No. 1 Children's Non-Fiction Book of the Year 2019 is an illustrated encyclopedia of Greek mythology like no other. Mythologica features startlingly beautiful and exquisitely otherworldly portraits of mythological characters in eye-popping color from artist Victoria Topping and authoritative text from Classics scholar and Greek mythology expert Dr. Stephen Kershaw. Uncover the colorful lives of 50 powerful gods and goddesses, earth-dwelling mortals, and terrifying monsters as you journey back in time to ancient Greece. From the fearless Athena and her meddlesome ways to the brave and bold Odysseus and his remarkable journey home, discover why these incredible stories are still a part of our culture today. Listed alphabetically, each boldly designed spread presents a figure from the myths, including their name in Greek, their defining attributes, and a summary of their story, along with multiple sidelights that provide additional facts. Interspersed with the profiles are summaries of famous mythological tales and historical events, like the Odyssey, the Trojan War, and the story of the Argonauts. An electrifying visual portrayal of each figure transports you directly into their wild world. Victoria Topping’s artwork is a fusion of technological and traditional techniques that combines photography, painting, and cut-paper collage to perfectly express the blending of human and fantastic traits from which mythical beings are made. The thrilling images and digestible text provide the perfect introduction to the lively world of Greek mythology and a beautiful display reference for the whole family. Prepare to be amazed as you uncover the epic, heroic, and sometimes terrible lives of mortals, monsters, and gods.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2019,
+        "pageCount": 115,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=IWyoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "ancient-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "history-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 5,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_b1230da6-9234-45be-a07c-32e3cf9e2b5a",
+      "book": {
+        "id": "google-books:uYnoDwAAQBAJ",
+        "title": "The Age of Dinosaurs",
+        "subtitle": "The Rise and Fall of the World's Most Remarkable Animals",
+        "authors": [
+          "Steve Brusatte"
+        ],
+        "isbn10": "0062930192",
+        "isbn13": "9780062930194",
+        "description": "The New York Times–bestselling author and paleontologist offers young readers a revealing look at dinosaurs and the new science used to learn about them. Even though the dinosaurs roamed the earth millions of years ago, we're still piecing together new information about these ancient animals. In fact, a new species of dinosaur is discovered just about every week! New York Times–bestselling author and acclaimed paleontologist Steve Brusatte writes about all the new discoveries he and his colleagues have made that help us better understand—and marvel at—these remarkable reptiles. Did you know that many dinosaurs had feathers? Or that there are even modern-day dinosaurs walking around right now? Brusatte covers all this and more in The Age of Dinosaurs, which also includes a glossary, pronunciation guide, and index, as well as photos throughout.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2021,
+        "pageCount": 233,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=uYnoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "advanced-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 12,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_3070605b-28bd-40ad-8eb1-3e5d72ff065d",
+      "book": {
+        "id": "google-books:YD2JBAAAQBAJ",
+        "title": "Raising Rufus",
+        "authors": [
+          "David Fulk"
+        ],
+        "isbn10": "0385390726",
+        "isbn13": "9780385390729",
+        "description": "Readers of The Enormous Egg will dive right into this adventurous story about what happens when an average eleven-year-old boy becomes the parent of a giant T-rex! In the unremarkable town of Menominee Springs, Wisconsin, lives a twelve-year-old explorer named Martin, who one day stumbles across something remarkable. It’s an egg. But not just any egg—a dinosaur egg. And a week later, Martin becomes the proud parent of . . . a Tyrannosaurus rex! As the summer unfolds, Martin finds it harder and harder to keep Rufus hidden from rest of the world. And then it gets ugly. Can Martin save Rufus from his parents, his neighbors, and most importantly, the owner of the town carnival? With the help of his best friend, Audrey, and his science teacher, Mr. Ekhart, Martin must uncover his inner hero and find Rufus a home, even if it means losing the one thing he’s come to really care about. Praise for Raising Rufus: \"The premise of Fulk’s first children’s book has immediate appeal, and Martin’s difficulties with his father (who wishes his son was more into sports than science) and school bullies are handled well.\"--Publishers Weekly \"Fulk's debut novel is a poignant story of a boy's coming into his own. . . . Readers will cheer for Martin and Rufus in this funny twist on a boy-and-his-dog story.\"--Kirkus Reviews",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2015,
+        "pageCount": 211,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=YD2JBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 12,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_4c23285b-f464-4f6b-9673-a4405d842f8a",
+      "book": {
+        "id": "google-books:AGRgDgAAQBAJ",
+        "title": "Dinosaur Empire! (Earth Before Us #1)",
+        "subtitle": "Journey through the Mesozoic Era",
+        "authors": [
+          "Abby Howard"
+        ],
+        "isbn10": "1683351134",
+        "isbn13": "9781683351139",
+        "description": "Ronnie is just a normal fifth-grader trying to pass her science class’s impossible quiz on the history of dinosaurs . . . until she happens upon her neighbor—Ms. Lernin—a retired paleontologist. With the assistance of Science Magic, Ronnie and Ms. Lernin travel back through time and space to experience the Mesozoic Era firsthand. They visit three important time periods in the development of the Mesozoic Era: the Triassic, the Jurassic, and the Cretaceous. Along the way, Ronnie finds herself face-to-face with real-life dinosaurs and reptiles, like stegosauruses, velociraptors, and thalattosaurs. With the help of her neighbor’s trusty knowledge of prehistoric times, she learns the differences between herbivores, carnivores, and omnivores, as well as between dinosaurs, insects, and reptiles. This insightful and informative graphic novel uses engaging art to bring facts to life, giving kids the tools to understand the evolution of these prehistoric creatures and the important effects this era had on our world today.",
+        "subjects": [
+          "Juvenile Nonfiction"
+        ],
+        "publicationYear": 2017,
+        "pageCount": 128,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=AGRgDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 11,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Earth Before Us",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_ff92107f-3bcd-4f95-8ee3-173177b7dc26",
+      "book": {
+        "id": "google-books:stTdtAEACAAJ",
+        "title": "Aru Shah and the End of Time (A Pandava Novel Book 1)",
+        "authors": [
+          "Roshani Chokshi"
+        ],
+        "isbn10": "1368012353",
+        "isbn13": "9781368012355",
+        "description": "Best-selling author Rick Riordan introduces this adventure by Roshani Chokshi about twelve-year-old Aru Shah, who has a tendency to stretch the truth in order to fit in at school. While her classmates are jetting off to family vacations in exotic locales, she'll be spending her autumn break at home, in the Museum of Ancient Indian Art and Culture, waiting for her mom to return from her latest archeological trip. Is it any wonder that Aru makes up stories about being royalty, traveling to Paris, and having a chauffeur? One day, three schoolmates show up at Aru's doorstep to catch her in a lie. They don't believe her claim that the museum's Lamp of Bharata is cursed, and they dare Aru to prove it. Just a quick light, Aru thinks. Then she can get herself out of this mess and never ever fib again. But lighting the lamp has dire consequences. She unwittingly frees the Sleeper, an ancient demon whose duty it is to awaken the God of Destruction. Her classmates and beloved mother are frozen in time, and it's up to Aru to save them. The only way to stop the demon is to find the reincarnations of the five legendary Pandava brothers, protagonists of the Hindu epic poem, the Mahabharata, and journey through the Kingdom of Death. But how is one girl in Spider-Man pajamas supposed to do all that?",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2018,
+        "pageCount": 368,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=stTdtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "world-building",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "fantasy": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "educational": {
+          "value": 2.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "reluctantReader": {
+          "value": 3,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "average",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Pandava",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T13:12:15.476Z",
+        "updatedAt": "2026-09-20T17:39:52.480Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:39:52.480Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+      "book": {
+        "id": "google-books:dzr9jwEACAAJ",
+        "title": "Percy Jackson and the Lightning Thief",
+        "authors": [
+          "Rick Riordan"
+        ],
+        "isbn10": "0141381485",
+        "isbn13": "9780141381480",
+        "description": "The gods of Olympus are alive in the 21st Century. They still fall in love with mortals and have children who might become great heroes, but most of these children meet horrible fates at the hands of monsters by the age of twelve. Only a few learn the truth of their identity and make it to Half Blood Hill, a Long Island summer camp dedicated to training young demigods. Such is the revelation that launches young Percy Jackson on a quest to help his real father, Poseidon, avert a war among the gods. With the help of Grover the satyr and Annabeth the daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction - Zeus master bolt. Along the way, they face a host of mythological enemies determined to stop them. Most of all, Percy must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend. Follow the author on his blog",
+        "subjects": [
+          "Juvenile Fiction / Family / Parents",
+          "Juvenile Fiction / Legends, Myths, Fables / General",
+          "Juvenile Fiction / Sports & Recreation / Camping & Outdoor Activities",
+          "Juvenile Fiction / Fantasy / General",
+          "Juvenile Fiction / Social Themes / Friendship"
+        ],
+        "publicationYear": 2005,
+        "pageCount": 374,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=dzr9jwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72AgqfYUkIJ65XxAmKRCgcKiEtBro06OFQuOtVFWNJ-PwWodYlzCx_nWVho4nbKG3vHhAQr3UeOxUHmJhIUEUK7pZbEOkiluUVSnnhBeuMWPQWp41GMBCbGBYy-Y3I8UO-GfUdi&source=gbs_api"
+      },
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/bookfinder/percy-jackson-and-the-lightning-thief/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Percy Jackson and the Olympians",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": [
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_f2877cd7-925b-4274-85c6-1842d55a6e28",
+          "type": "read_next",
+          "strength": 1,
+          "reasons": [
+            "Continues Greek and Roman demigod adventures."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_60846c6e-5dc4-4e45-9115-67d51d2c549e",
+          "type": "similar_to",
+          "strength": 0.95,
+          "reasons": [
+            "Greek gods, contemporary adventure, and humor."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_e368d673-4c26-41a1-a961-92369bc23c3a",
+          "type": "read_next",
+          "strength": 0.9,
+          "reasons": [
+            "Another Greek mythology adventure by Rick Riordan."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_ae7c4fdc-80cc-48b1-8122-6fdb0ab08193",
+          "type": "similar_to",
+          "strength": 0.85,
+          "reasons": [
+            "Modern-day mythological quest with humor."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_24e47df7-ae7c-4ed1-8808-143722b57d97",
+          "type": "similar_to",
+          "strength": 0.85,
+          "reasons": [
+            "Modern mythological adventure with a young hero."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+          "targetBookId": "bs_ff92107f-3bcd-4f95-8ee3-173177b7dc26",
+          "type": "similar_to",
+          "strength": 0.85,
+          "reasons": [
+            "Contemporary adventure inspired by mythology."
+          ],
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "audit": {
+        "createdAt": "2026-09-20T17:38:30.779Z",
+        "updatedAt": "2026-09-20T17:39:52.522Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:39:52.522Z",
         "approvedBy": "ai:book-scout-curator"
       }
     }
@@ -30270,6 +31923,1709 @@
         "createdBy": "system:developer",
         "updatedBy": "ai:book-scout-curator",
         "approvedAt": "2026-09-20T13:22:58.460Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "071da83f-ef66-43d4-9583-7e38b30c8a27",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_f2877cd7-925b-4274-85c6-1842d55a6e28",
+        "book": {
+          "id": "google-books:JeiGsRd4mywC",
+          "title": "The Lost Hero (Heroes of Olympus Book 1)",
+          "authors": [
+            "Rick Riordan"
+          ],
+          "isbn10": "014196555X",
+          "isbn13": "9780141965550",
+          "description": "The first book in the bestselling spin off series from Percy Jackson and the Olympians, featuring the original hero – now in a brand-new look! Seven Heroes. One Prophecy. Destiny Calls. When Jason, Piper and Leo crash land at Camp Half-Blood, they have no idea what to expect. A haven for the children of the Greek Gods, like the famous Percy Jackson, they are apparently safe here – despite the monsters roaming the woods. . . But before they can settle into their new lives as demigods, the trio are thrown into a quest – to rescue Hera, Queen of the Gods, from the clutches of a new, and terrifying, enemy. If they fail? Demigods will turn on each other, the Giants will overrun Mount Olympus and it’ll be the end of them all. . . So, no big deal! Return to the World of Percy Jackson in the best-selling, brand-new adventure featuring the original hero in Percy Jackson and the Olympians: Wrath of the Triple Goddess – out now!",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2010,
+          "pageCount": 495,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=JeiGsRd4mywC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "roman-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "advanced-reader-friendly",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "action": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 3.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "difficulty": {
+            "value": "advanced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Heroes of Olympus",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "63eb895f-0150-44d7-8bc5-7b195ceafe2c",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_7635b060-87a8-42ff-8d5c-ec82a05259a9",
+        "book": {
+          "id": "google-books:4zjrLRwM3mAC",
+          "title": "The Red Pyramid (The Kane Chronicles Book 1)",
+          "authors": [
+            "Rick Riordan"
+          ],
+          "isbn10": "0141331585",
+          "isbn13": "9780141331584",
+          "description": "The Red Pyramid: the first book in Rick Riordan's The Kane Chronicles. Percy Jackson fought Greek Gods. Now the Gods of Egypt are waking in the modern world... 'I GUESS IT STARTED THE NIGHT OUR DAD BLEW UP THE BRITISH MUSEUM . . .' CARTER AND SADIE KANE'S dad is a brilliant Egyptologist with a secret plan that goes horribly wrong. An explosion shatters the ancient Rosetta stone and unleashes Set, the evil god of chaos . . . Set imprisons Dr Kane in a golden coffin and Carter and Sadie must run for their lives. To save their dad, they embark on a terrifying quest from Cairo to Paris to the American South-west and discover the truth about their family's connection to the House of Life: an Egyptian temple of magic that has existed for thousands of years. The pharaohs of ancient Egypt are far from dead and buried. And neither, unfortunately, are their gods . . . Rick Riordan has now sold an incredible 55 million copies of his books worldwide Praise for the Percy Jackson series: 'Witty and inspired. Gripping, touching and deliciously satirical...This is most likely to succeed Rowling. Puffin is on to a winner' - Amanda Craig, The Times 'Puns, jokes and subtle wit, alongside a gripping storyline' - Telegraph 'Perfectly paced, with electrifying moments chasing each other like heartbeats' - New York Times Rick Riordan is an award-winning mystery writer. He lives in San Antonio, Texas, with his wife and two sons. Percy Jackson and the Lightning Thief was the overall winner of the Red House Children's Book Award in 2006. The Percy Jackson series: The Lightning Thief; The Sea of Monsters; The Battle of the Labyrinth; The Titan's Curse; The Last Olympian Heroes of Olympus: The Lost Hero; The Son of Neptune; The Mark of Athena The Kane Chronicles: The Red Pyramid; The Throne of Fire; The Serpent's Shadow",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2010,
+          "pageCount": 452,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=4zjrLRwM3mAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "ancient-history",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "action": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 3.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "The Kane Chronicles",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "af93442e-d473-4f77-be4b-2731aa9a82e6",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_ae7c4fdc-80cc-48b1-8122-6fdb0ab08193",
+        "book": {
+          "id": "google-books:jUicuAEACAAJ",
+          "title": "The Storm Runner",
+          "authors": [
+            "J. C. Cervantes"
+          ],
+          "isbn10": "1432856197",
+          "isbn13": "9781432856199",
+          "description": "Zane Obispo explores the sleeping volcano in his backyard to escape being teased because he walks with a cane. Then a mysterious girl reveals a prophecy, and soon Zane is on a quest that tests him to the very core in this fresh and funny take on Mayan mythology.",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2018,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=jUicuAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 3.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 14,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "The Storm Runner",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "351fa786-a99a-4a77-a109-4cf6ce7ac2c7",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_60846c6e-5dc4-4e45-9115-67d51d2c549e",
+        "book": {
+          "id": "google-books:WI7FDAAAQBAJ",
+          "title": "Who Let the Gods Out?",
+          "authors": [
+            "Maz Evans"
+          ],
+          "isbn10": "1338065629",
+          "isbn13": "9781338065626",
+          "description": "In the tradition of Chris Grabenstein, Stuart Gibbs, and Pseudonymous Bosch, a hilarious and action-packed romp involving one ordinary boy and a crazy cast of immortals. Elliot Hooper wants nothing more than a regular life for him and his mom. Then a Constellation of the Zodiac crashes from the sky into a pile of cow dung in front of him, and that wish explodes in a spray of...well...you know.Virgo, a 1,964-year-old girl, is on a routine mission to Earth and ABSOLUTELY FORBIDDEN from interacting with mortals. So of course she takes Elliot along with her. But when an evil daemon named Thanatos escapes to wreak terrible havoc, their routine mission turns not-so-routine. For if Elliot and Virgo don't track down the retired Zeus and the rest of the Olympians and help them catch Thanatos, mortals and gods alike won't be long for this earth.Elliot Hooper's life just got a whole lot more LEGENDARY.",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2017,
+          "pageCount": 278,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=WI7FDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "magic",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "humor-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 14,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Who Let the Gods Out?",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "954c79ea-01ed-47e8-868e-71b15361801a",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_24e47df7-ae7c-4ed1-8808-143722b57d97",
+        "book": {
+          "id": "google-books:IHy6vwEACAAJ",
+          "title": "Tristan Strong Punches a Hole in the Sky",
+          "authors": [
+            "Kwame Mbalia"
+          ],
+          "isbn10": "1368039936",
+          "isbn13": "9781368039932",
+          "description": "Best-selling author Rick Riordan presents Kwame Mbalia's epic fantasy, a middle grade American Gods set in a richly-imagined world populated with African American folk heroes and West African gods. Seventh grader Tristan Strong feels anything but strong ever since he failed to save his best friend when they were in a bus accident together. All he has left of Eddie is the journal his friend wrote stories in. Tristan is dreading the month he's going to spend on his grandparents' farm in Alabama, where he's being sent to heal from the tragedy. But on his first night there, a sticky creature shows up in his bedroom and steals Eddie's notebook. Tristan chases after it--is that a doll ?--and a tug-of-war ensues between them underneath a Bottle Tree. In a last attempt to wrestle the journal out of the creature's hands, Tristan punches the tree, accidentally ripping open a chasm into the MidPass, a volatile place with a burning sea, haunted bone ships, and iron monsters that are hunting the inhabitants of this world. Tristan finds himself in the middle of a battle that has left black American folk heroes John Henry and Brer Rabbit exhausted. In order to get back home, Tristan and these new allies will need to entice the god Anansi, the Weaver, to come out of hiding and seal the hole in the sky. But bartering with the trickster Anansi always comes at a price. Can Tristan save this world before he loses more of the things he loves?",
+          "subjects": [
+            "Juvenile Fiction / Legends, Myths, Fables / African",
+            "Juvenile Fiction / People & Places / United States / African American",
+            "Juvenile Fiction / Social Themes / Friendship"
+          ],
+          "publicationYear": 2019,
+          "pageCount": 496,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=IHy6vwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70UKfZ-vQp4--z2DeOPPr7EdDJtBFQvHr8x1kjJdE2r8En4cmi9nTYPdAfX0zvThygz8dupSeM4hFsTYBrvd7IAfvUWPWRypOssiEfv6jkGV5Z7qx9adzAgyf2fnQG_EzOlNJZ7&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "action": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Tristan Strong",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "35bbbb5e-e9d7-400a-a23c-ac8b5763c1fa",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_e368d673-4c26-41a1-a961-92369bc23c3a",
+        "book": {
+          "id": "google-books:4No_jgEACAAJ",
+          "title": "The Hidden Oracle",
+          "authors": [
+            "Rick Riordan"
+          ],
+          "isbn10": "0141363932",
+          "isbn13": "9780141363936",
+          "description": "\"How do you punish an immortal? My name is Apollo. I used to be a god. But what was before I was cast down from Olympus (a terrible misunderstanding) and woke up in a New York dumpster. I persuaded Percy Jackson to give me a lift to Camp Half-Blood. But the place is in chaos. Demigods are going missing and the all-seeing Oracles have fallen to a mysterious enemy known only as 'the Beast'. I figured that regaining Zeu's favour would involve a series of harrowing trials, and I was right (I usually am). My first task? Protect the final Oracle, hidden away for millennia. If I fail, the Beast will control the future, but worse - I'll be stuck as a teenage boy, forever . . .\"",
+          "subjects": [
+            "Juvenile Fiction / Action & Adventure / General",
+            "Juvenile Fiction / Legends, Myths, Fables / General",
+            "Juvenile Fiction / Fantasy / General"
+          ],
+          "publicationYear": 2016,
+          "pageCount": 432,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=4No_jgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE716BYAsBPeGDnQVq-W9x20aquatYMpRAb4oQcVAnATBWANrsVk2t9z27aKWcYuQ4nxRHDxrxA_sH8XKxjy4IXY6FMkDgGGeu1ZkwUKb4quUhOpqgg0-qhOfpki_ARbW9jdpDPXt&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "The Trials of Apollo",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "390d478f-7c57-49e9-abe4-ee8c6637df4b",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_1a441037-7e09-4eba-bd9d-baf26a2c79df",
+        "book": {
+          "id": "google-books:IWyoDwAAQBAJ",
+          "title": "Mythologica",
+          "subtitle": "An encyclopedia of gods, monsters and mortals from ancient Greece",
+          "authors": [
+            "Dr. Stephen P. Kershaw"
+          ],
+          "isbn10": "1786031930",
+          "isbn13": "9781786031938",
+          "description": "Amazon's No. 1 Children's Non-Fiction Book of the Year 2019 is an illustrated encyclopedia of Greek mythology like no other. Mythologica features startlingly beautiful and exquisitely otherworldly portraits of mythological characters in eye-popping color from artist Victoria Topping and authoritative text from Classics scholar and Greek mythology expert Dr. Stephen Kershaw. Uncover the colorful lives of 50 powerful gods and goddesses, earth-dwelling mortals, and terrifying monsters as you journey back in time to ancient Greece. From the fearless Athena and her meddlesome ways to the brave and bold Odysseus and his remarkable journey home, discover why these incredible stories are still a part of our culture today. Listed alphabetically, each boldly designed spread presents a figure from the myths, including their name in Greek, their defining attributes, and a summary of their story, along with multiple sidelights that provide additional facts. Interspersed with the profiles are summaries of famous mythological tales and historical events, like the Odyssey, the Trojan War, and the story of the Argonauts. An electrifying visual portrayal of each figure transports you directly into their wild world. Victoria Topping’s artwork is a fusion of technological and traditional techniques that combines photography, painting, and cut-paper collage to perfectly express the blending of human and fantastic traits from which mythical beings are made. The thrilling images and digestible text provide the perfect introduction to the lively world of Greek mythology and a beautiful display reference for the whole family. Prepare to be amazed as you uncover the epic, heroic, and sometimes terrible lives of mortals, monsters, and gods.",
+          "subjects": [
+            "Juvenile Nonfiction"
+          ],
+          "publicationYear": 2019,
+          "pageCount": 115,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=IWyoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "ancient-history",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "history-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "educational": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 5,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 14,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+              "reviewed": false
+            }
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "393fb68e-cccf-4c4b-abe1-e37254aa5630",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_b1230da6-9234-45be-a07c-32e3cf9e2b5a",
+        "book": {
+          "id": "google-books:uYnoDwAAQBAJ",
+          "title": "The Age of Dinosaurs",
+          "subtitle": "The Rise and Fall of the World's Most Remarkable Animals",
+          "authors": [
+            "Steve Brusatte"
+          ],
+          "isbn10": "0062930192",
+          "isbn13": "9780062930194",
+          "description": "The New York Times–bestselling author and paleontologist offers young readers a revealing look at dinosaurs and the new science used to learn about them. Even though the dinosaurs roamed the earth millions of years ago, we're still piecing together new information about these ancient animals. In fact, a new species of dinosaur is discovered just about every week! New York Times–bestselling author and acclaimed paleontologist Steve Brusatte writes about all the new discoveries he and his colleagues have made that help us better understand—and marvel at—these remarkable reptiles. Did you know that many dinosaurs had feathers? Or that there are even modern-day dinosaurs walking around right now? Brusatte covers all this and more in The Age of Dinosaurs, which also includes a glossary, pronunciation guide, and index, as well as photos throughout.",
+          "subjects": [
+            "Juvenile Nonfiction"
+          ],
+          "publicationYear": 2021,
+          "pageCount": 233,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=uYnoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "dinosaurs",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "science",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "advanced-reader-friendly",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "educational": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 12,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+              "reviewed": false
+            }
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "b16eda5c-ebdf-43a3-bcd7-027169f52efa",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_3070605b-28bd-40ad-8eb1-3e5d72ff065d",
+        "book": {
+          "id": "google-books:YD2JBAAAQBAJ",
+          "title": "Raising Rufus",
+          "authors": [
+            "David Fulk"
+          ],
+          "isbn10": "0385390726",
+          "isbn13": "9780385390729",
+          "description": "Readers of The Enormous Egg will dive right into this adventurous story about what happens when an average eleven-year-old boy becomes the parent of a giant T-rex! In the unremarkable town of Menominee Springs, Wisconsin, lives a twelve-year-old explorer named Martin, who one day stumbles across something remarkable. It’s an egg. But not just any egg—a dinosaur egg. And a week later, Martin becomes the proud parent of . . . a Tyrannosaurus rex! As the summer unfolds, Martin finds it harder and harder to keep Rufus hidden from rest of the world. And then it gets ugly. Can Martin save Rufus from his parents, his neighbors, and most importantly, the owner of the town carnival? With the help of his best friend, Audrey, and his science teacher, Mr. Ekhart, Martin must uncover his inner hero and find Rufus a home, even if it means losing the one thing he’s come to really care about. Praise for Raising Rufus: \"The premise of Fulk’s first children’s book has immediate appeal, and Martin’s difficulties with his father (who wishes his son was more into sports than science) and school bullies are handled well.\"--Publishers Weekly \"Fulk's debut novel is a poignant story of a boy's coming into his own. . . . Readers will cheer for Martin and Rufus in this funny twist on a boy-and-his-dog story.\"--Kirkus Reviews",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2015,
+          "pageCount": 211,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=YD2JBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "dinosaurs",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "friendship",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 3.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 12,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+              "reviewed": false
+            }
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "97166738-ed28-43ac-9a02-5fcb16b4a2d1",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_4c23285b-f464-4f6b-9673-a4405d842f8a",
+        "book": {
+          "id": "google-books:AGRgDgAAQBAJ",
+          "title": "Dinosaur Empire! (Earth Before Us #1)",
+          "subtitle": "Journey through the Mesozoic Era",
+          "authors": [
+            "Abby Howard"
+          ],
+          "isbn10": "1683351134",
+          "isbn13": "9781683351139",
+          "description": "Ronnie is just a normal fifth-grader trying to pass her science class’s impossible quiz on the history of dinosaurs . . . until she happens upon her neighbor—Ms. Lernin—a retired paleontologist. With the assistance of Science Magic, Ronnie and Ms. Lernin travel back through time and space to experience the Mesozoic Era firsthand. They visit three important time periods in the development of the Mesozoic Era: the Triassic, the Jurassic, and the Cretaceous. Along the way, Ronnie finds herself face-to-face with real-life dinosaurs and reptiles, like stegosauruses, velociraptors, and thalattosaurs. With the help of her neighbor’s trusty knowledge of prehistoric times, she learns the differences between herbivores, carnivores, and omnivores, as well as between dinosaurs, insects, and reptiles. This insightful and informative graphic novel uses engaging art to bring facts to life, giving kids the tools to understand the evolution of these prehistoric creatures and the important effects this era had on our world today.",
+          "subjects": [
+            "Juvenile Nonfiction"
+          ],
+          "publicationYear": 2017,
+          "pageCount": 128,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=AGRgDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "dinosaurs",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "science",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "educational": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+              "reviewed": false
+            }
+          },
+          "maximumAge": {
+            "value": 11,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Earth Before Us",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:37:08.922Z",
+          "updatedAt": "2026-09-20T17:37:08.922Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:37:08.922Z",
+        "updatedAt": "2026-09-20T17:37:17.921Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:37:17.921Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "8f964a5e-253f-4dba-8565-84ba28a0d931",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+        "book": {
+          "id": "google-books:dzr9jwEACAAJ",
+          "title": "Percy Jackson and the Lightning Thief",
+          "authors": [
+            "Rick Riordan"
+          ],
+          "isbn10": "0141381485",
+          "isbn13": "9780141381480",
+          "description": "The gods of Olympus are alive in the 21st Century. They still fall in love with mortals and have children who might become great heroes, but most of these children meet horrible fates at the hands of monsters by the age of twelve. Only a few learn the truth of their identity and make it to Half Blood Hill, a Long Island summer camp dedicated to training young demigods. Such is the revelation that launches young Percy Jackson on a quest to help his real father, Poseidon, avert a war among the gods. With the help of Grover the satyr and Annabeth the daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction - Zeus master bolt. Along the way, they face a host of mythological enemies determined to stop them. Most of all, Percy must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend. Follow the author on his blog",
+          "subjects": [
+            "Juvenile Fiction / Family / Parents",
+            "Juvenile Fiction / Legends, Myths, Fables / General",
+            "Juvenile Fiction / Sports & Recreation / Camping & Outdoor Activities",
+            "Juvenile Fiction / Fantasy / General",
+            "Juvenile Fiction / Social Themes / Friendship"
+          ],
+          "publicationYear": 2005,
+          "pageCount": 374,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=dzr9jwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72AgqfYUkIJ65XxAmKRCgcKiEtBro06OFQuOtVFWNJ-PwWodYlzCx_nWVho4nbKG3vHhAQr3UeOxUHmJhIUEUK7pZbEOkiluUVSnnhBeuMWPQWp41GMBCbGBYy-Y3I8UO-GfUdi&source=gbs_api"
+        },
+        "tier": "golden",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "humor-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/bookfinder/percy-jackson-and-the-lightning-thief/",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Percy Jackson and the Olympians",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T17:38:30.779Z",
+          "updatedAt": "2026-09-20T17:38:30.779Z",
+          "createdBy": "system:developer",
+          "updatedBy": "system:developer"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:38:30.779Z",
+        "updatedAt": "2026-09-20T17:38:33.414Z",
+        "createdBy": "system:developer",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:38:33.414Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "91202cdb-37f6-45d8-ab55-3151f11517ed",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_ff92107f-3bcd-4f95-8ee3-173177b7dc26",
+        "book": {
+          "id": "google-books:stTdtAEACAAJ",
+          "title": "Aru Shah and the End of Time (A Pandava Novel Book 1)",
+          "authors": [
+            "Roshani Chokshi"
+          ],
+          "isbn10": "1368012353",
+          "isbn13": "9781368012355",
+          "description": "Best-selling author Rick Riordan introduces this adventure by Roshani Chokshi about twelve-year-old Aru Shah, who has a tendency to stretch the truth in order to fit in at school. While her classmates are jetting off to family vacations in exotic locales, she'll be spending her autumn break at home, in the Museum of Ancient Indian Art and Culture, waiting for her mom to return from her latest archeological trip. Is it any wonder that Aru makes up stories about being royalty, traveling to Paris, and having a chauffeur? One day, three schoolmates show up at Aru's doorstep to catch her in a lie. They don't believe her claim that the museum's Lamp of Bharata is cursed, and they dare Aru to prove it. Just a quick light, Aru thinks. Then she can get herself out of this mess and never ever fib again. But lighting the lamp has dire consequences. She unwittingly frees the Sleeper, an ancient demon whose duty it is to awaken the God of Destruction. Her classmates and beloved mother are frozen in time, and it's up to Aru to save them. The only way to stop the demon is to find the reincarnations of the five legendary Pandava brothers, protagonists of the Hindu epic poem, the Mahabharata, and journey through the Kingdom of Death. But how is one girl in Spider-Man pajamas supposed to do all that?",
+          "subjects": [
+            "Juvenile Fiction"
+          ],
+          "publicationYear": 2018,
+          "pageCount": 368,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=stTdtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "tier": "core",
+        "topics": [
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "magic",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "world-building",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "action": {
+            "value": 3.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "fantasy": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "educational": {
+            "value": 2.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "reluctantReader": {
+            "value": 3,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "difficulty": {
+            "value": "average",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Pandava",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [],
+        "audit": {
+          "createdAt": "2026-09-20T13:12:15.476Z",
+          "updatedAt": "2026-09-20T17:39:52.446Z",
+          "createdBy": "system:developer",
+          "updatedBy": "ai:book-scout-curator"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:39:52.446Z",
+        "updatedAt": "2026-09-20T17:39:52.480Z",
+        "createdBy": "ai:book-scout-curator",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:39:52.480Z",
+        "approvedBy": "ai:book-scout-curator"
+      }
+    },
+    {
+      "id": "b949c5cb-5233-4338-ad14-7e52ec57ce43",
+      "state": "approved",
+      "proposed": {
+        "id": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+        "book": {
+          "id": "google-books:dzr9jwEACAAJ",
+          "title": "Percy Jackson and the Lightning Thief",
+          "authors": [
+            "Rick Riordan"
+          ],
+          "isbn10": "0141381485",
+          "isbn13": "9780141381480",
+          "description": "The gods of Olympus are alive in the 21st Century. They still fall in love with mortals and have children who might become great heroes, but most of these children meet horrible fates at the hands of monsters by the age of twelve. Only a few learn the truth of their identity and make it to Half Blood Hill, a Long Island summer camp dedicated to training young demigods. Such is the revelation that launches young Percy Jackson on a quest to help his real father, Poseidon, avert a war among the gods. With the help of Grover the satyr and Annabeth the daughter of Athena, Percy must journey across the United States to catch a thief who has stolen the original weapon of mass destruction - Zeus master bolt. Along the way, they face a host of mythological enemies determined to stop them. Most of all, Percy must come to terms with a father he has never known, and an Oracle that has warned him of betrayal by a friend. Follow the author on his blog",
+          "subjects": [
+            "Juvenile Fiction / Family / Parents",
+            "Juvenile Fiction / Legends, Myths, Fables / General",
+            "Juvenile Fiction / Sports & Recreation / Camping & Outdoor Activities",
+            "Juvenile Fiction / Fantasy / General",
+            "Juvenile Fiction / Social Themes / Friendship"
+          ],
+          "publicationYear": 2005,
+          "pageCount": 374,
+          "language": "en",
+          "coverUrl": "https://books.google.com/books/content?id=dzr9jwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72AgqfYUkIJ65XxAmKRCgcKiEtBro06OFQuOtVFWNJ-PwWodYlzCx_nWVho4nbKG3vHhAQr3UeOxUHmJhIUEUK7pZbEOkiluUVSnnhBeuMWPQWp41GMBCbGBYy-Y3I8UO-GfUdi&source=gbs_api"
+        },
+        "tier": "golden",
+        "topics": [
+          {
+            "value": "greek-mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "mythology",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "adventure",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "readerFitTags": [
+          {
+            "value": "mythology-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "series-reader",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "fast-paced",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "value": "humor-lover",
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "traits": {
+          "adventure": {
+            "value": 4.5,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          "humor": {
+            "value": 4,
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        },
+        "readingFit": {
+          "minimumAge": {
+            "value": 9,
+            "provenance": {
+              "sourceType": "external",
+              "source": "https://www.booktrust.org.uk/book-recommendations/bookfinder/percy-jackson-and-the-lightning-thief/",
+              "reviewed": false
+            }
+          }
+        },
+        "series": {
+          "name": "Percy Jackson and the Olympians",
+          "position": 1,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "relationships": [
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_f2877cd7-925b-4274-85c6-1842d55a6e28",
+            "type": "read_next",
+            "strength": 1,
+            "reasons": [
+              "Continues Greek and Roman demigod adventures."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_60846c6e-5dc4-4e45-9115-67d51d2c549e",
+            "type": "similar_to",
+            "strength": 0.95,
+            "reasons": [
+              "Greek gods, contemporary adventure, and humor."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_e368d673-4c26-41a1-a961-92369bc23c3a",
+            "type": "read_next",
+            "strength": 0.9,
+            "reasons": [
+              "Another Greek mythology adventure by Rick Riordan."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_ae7c4fdc-80cc-48b1-8122-6fdb0ab08193",
+            "type": "similar_to",
+            "strength": 0.85,
+            "reasons": [
+              "Modern-day mythological quest with humor."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_24e47df7-ae7c-4ed1-8808-143722b57d97",
+            "type": "similar_to",
+            "strength": 0.85,
+            "reasons": [
+              "Modern mythological adventure with a young hero."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          },
+          {
+            "sourceBookId": "bs_a9cdef0c-3436-4cff-ac40-cc237048c668",
+            "targetBookId": "bs_ff92107f-3bcd-4f95-8ee3-173177b7dc26",
+            "type": "similar_to",
+            "strength": 0.85,
+            "reasons": [
+              "Contemporary adventure inspired by mythology."
+            ],
+            "provenance": {
+              "sourceType": "book_scout_classification",
+              "assistance": "ai_assisted",
+              "reviewed": false
+            }
+          }
+        ],
+        "audit": {
+          "createdAt": "2026-09-20T17:38:30.779Z",
+          "updatedAt": "2026-09-20T17:39:52.502Z",
+          "createdBy": "system:developer",
+          "updatedBy": "ai:book-scout-curator"
+        }
+      },
+      "audit": {
+        "createdAt": "2026-09-20T17:39:52.502Z",
+        "updatedAt": "2026-09-20T17:39:52.522Z",
+        "createdBy": "ai:book-scout-curator",
+        "updatedBy": "ai:book-scout-curator",
+        "approvedAt": "2026-09-20T17:39:52.522Z",
         "approvedBy": "ai:book-scout-curator"
       }
     }

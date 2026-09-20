@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "ref": "lost-hero",
+      "title": "The Lost Hero (Heroes of Olympus Book 1)",
+      "author": "Rick Riordan",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "roman-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "advanced-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "difficulty": {
+          "value": "advanced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Heroes of Olympus",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "red-pyramid",
+      "title": "The Red Pyramid (The Kane Chronicles Book 1)",
+      "author": "Rick Riordan",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "ancient-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Kane Chronicles",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "storm-runner",
+      "title": "The Storm Runner",
+      "author": "J. C. Cervantes",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Storm Runner",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "who-let-gods-out",
+      "title": "Who Let the Gods Out?",
+      "author": "Maz Evans",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "magic",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Who Let the Gods Out?",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "tristan-strong",
+      "title": "Tristan Strong Punches a Hole in the Sky",
+      "author": "Kwame Mbalia",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "action": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Tristan Strong",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "hidden-oracle",
+      "title": "The Hidden Oracle",
+      "author": "Rick Riordan",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "The Trials of Apollo",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "mythologica",
+      "title": "Mythologica",
+      "author": "Dr. Stephen P. Kershaw",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "ancient-history",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "history-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 5,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 14,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/what-to-read-next/percy-jackson/",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "age-of-dinosaurs",
+      "title": "The Age of Dinosaurs",
+      "author": "Steve Brusatte",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "advanced-reader-friendly",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 12,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/age-dinosaurs-rise-and-fall-worlds-most-remarkable-animals",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "raising-rufus",
+      "title": "Raising Rufus",
+      "author": "David Fulk",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "friendship",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 3.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 12,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.readingrockets.org/books-and-authors/books/raising-rufus",
+            "reviewed": false
+          }
+        }
+      },
+      "relationships": []
+    },
+    {
+      "ref": "dinosaur-empire",
+      "title": "Dinosaur Empire! (Earth Before Us #1)",
+      "author": "Abby Howard",
+      "tier": "core",
+      "topics": [
+        {
+          "value": "dinosaurs",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "science",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "educational": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+            "reviewed": false
+          }
+        },
+        "maximumAge": {
+          "value": 11,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.kirkusreviews.com/book-reviews/abby-howard/dinosaur-empire/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Earth Before Us",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    }
+  ]
+}

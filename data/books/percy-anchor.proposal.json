@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "ref": "percy-anchor",
+      "title": "The Lightning Thief",
+      "author": "Rick Riordan",
+      "tier": "golden",
+      "topics": [
+        {
+          "value": "greek-mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "mythology",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "adventure",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "readerFitTags": [
+        {
+          "value": "mythology-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "series-reader",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "fast-paced",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        {
+          "value": "humor-lover",
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      ],
+      "traits": {
+        "adventure": {
+          "value": 4.5,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        },
+        "humor": {
+          "value": 4,
+          "provenance": {
+            "sourceType": "book_scout_classification",
+            "assistance": "ai_assisted",
+            "reviewed": false
+          }
+        }
+      },
+      "readingFit": {
+        "minimumAge": {
+          "value": 9,
+          "provenance": {
+            "sourceType": "external",
+            "source": "https://www.booktrust.org.uk/book-recommendations/bookfinder/percy-jackson-and-the-lightning-thief/",
+            "reviewed": false
+          }
+        }
+      },
+      "series": {
+        "name": "Percy Jackson and the Olympians",
+        "position": 1,
+        "provenance": {
+          "sourceType": "book_scout_classification",
+          "assistance": "ai_assisted",
+          "reviewed": false
+        }
+      },
+      "relationships": []
+    }
+  ]
+}

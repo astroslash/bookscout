@@ -59,6 +59,12 @@ export function passesHardFilters(candidate: Candidate, input: RecommendationInp
     !book.subjects.some((subject) => /juvenile|children|middle grade/i.test(subject)) &&
     candidate.curated?.readingFit?.minimumAge?.value === undefined) return false;
   if (input.likedBooks.some((name) => sameWorkTitle(name, book.title))) return false;
+  const seriesName = candidate.curated?.series?.name;
+  if (seriesName && input.likedBooks.some((name) => {
+    const liked = normalizeWords(name);
+    const series = normalizeWords(seriesName);
+    return liked.split(" ").length >= 2 && series.startsWith(liked);
+  })) return false;
   if (input.dislikedBooks.some((name) => {
     if (sameWorkTitle(name, book.title)) return true;
     const disliked = normalizeWords(name);

@@ -1,4 +1,4 @@
-# Curated Book Scout catalog
+# Curated Book Beacon catalog
 
 For external Golden/Core data creation, use the exact [data contract](CATALOG_DATA_CONTRACT.md) and [proposal JSON template](CATALOG_DATA_TEMPLATE.json). The template is fictional and must not be staged as real book data.
 
@@ -24,7 +24,7 @@ npm run catalog:check
 
 `npm run catalog:approve -- <seed-id>` is a developer command for an **already inspected**, high confidence enriched seed. It approves a factual provider record with an AI curator identity and makes no human-review claim. For imported AI-assisted editorial proposals, preview `npm run catalog:approve-ready-ai -- <dataset.json> ai:book-scout-curator`, then add `--apply` to approve ready records. The report lists every approved and skipped ref. A later human review uses `npm run catalog:mark-human-reviewed -- <catalog-id> human:<opaque-id>`. Run `catalog:build` after approval.
 
-The starter set has 12 seeds: *The Lightning Thief*, *Harry Potter and the Sorcerer's Stone*, *The Hunger Games*, *The Hobbit*, *The Wild Robot*, *Wonder*, *Holes*, *Hatchet*, *The Giver*, *Diary of a Wimpy Kid*, *Dog Man*, and *The Dragonet Prophecy* (Wings of Fire). Five factual records were previously approved and seven require edition selection. The small catalog proves the workflow; it is not the Golden 100 or a public browsable collection.
+The current catalog began with a 200-book Golden/Core proposal. A focused expansion for Percy Jackson and dinosaur requests is documented in [COVERAGE_CURATION.md](COVERAGE_CURATION.md). Approved records alone enter the runtime catalog; staged or unresolved seeds do not.
 
 ## Model and review rules
 
@@ -34,4 +34,4 @@ Each profile has an opaque stable Book Scout ID, independent of title, ISBN, fil
 
 The future flow is: authorized curator searches through the existing provider, selects the correct normalized result, creates or revises a profile, adds sourced classifications and relationships, submits for review, and a reviewer approves it. A browser interface can orchestrate these domain operations using a database backed repository without rewriting recommendations. No child names, emails, schools, or other personal information belongs in the catalog.
 
-At recommendation time, the service generates candidates from Google Books, attaches approved profiles by ISBN or title/author, then uses known curated fields in the existing scorer and diversification pass. The provider `Book` remains unchanged. Books outside the small curated set continue through the same pipeline.
+At recommendation time, the service generates candidates only from approved curated profiles, then applies reader-fit, scoring, and diversification. Google Books remains a bibliographic and enrichment provider. Books without approved curated profiles cannot be recommended.

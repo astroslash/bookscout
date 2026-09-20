@@ -31,7 +31,10 @@ export const recommendationReasonSchema = z.object({
 });
 
 export const recommendationResultSchema = z.object({
-  coverage: z.object({ status: z.literal("insufficient_curated_match") }).optional(),
+  coverage: z.object({
+    status: z.literal("insufficient_curated_match"),
+    availableCatalogTopics: z.array(z.string().min(1)).max(3),
+  }).optional(),
   recommendations: z.array(z.object({
     book: bookSchema,
     matchScore: z.number().int().min(0).max(100),
