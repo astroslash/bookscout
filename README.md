@@ -22,6 +22,8 @@ Open `http://localhost:3000`. Copy `.env.example` to `.env.local` and set `GOOGL
 | `connectors/index.ts` | Composition root where connectors are registered |
 | `providers/google-books/` | Google Books response schema, normalization, and HTTP adapter |
 | `providers/amazon/` | Optional Amazon.com search link provider; no book-data or pricing dependency |
+| `connectors/book-scout/curation/` | Curated profile schemas, review service, repository contract, file adapter, and approved-topic enrichment |
+| `data/books/` | Version-controlled catalog source and generated runtime catalog |
 | `app/` | Thin Next.js routes and UI |
 | `tests/` | Factory, Google Books adapter, and recommendation pipeline tests |
 
@@ -58,9 +60,13 @@ Create a Google Cloud API key for the Books API and put it in `.env.local` as `G
 
 Set `AMAZON_ASSOCIATES_TAG` to your **Amazon.com** Associates tracking ID in `.env.local` and in Vercel's server environment variables, then redeploy. If it is unset, book pages omit the commerce link and disclosure. The commerce provider builds tagged Amazon book-search URLs; no Amazon API key, scraping, product data, or pricing is involved. The page labels the link as paid and displays the Associates disclosure. Amazon notes that ISBNs do not reliably equal ASINs, so we do not construct direct product links from ISBNs. [Amazon link guidance](https://affiliate-program.amazon.com/help/node/topic/GP38PJ6EUR6PFBEC), [disclosure guidance](https://affiliate-program.amazon.com/help/node/topic/GPXFHVYZMTGPUMPE).
 
+## Curated catalog foundation
+
+The curated catalog starts empty. `data/books/catalog.source.json` holds developer-maintained approved profiles and separate submissions; `npm run catalog:build` validates it and generates `data/books/catalog.json`. `npm run catalog:check` verifies that the generated file is current. Approved topics are matched to live Google Books candidates through a narrow repository interface and can improve the existing recommendation score. The engine never reads files directly. Stable opaque Book Scout IDs, audit metadata, field provenance, and review operations are defined in reusable domain code. See [docs/CURATION.md](docs/CURATION.md) for the source format, review boundary, and future curator workflow.
+
 ## Future recommendation catalog
 
-A browseable catalog of **Book Scout recommendations** is a separate product feature from the Google Books source catalog. Start with a small set of curated themes or reading situations, such as mythology for advanced middle-grade readers, and store only the theme definitions and selected normalized book IDs or ISBNs. Resolve current metadata from providers and use the existing scoring service where a visitor supplies preferences. This avoids copying a giant book database or storing child profiles. A browse/search UI and any persistence for curated collections can be designed when we build that feature.
+A browseable catalog of **Book Scout recommendations** is a separate product feature from the Google Books source catalog and the curated-book foundation above. Start with a small set of curated themes or reading situations, such as mythology for advanced middle-grade readers, and store only the theme definitions and selected stable Book Scout IDs. Resolve current metadata from providers and use the existing scoring service where a visitor supplies preferences. This avoids copying a giant book database or storing child profiles. A browse/search UI and any persistence for curated collections can be designed when we build that feature.
 
 ## Adding a connector or provider
 
@@ -75,6 +81,7 @@ npm test
 npm run typecheck
 npm run lint
 npm run build
+npm run catalog:check
 ```
 
 The Google Books tests use mocked HTTP and need no key. To run the optional live catalog check in PowerShell, set `$env:GOOGLE_BOOKS_API_KEY = "your-key"` and `$env:LIVE_GOOGLE_BOOKS = "1"`, then run `npm test`. Without `LIVE_GOOGLE_BOOKS`, no live call is made. See the [Google Books API documentation](https://developers.google.com/books/docs/v1/using) for key setup.

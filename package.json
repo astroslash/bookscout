@@ -8,7 +8,9 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "catalog:build": "tsx scripts/build-catalog.ts",
+    "catalog:check": "tsx scripts/build-catalog.ts --check"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",
@@ -23,6 +25,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^16.3.5",
+    "tsx": "^4.23.13",
     "typescript": "^5.0.0",
     "vitest": "^5.0.1"
   }
