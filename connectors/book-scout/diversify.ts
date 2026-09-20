@@ -35,6 +35,7 @@ export function diversifyCandidates(
       return !selected.some((chosen) =>
         (author && author === primaryAuthor(chosen)) || (prefix && prefix === seriesPrefix(chosen)));
     });
+    if (!diverse.length && selected.length) break;
     const pool = diverse.length ? diverse : remaining;
     const ordered = [...pool].sort((a, b) => {
       const adjusted = (candidate: ScoredCandidate) => {

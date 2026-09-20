@@ -17,6 +17,7 @@ export interface Connector {
   manifest: ConnectorManifest;
   tools: readonly ConnectorTool[];
   healthCheck(): Promise<boolean>;
+  diagnostics?(): Promise<Record<string, string | number>>;
 }
 
 export async function invokeTool(

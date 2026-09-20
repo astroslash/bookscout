@@ -7,6 +7,8 @@ import { BookScoutRecommendationService } from "./service";
 import { createBookScoutTools } from "./tools";
 import { FileCuratedCatalogRepository } from "./curation/file-repository";
 import type { CuratedCatalogRepository } from "./curation/repository";
+import { createHash } from "node:crypto";
+import runtimeCatalog from "@/data/books/catalog.json";
 
 export function createBookScoutConnector(provider?: BookProvider, curatedRepository: CuratedCatalogRepository = new FileCuratedCatalogRepository()): Connector {
   const getService = () => new BookScoutRecommendationService(
@@ -19,6 +21,14 @@ export function createBookScoutConnector(provider?: BookProvider, curatedReposit
     tools: createBookScoutTools(getService),
     async healthCheck() {
       return provider !== undefined || Boolean(process.env.GOOGLE_BOOKS_API_KEY?.trim());
+    },
+    async diagnostics() {
+      const approved = await curatedRepository.listApproved();
+      return {
+        catalogSchemaVersion: runtimeCatalog.schemaVersion,
+        approvedCuratedBooks: approved.length,
+        catalogChecksum: createHash("sha256").update(JSON.stringify(approved)).digest("hex").slice(0, 16),
+      };
     },
   };
 }

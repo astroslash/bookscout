@@ -2,7 +2,8 @@ import type { Candidate } from "./candidates";
 import { normalizeWords } from "./candidates";
 import type { Book } from "./book";
 import type { RecommendationInput, RecommendationReason } from "./schemas";
-import { normalizeTopic } from "./curation/taxonomy";
+import { sameWorkTitle } from "./identity";
+import { curatedInterestEvidence, providerInterestEvidence } from "./quality";
 
 export type ScoreWeights = {
   likedBookSimilarity: number;
@@ -17,6 +18,8 @@ export type ScoreWeights = {
 export type RecommendationConfig = {
   weights: ScoreWeights;
   lowContentThreshold: number;
+  minimumCuratedScore: number;
+  minimumFallbackScore: number;
   lexileBands: Record<NonNullable<RecommendationInput["readingAbility"]>, readonly [number, number]>;
 };
 
@@ -31,6 +34,9 @@ export const defaultRecommendationConfig: RecommendationConfig = {
     diversity: 5,
   },
   lowContentThreshold: 75,
+  // Old one-word results clustered around 59; evidence gates screen the higher-scoring false matches.
+  minimumCuratedScore: 60,
+  minimumFallbackScore: 54,
   // Broad scoring bands, used only when a provider supplies a real Lexile value.
   lexileBands: { beginner: [0, 650], average: [550, 1100], advanced: [900, 2000] },
 };
@@ -41,6 +47,8 @@ export function validateRecommendationConfig(config: RecommendationConfig): void
       Math.abs(weights.reduce((sum, weight) => sum + weight, 0) - 100) > 0.001 ||
       config.weights.diversity >= 100 ||
       !Number.isFinite(config.lowContentThreshold) || config.lowContentThreshold < 0 || config.lowContentThreshold > 100 ||
+      !Number.isFinite(config.minimumCuratedScore) || config.minimumCuratedScore < 0 || config.minimumCuratedScore > 100 ||
+      !Number.isFinite(config.minimumFallbackScore) || config.minimumFallbackScore < 0 || config.minimumFallbackScore > 100 ||
       Object.values(config.lexileBands).some(([minimum, maximum]) => !Number.isFinite(minimum) || !Number.isFinite(maximum) || minimum > maximum)) {
     throw new Error("Recommendation weights must be non-negative, sum to 100, and use a valid content threshold.");
   }
@@ -48,10 +56,27 @@ export function validateRecommendationConfig(config: RecommendationConfig): void
 
 export function passesHardFilters(candidate: Candidate, input: RecommendationInput, config: RecommendationConfig): boolean {
   const book = candidate.book;
-  const title = normalizeWords(book.title);
-  if ([...input.likedBooks, ...input.dislikedBooks].some((name) => normalizeWords(name) === title)) return false;
+  if (book.language && book.language.toLowerCase() !== input.language) return false;
+  if (input.age !== undefined && input.age < 13 &&
+    book.subjects.some((subject) => /young adult/i.test(subject)) &&
+    !book.subjects.some((subject) => /juvenile|children|middle grade/i.test(subject)) &&
+    candidate.curated?.readingFit?.minimumAge?.value === undefined) return false;
+  if (input.likedBooks.some((name) => sameWorkTitle(name, book.title))) return false;
+  if (input.dislikedBooks.some((name) => {
+    if (sameWorkTitle(name, book.title)) return true;
+    const disliked = normalizeWords(name);
+    return disliked.split(" ").length >= 2 && normalizeWords(book.title).startsWith(`${disliked} `);
+  })) return false;
   const minimumAge = candidate.curated?.readingFit?.minimumAge?.value ?? book.readingLevel?.minimumAge;
+  const maximumAge = candidate.curated?.readingFit?.maximumAge?.value ?? book.readingLevel?.maximumAge;
   if (input.age !== undefined && minimumAge !== undefined && input.age < minimumAge) return false;
+  if (input.age !== undefined && maximumAge !== undefined && input.age > maximumAge + 1) return false;
+  const minimumGrade = candidate.curated?.readingFit?.minimumGrade?.value;
+  const maximumGrade = candidate.curated?.readingFit?.maximumGrade?.value;
+  if (input.grade !== undefined && minimumGrade !== undefined && input.grade < minimumGrade) return false;
+  if (input.grade !== undefined && maximumGrade !== undefined && input.grade > maximumGrade + 1) return false;
+  if (input.readingAbility === "advanced" && candidate.curated?.readingFit?.difficulty?.value === "beginner" &&
+    (input.age ?? 10) >= 9) return false;
   const romance = candidate.curated?.traits.romance?.value === undefined ? book.content?.romance : candidate.curated.traits.romance.value * 20;
   const scary = candidate.curated?.traits.scary?.value === undefined ? book.content?.scary : candidate.curated.traits.scary.value * 20;
   if (input.preferences.romance === "low" && romance !== undefined && romance >= config.lowContentThreshold) return false;
@@ -59,29 +84,11 @@ export function passesHardFilters(candidate: Candidate, input: RecommendationInp
   return true;
 }
 
-function phraseMatch(phrase: string, text: string): number {
-  const query = normalizeWords(phrase);
-  const content = normalizeWords(text);
-  if (!query || !content) return 0;
-  if (content.includes(query)) return 1;
-  const tokens = query.split(" ");
-  const haystack = new Set(content.split(" "));
-  const coverage = tokens.filter((token) => haystack.has(token)).length / tokens.length;
-  return coverage === 1 ? 0.85 : coverage * 0.5;
-}
-
 function interestSignal(candidate: Candidate, input: RecommendationInput): { score: number; term: string } | undefined {
   if (input.interests.length === 0) return undefined;
-  const book = candidate.book;
-  const primaryText = [book.title, ...book.subjects].join(" ");
   const matches = input.interests.map((term) => ({
     term,
-    score: Math.max(
-      phraseMatch(term, primaryText),
-      phraseMatch(term, book.description ?? "") * 0.7,
-      candidate.matchedInterests.includes(term) ? 0.55 : 0,
-      candidate.curated?.topics.some((topic) => topic.value === normalizeTopic(term)) ? 1 : 0,
-    ),
+    score: candidate.curated ? curatedInterestEvidence(candidate.curated, term) : providerInterestEvidence(candidate.book, term),
   }));
   matches.sort((a, b) => b.score - a.score);
   const score = 0.7 * matches[0].score + 0.3 * (matches.reduce((sum, match) => sum + match.score, 0) / matches.length);
@@ -90,19 +97,19 @@ function interestSignal(candidate: Candidate, input: RecommendationInput): { sco
 
 function likedSignal(candidate: Candidate, input: RecommendationInput, references: Book[]): number | undefined {
   if (input.likedBooks.length === 0) return undefined;
-  let signal = candidate.matchedLikedBooks.length > 0 ? 0.6 : 0;
+  let signal = candidate.relationshipStrength ?? 0;
   for (const reference of references) {
-    if (reference.id === candidate.book.id) continue;
+    if (reference.id === candidate.book.id || sameWorkTitle(reference.title, candidate.book.title)) continue;
     if (reference.authors.some((author) => candidate.book.authors.some((other) => normalizeWords(author) === normalizeWords(other)))) {
-      signal = Math.max(signal, 0.85);
+      signal = Math.max(signal, 0.7);
     }
     if (reference.subjects.length && candidate.book.subjects.length) {
       const referenceSubjects = new Set(reference.subjects.map(normalizeWords));
       const overlap = candidate.book.subjects.filter((subject) => referenceSubjects.has(normalizeWords(subject))).length;
-      if (overlap) signal = Math.max(signal, 0.55 + 0.25 * overlap / Math.max(reference.subjects.length, candidate.book.subjects.length));
+      if (overlap && referenceSubjects.size > 1) signal = Math.max(signal, 0.45 + 0.2 * overlap / Math.max(reference.subjects.length, candidate.book.subjects.length));
     }
   }
-  return signal > 0 ? signal : references.length ? 0.4 : undefined;
+  return signal > 0 ? signal : undefined;
 }
 
 function ageSignal(candidate: Candidate, input: RecommendationInput): number | undefined {
@@ -167,7 +174,8 @@ export function scoreCandidate(candidate: Candidate, input: RecommendationInput,
   ];
   const matchWeight = signals.reduce((sum, [weight]) => sum + weight, 0);
   const total = signals.reduce((sum, [weight, value]) => sum + weight * (value ?? 0.5), 0);
-  const matchScore = Math.round(100 * total / matchWeight);
+  const matchScore = Math.max(0, Math.round(100 * total / matchWeight) -
+    (!candidate.curated && candidate.book.language === undefined ? 5 : 0));
   const reasons: RecommendationReason[] = [];
   if (interest && interest.score >= 0.6) reasons.push({ code: "interest_match", message: `Matches your interest in ${interest.term}.` });
   if (liked !== undefined && liked >= 0.6) reasons.push({ code: "liked_book_similarity", message: "Found through or similar to a book you liked." });

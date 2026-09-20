@@ -8,6 +8,7 @@ export const recommendationInputSchema = z.object({
   age: z.number().int().min(3).max(19).optional(),
   grade: z.number().int().min(0).max(12).optional(),
   readingAbility: z.enum(["beginner", "average", "advanced"]).optional(),
+  language: z.string().trim().toLowerCase().regex(/^[a-z]{2,3}$/).default("en"),
   interests: z.array(term(60)).max(10).default([]),
   likedBooks: z.array(term(120)).max(10).default([]),
   dislikedBooks: z.array(term(120)).max(10).default([]),

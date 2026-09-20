@@ -16,6 +16,8 @@ export async function GET(
         manifest: connector.manifest,
         tools: connector.tools.map(({ name, description }) => ({ name, description })),
         healthy: await connector.healthCheck(),
+        deploymentCommit: process.env.VERCEL_GIT_COMMIT_SHA ?? "unknown",
+        ...(connector.diagnostics ? { diagnostics: await connector.diagnostics() } : {}),
       },
     });
   } catch (error) {

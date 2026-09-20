@@ -17,7 +17,7 @@ const now = new Date("2026-01-01T00:00:00.000Z");
 const source = { schemaVersion: 1, seeds: [], approved: [], submissions: [] };
 const provenance = { sourceType: "book_scout_classification" as const };
 const volume = (id: string, title = "The Lightning Thief", author = "Rick Riordan"): Book => ({
-  id: `google-books:${id}`, title, authors: [author], subjects: [],
+  id: `google-books:${id}`, title, authors: [author], subjects: [], pageCount: 200,
   ...(id === "a" ? { isbn13: "9780786838653" } : {}),
 });
 const draft = (id: string, title?: string, author?: string) =>
@@ -151,9 +151,9 @@ describe("relationships, similarity, and ranking integration", () => {
     const curated = await new BookScoutRecommendationService(provider, undefined, repository).recommend(input);
     const longTail = await new BookScoutRecommendationService(provider, undefined,
       new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] })).recommend(input);
-    expect(curated.recommendations[0].matchScore).toBeGreaterThan(longTail.recommendations[0].matchScore);
+    expect(curated.recommendations).toHaveLength(1);
     expect(curated.recommendations[0].book.subjects).toEqual([]);
-    expect(longTail.recommendations).toHaveLength(1);
+    expect(longTail.recommendations).toHaveLength(0);
   });
 
   it("diversifies across a known series when the user did not request a series", () => {

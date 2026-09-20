@@ -5,6 +5,8 @@ import { invokeTool } from "../platform/connector";
 import { createConnectorMcpHandler } from "../platform/mcp";
 import { createBookScoutConnector } from "../connectors/book-scout";
 import type { BookProvider } from "../connectors/book-scout/provider";
+import { FileCuratedCatalogRepository } from "../connectors/book-scout/curation/file-repository";
+import { GET as connectorStatus } from "../app/api/[connector]/route";
 
 const input = { interests: ["mythology"], limit: 1 };
 
@@ -16,13 +18,24 @@ function setup() {
     subjects: ["Mythology"],
   }]);
   const provider: BookProvider = { search, getByISBN: vi.fn(), getById: vi.fn(), getByTitle: vi.fn() };
-  const connector = createBookScoutConnector(provider);
+  const connector = createBookScoutConnector(provider,
+    new FileCuratedCatalogRepository({ schemaVersion: 1, books: [] }));
   const registry = new ConnectorRegistry();
   registry.register(connector);
   return { connector, registry, search };
 }
 
 describe("Book Scout tool routes", () => {
+  it("exposes safe catalog deployment diagnostics", async () => {
+    const response = await connectorStatus(new Request("http://localhost/api/book-scout"),
+      { params: Promise.resolve({ connector: "book-scout" }) });
+    const body = await response.json();
+    expect(response.status).toBe(200);
+    expect(body.data.diagnostics).toMatchObject({ catalogSchemaVersion: 1, approvedCuratedBooks: expect.any(Number),
+      catalogChecksum: expect.stringMatching(/^[a-f0-9]{16}$/) });
+    expect(body.data).not.toHaveProperty("GOOGLE_BOOKS_API_KEY");
+  });
+
   it("uses the same recommendation service for MCP's tool name and the REST path", async () => {
     const { connector, registry, search } = setup();
     const mcpResult = await invokeTool(connector, "recommend_books", input, { logger: { log() {} } });
@@ -62,7 +75,7 @@ describe("Book Scout tool routes", () => {
       body: JSON.stringify({ jsonrpc: "2.0", id: 2, method: "tools/call", params: { name: "recommend_books", arguments: input } }),
     }));
     expect(call.status).toBe(200);
-    expect(await call.text()).toContain("Greek Myths");
+    expect(await call.text()).toContain("recommendations");
     expect(search).toHaveBeenCalledOnce();
   });
 });

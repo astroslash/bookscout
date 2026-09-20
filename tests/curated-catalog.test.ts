@@ -6,7 +6,7 @@ import { BookScoutRecommendationService } from "../connectors/book-scout/service
 import type { BookProvider } from "../connectors/book-scout/provider";
 
 const now = new Date("2026-01-01T00:00:00.000Z");
-const book: Book = { id: "google-books:volume-1", title: "A Book", authors: ["A Writer"], subjects: [] };
+const book: Book = { id: "google-books:volume-1", title: "A Book", authors: ["A Writer"], subjects: [], pageCount: 200 };
 const emptySource = { schemaVersion: 1, approved: [], submissions: [] };
 const service = new CuratedCatalogService();
 

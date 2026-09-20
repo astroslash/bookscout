@@ -3,12 +3,15 @@ import type { BookProvider } from "./provider";
 import type { RecommendationInput } from "./schemas";
 import { ProviderError } from "@/platform/errors";
 import type { CuratedBookProfile } from "./curation/schemas";
+import { normalizeBookText, sameWork } from "./identity";
 
 export type Candidate = {
   book: Book;
   matchedInterests: string[];
   matchedLikedBooks: string[];
   curated?: CuratedBookProfile;
+  relationshipStrength?: number;
+  relationshipType?: "similar_to" | "read_next";
 };
 
 export type CandidateSet = {
@@ -21,7 +24,7 @@ export type CandidateSet = {
 type SearchPlan = { query: string; interests: string[]; likedBooks: string[] };
 
 export function normalizeWords(value: string): string {
-  return value.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  return normalizeBookText(value);
 }
 
 export function planCandidateQueries(input: RecommendationInput): SearchPlan[] {
@@ -37,14 +40,6 @@ export function planCandidateQueries(input: RecommendationInput): SearchPlan[] {
   return [...plans.values()];
 }
 
-function identityKeys(book: Book): string[] {
-  const keys = [`id:${book.id}`];
-  if (book.isbn13) keys.push(`isbn13:${book.isbn13}`);
-  if (book.isbn10) keys.push(`isbn10:${book.isbn10}`);
-  if (book.authors[0]) keys.push(`title-author:${normalizeWords(book.title)}:${normalizeWords(book.authors[0])}`);
-  return keys;
-}
-
 function metadataQuality(book: Book): number {
   return (book.isbn13 ? 3 : 0) + (book.isbn10 ? 2 : 0) +
     (book.description ? 1 : 0) + (book.coverUrl ? 1 : 0) +
@@ -54,29 +49,25 @@ function metadataQuality(book: Book): number {
 
 export function deduplicateCandidates(candidates: Candidate[]): Candidate[] {
   const output: Candidate[] = [];
-  const byIdentity = new Map<string, Candidate>();
   for (const candidate of candidates) {
-    const keys = identityKeys(candidate.book);
-    const matches = [...new Set(keys.map((key) => byIdentity.get(key)).filter((item): item is Candidate => item !== undefined))];
-    const target = matches[0];
+    const target = output.find((item) => item.book.id === candidate.book.id || sameWork(item.book, candidate.book));
     if (!target) {
       const copy = { ...candidate, matchedInterests: [...candidate.matchedInterests], matchedLikedBooks: [...candidate.matchedLikedBooks] };
       output.push(copy);
-      for (const key of keys) byIdentity.set(key, copy);
       continue;
-    }
-
-    for (const duplicate of matches.slice(1)) {
-      target.matchedInterests.push(...duplicate.matchedInterests);
-      target.matchedLikedBooks.push(...duplicate.matchedLikedBooks);
-      if (metadataQuality(duplicate.book) > metadataQuality(target.book)) target.book = duplicate.book;
-      output.splice(output.indexOf(duplicate), 1);
-      for (const [key, value] of byIdentity) if (value === duplicate) byIdentity.set(key, target);
     }
     target.matchedInterests = [...new Set([...target.matchedInterests, ...candidate.matchedInterests])];
     target.matchedLikedBooks = [...new Set([...target.matchedLikedBooks, ...candidate.matchedLikedBooks])];
-    if (metadataQuality(candidate.book) > metadataQuality(target.book)) target.book = candidate.book;
-    for (const key of keys) byIdentity.set(key, target);
+    if (candidate.curated && !target.curated) {
+      target.book = candidate.book;
+      target.curated = candidate.curated;
+    } else if (!target.curated && metadataQuality(candidate.book) > metadataQuality(target.book)) {
+      target.book = candidate.book;
+    }
+    if ((candidate.relationshipStrength ?? 0) > (target.relationshipStrength ?? 0)) {
+      target.relationshipStrength = candidate.relationshipStrength;
+      target.relationshipType = candidate.relationshipType;
+    }
   }
   return output;
 }
