@@ -2,11 +2,13 @@ import type { Book } from "./book";
 import type { BookProvider } from "./provider";
 import type { RecommendationInput } from "./schemas";
 import { ProviderError } from "@/platform/errors";
+import type { CuratedBookProfile } from "./curation/schemas";
 
 export type Candidate = {
   book: Book;
   matchedInterests: string[];
   matchedLikedBooks: string[];
+  curated?: CuratedBookProfile;
 };
 
 export type CandidateSet = {

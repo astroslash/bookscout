@@ -15,7 +15,7 @@ describe("curated catalog foundation", () => {
     const draft = service.createDraft(book, "system:developer", now);
     expect(draft.id).toMatch(/^bs_[0-9a-f-]{36}$/);
     expect(draft.id).not.toContain(book.id);
-    const proposed = { ...draft, topics: [{ value: "Mythology", provenance: {
+    const proposed = { ...draft, topics: [{ value: "mythology", provenance: {
       sourceType: "book_scout_classification" as const,
       contributorId: "curator_001",
     } }] };
@@ -35,13 +35,13 @@ describe("curated catalog foundation", () => {
     const first = service.submit(emptySource, draft, "system:developer", now);
     const approved = service.approve(first, first.submissions[0].id, "reviewer_001", now);
     const revised = service.submit(approved, { ...approved.approved[0], topics: [{
-      value: "Adventure", provenance: { sourceType: "book_scout_classification" },
+      value: "adventure", provenance: { sourceType: "book_scout_classification" },
     }] }, "curator_001", now);
     expect(revised.submissions[1].proposed.audit.reviewedBy).toBeUndefined();
     expect(revised.submissions[1].proposed.audit.updatedBy).toBe("curator_001");
     expect(service.build(revised).books[0].topics).toEqual([]);
     expect(service.build(service.approve(revised, revised.submissions[1].id, "reviewer_001", now)).books[0].topics[0].value)
-      .toBe("Adventure");
+      .toBe("adventure");
   });
 
   it("rejects a submission without changing approved data", () => {
@@ -69,13 +69,13 @@ describe("curated catalog foundation", () => {
   it("uses approved topics in recommendations without depending on a file format", async () => {
     const draft = service.createDraft(book, "system:developer", now);
     const pending = service.submit(emptySource, { ...draft, topics: [{
-      value: "Mythology", provenance: { sourceType: "book_scout_classification" },
+      value: "mythology", provenance: { sourceType: "book_scout_classification" },
     }] }, "system:developer", now);
     const approved = service.build(service.approve(pending, pending.submissions[0].id, "reviewer_001", now));
     const repository = new FileCuratedCatalogRepository(approved);
     const provider: BookProvider = { search: vi.fn(async () => [book]), getById: vi.fn(), getByISBN: vi.fn(), getByTitle: vi.fn() };
     const result = await new BookScoutRecommendationService(provider, undefined, repository).recommend({ interests: ["mythology"] });
-    expect(result.recommendations[0].book.subjects).toContain("Mythology");
+    expect(result.recommendations[0].book.subjects).toEqual([]);
     expect(result.recommendations[0].reasons.some((reason) => reason.code === "interest_match")).toBe(true);
   });
 

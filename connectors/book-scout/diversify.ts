@@ -8,6 +8,7 @@ function primaryAuthor(candidate: ScoredCandidate): string | undefined {
 }
 
 function seriesPrefix(candidate: ScoredCandidate): string | undefined {
+  if (candidate.curated?.series?.name) return `series:${normalizeWords(candidate.curated.series.name)}`;
   const words = normalizeWords(candidate.book.title).split(" ");
   return words.length >= 3 ? words.slice(0, 3).join(" ") : undefined;
 }

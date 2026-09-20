@@ -1,6 +1,6 @@
 # K4 Connect
 
-K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, and an optional commerce link boundary.
+K4 Connect is a TypeScript connector factory built with Next.js App Router. Book Scout is its first registered connector. **Phases 1 through 6 and the Phase 6.5 curated catalog foundation are implemented:** the shared factory, normalized Google Books catalog adapter, deterministic recommendation service, public REST/MCP recommendation routes, canonical book pages, optional commerce link boundary, and a small reviewed catalog layer.
 
 ## Local setup
 
@@ -62,7 +62,7 @@ Set `AMAZON_ASSOCIATES_TAG` to your **Amazon.com** Associates tracking ID in `.e
 
 ## Curated catalog foundation
 
-The curated catalog starts empty. `data/books/catalog.source.json` holds developer-maintained approved profiles and separate submissions; `npm run catalog:build` validates it and generates `data/books/catalog.json`. `npm run catalog:check` verifies that the generated file is current. Approved topics are matched to live Google Books candidates through a narrow repository interface and can improve the existing recommendation score. The engine never reads files directly. Stable opaque Book Scout IDs, audit metadata, field provenance, and review operations are defined in reusable domain code. See [docs/CURATION.md](docs/CURATION.md) for the source format, review boundary, and future curator workflow.
+`data/books/catalog.source.json` holds 12 starter seeds, approved profiles, and separate submissions; `npm run catalog:build` validates it and generates `data/books/catalog.json`. `npm run catalog:check` verifies that the generated file is current. Five factual records are approved; seven seeds await edition selection because Google Books returned ambiguous matches. Subjective traits, age fit, topics, tiers, and relationships remain unknown until reviewed. Approved intelligence attaches to live Google Books candidates through a narrow repository interface and can improve the existing score and series diversification. The engine never reads files directly and keeps long-tail Google Books recommendations working. See [docs/CURATION.md](docs/CURATION.md) for commands, source format, and review workflow.
 
 ## Future recommendation catalog
 
@@ -81,6 +81,9 @@ npm test
 npm run typecheck
 npm run lint
 npm run build
+npm run catalog:validate
+npm run catalog:build
+npm run catalog:stats
 npm run catalog:check
 ```
 

@@ -1,4 +1,165 @@
 {
   "schemaVersion": 1,
-  "books": []
+  "books": [
+    {
+      "id": "bs_23b718b3-da99-4ec9-87f2-18e62b35e4ea",
+      "book": {
+        "id": "google-books:LE47jyBGjowC",
+        "title": "Hatchet",
+        "authors": [
+          "Gary Paulsen"
+        ],
+        "isbn10": "0689808828",
+        "isbn13": "9780689808821",
+        "description": "A bag with ten copies of the title that may also include miscellaneous notes, discussion questions, biographical information, and reading lists to assist book group discussion leaders.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 1996,
+        "pageCount": 214,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=LE47jyBGjowC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "topics": [],
+      "readerFitTags": [],
+      "traits": {},
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T03:30:30.405Z",
+        "updatedAt": "2026-09-20T03:30:30.409Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer",
+        "reviewedAt": "2026-09-20T03:30:30.409Z",
+        "reviewedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_8c20f7ad-9909-45d1-a00c-0e78ed57b85d",
+      "book": {
+        "id": "google-books:Jw9MCgAAQBAJ",
+        "title": "The Wild Robot",
+        "authors": [
+          "Peter Brown"
+        ],
+        "isbn10": "0316382019",
+        "isbn13": "9780316382014",
+        "description": "Now a DreamWorks movie available on Prime Video! This #1 New York Times bestselling illustrated middle grade novel from a Caldecott Honor winner tells an extraordinary story full of action and thought-provoking questions as a robot learns to survive—and live—in the wilderness. Can a robot survive in the wilderness? When robot Roz opens her eyes for the first time, she discovers that she is all alone on a remote, wild island. She has no idea how she got there or what her purpose is--but she knows she needs to survive. After battling a violent storm and escaping a vicious bear attack, she realizes that her only hope for survival is to adapt to her surroundings and learn from the island's unwelcoming animal inhabitants. As Roz slowly befriends the animals, the island starts to feel like home--until, one day, the robot's mysterious past comes back to haunt her. From bestselling and award-winning author and illustrator Peter Brown comes a heartwarming and action-packed novel about what happens when nature and technology collide.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2016,
+        "pageCount": 258,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=Jw9MCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "topics": [],
+      "readerFitTags": [],
+      "traits": {},
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T03:30:29.948Z",
+        "updatedAt": "2026-09-20T03:30:29.952Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer",
+        "reviewedAt": "2026-09-20T03:30:29.952Z",
+        "reviewedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_8e0a9e0f-1b73-47a2-a641-079ae398d874",
+      "book": {
+        "id": "google-books:SLNIBAAAQBAJ",
+        "title": "The Dragonet Prophecy",
+        "authors": [
+          "Tui T. Sutherland"
+        ],
+        "isbn10": "1407147773",
+        "isbn13": "9781407147772",
+        "description": "Seven dragon tribes have been at war for generations. A secret movement called the Talons of Peace is determined to bring an end to the fighting, with the help of a prophecy. Five dragonets are enlisted, against their will, to end the terrible war. But when they escape their prison, the result may be more than intended . . .",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2014,
+        "pageCount": 274,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=SLNIBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "topics": [],
+      "readerFitTags": [],
+      "traits": {},
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T03:30:30.875Z",
+        "updatedAt": "2026-09-20T03:30:30.879Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer",
+        "reviewedAt": "2026-09-20T03:30:30.879Z",
+        "reviewedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_97128f28-74e1-4207-ae63-97f945feabc4",
+      "book": {
+        "id": "google-books:hlb_sM1AN0gC",
+        "title": "The Hunger Games",
+        "authors": [
+          "Suzanne Collins"
+        ],
+        "isbn10": "0439023521",
+        "isbn13": "9780439023528",
+        "description": "By winning the Hunger Games, Katniss and Peeta have secured a life of safety and plenty for themselves and their families, but because they won by defying the rules, they unwittingly become the faces of an impending rebellion. |",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2008,
+        "pageCount": 386,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=hlb_sM1AN0gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "topics": [],
+      "readerFitTags": [],
+      "traits": {},
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T03:30:29.479Z",
+        "updatedAt": "2026-09-20T03:30:29.483Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer",
+        "reviewedAt": "2026-09-20T03:30:29.483Z",
+        "reviewedBy": "system:developer"
+      }
+    },
+    {
+      "id": "bs_e1f958eb-4bc6-4de5-9937-3c9b3a0f9c31",
+      "book": {
+        "id": "google-books:wrOQLV6xB-wC",
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "authors": [
+          "J.K. Rowling"
+        ],
+        "isbn10": "1781100489",
+        "isbn13": "9781781100486",
+        "description": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
+        "subjects": [
+          "Juvenile Fiction"
+        ],
+        "publicationYear": 2015,
+        "pageCount": 312,
+        "language": "en",
+        "coverUrl": "https://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "topics": [],
+      "readerFitTags": [],
+      "traits": {},
+      "relationships": [],
+      "audit": {
+        "createdAt": "2026-09-20T03:30:29.006Z",
+        "updatedAt": "2026-09-20T03:30:29.012Z",
+        "createdBy": "system:developer",
+        "updatedBy": "system:developer",
+        "reviewedAt": "2026-09-20T03:30:29.012Z",
+        "reviewedBy": "system:developer"
+      }
+    }
+  ]
 }

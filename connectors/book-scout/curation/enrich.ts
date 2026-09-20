@@ -25,7 +25,6 @@ export async function enrichWithApprovedCuration(
   return candidates.map((candidate) => {
     const profile = approved.find((item) => matches(item, candidate));
     if (!profile) return candidate;
-    const subjects = [...new Set([...candidate.book.subjects, ...profile.topics.map((topic) => topic.value)])];
-    return { ...candidate, book: { ...candidate.book, subjects } };
+    return { ...candidate, curated: profile };
   });
 }

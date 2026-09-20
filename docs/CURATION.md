@@ -1,17 +1,34 @@
 # Curated Book Scout catalog
 
-Book Scout has a small, file-backed curated catalog foundation. It starts with **zero approved records**; Google Books still supplies the live catalog and recommendations. Developers maintain `data/books/catalog.source.json` in Git and run `npm run catalog:build` to generate `data/books/catalog.json`. Run `npm run catalog:check` to confirm the generated file is current. The build validates records through `CuratedCatalogService`, then includes only approved profiles in the runtime catalog. The recommendation service reads approved classifications through `CuratedCatalogRepository`; it never reads JSON directly. `FileCuratedCatalogRepository` is the current adapter, and a database adapter could implement the same narrow interface later.
+Google Books remains the live bibliographic source. A separate `CuratedBookProfile` stores Book Scout classifications, sourced reading fit, series information, relationships, and audit metadata. The normalized `Book` model stays provider focused. Unknown editorial values are absent rather than zero. No subjective classifications are inferred from Google categories or descriptions.
 
-Each curated profile has a stable opaque `bs_` UUID independent of title, ISBN, filename, and Google Books ID. The profile stores normalized provider book facts separately from Book Scout topics, optional series information, and relationships. Classification provenance can hold opaque contributor and reviewer IDs. Unknown fields stay absent. Audit metadata tracks creation, update, and review using opaque IDs, with no names, emails, ages, schools, or locations.
+`data/books/catalog.source.json` is the version controlled working source. It contains seeds, proposals, and approved profiles. `data/books/catalog.json` is the deterministic generated runtime artifact and contains **only approved profiles**. `FileCuratedCatalogRepository` imports that artifact into the Vercel server bundle and implements `CuratedCatalogRepository` (`getById`, `getByIsbn`, `findByTitleAuthor`, `listApproved`). The recommendation service depends on this interface and works with an empty catalog or a future database adapter.
 
-Source records separate `approved` profiles from `submissions`. Submissions have `seeded`, `enriched`, `needs_review`, `approved`, or `rejected` state. `CuratedCatalogService.createDraft`, `submit`, `approve`, and `reject` provide reusable domain rules. A submission does not change approved production data until explicit approval. A proposed revision keeps the same stable catalog ID, loses any old approval stamp, and can replace the approved profile only through `approve`. Full revision history is deferred; Git records changes to the source file in the meantime. The runtime catalog never includes pending or rejected submissions.
+## Commands
 
-The intended future curator flow is:
+Run commands from the repository root:
 
-1. Search Google Books for a title such as *The False Prince*.
-2. Select the correct volume and normalize it into the Book model.
-3. Create a draft with a stable Book Scout ID, add topics, series data, and relationships, then validate with the existing schemas.
-4. Submit for review. An authorized reviewer approves or rejects the proposal.
-5. Build the runtime catalog. Approved topics then enrich matching Google Books candidates before the existing recommendation scorer runs.
+```sh
+npm run catalog:add -- "The Lightning Thief" "Rick Riordan"
+npm run catalog:enrich
+npm run catalog:validate
+npm run catalog:build
+npm run catalog:stats
+npm run catalog:check
+```
 
-A future browser curator interface should call these same domain operations and a repository implementation. Authentication, permissions, accounts, user interface, and database storage are deliberately outside this foundation. A browseable public catalog of recommendation collections is also a separate future feature; this foundation does not invent editorial picks.
+`catalog:add` rejects an existing normalized title/author pair and creates an opaque `bs_` UUID. `catalog:enrich` uses the existing Google Books provider and requires `GOOGLE_BOOKS_API_KEY` in `.env.local`; it searches unresolved seeds, records candidate IDs and a deterministic confidence score, and attaches normalized book facts only for a high confidence title/author match with enough separation from other editions. Ambiguous matches stay `needs_review`. If the provider is unavailable, individual failures are reported and the source remains valid. `catalog:validate` checks schemas, IDs, ISBN checksums, duplicates, ranges, controlled terms, provenance, review metadata, and relationship references. `catalog:build` fails on invalid data; `catalog:check` detects a stale generated artifact. `catalog:stats` reports seed states and approved coverage.
+
+`npm run catalog:approve -- <seed-id>` is a developer command for an **already inspected**, high confidence enriched seed. It creates a proposal and approves the factual provider record with a system reviewer ID. It does not add subjective traits or grant approval to ambiguous matches. Run `catalog:build` afterward. Future editorial changes should be proposed and reviewed through `CuratedCatalogService.submit` and `approve`; the CLI does not offer a shortcut for subjective classifications.
+
+The starter set has 12 seeds: *The Lightning Thief*, *Harry Potter and the Sorcerer's Stone*, *The Hunger Games*, *The Hobbit*, *The Wild Robot*, *Wonder*, *Holes*, *Hatchet*, *The Giver*, *Diary of a Wimpy Kid*, *Dog Man*, and *The Dragonet Prophecy* (Wings of Fire). Five currently have reviewed exact Google title/author matches and seven require edition selection. The small catalog proves the workflow; it is not the Golden 100 or a public browsable collection.
+
+## Model and review rules
+
+Each profile has an opaque stable Book Scout ID, independent of title, ISBN, filename, or provider ID. The embedded normalized `Book` holds current factual metadata. Optional `tier` is `golden` or `core`. Controlled topics and reader fit tags live in `curation/taxonomy.ts`; aliases normalize deterministically. The 12 optional traits use a 0–5 scale, where an absent trait means unknown. Reading fit may include age, grade, reviewed sourced Lexile, and editorial difficulty. Provenance distinguishes external facts, Book Scout classifications, and derived values; optional contributor/reviewer IDs are opaque. Relationships may be `similar_to` or directed `read_next`; validation rejects missing targets, self links, and duplicate symmetric `similar_to` pairs. The structured similarity function returns a score, confidence, and reasons; missing dimensions reduce confidence instead of reducing the match score.
+
+`CuratedCatalogService` owns seed normalization, provider matching, validation, submission, approval, rejection, building, and stats. A proposal does not change an approved runtime record. An approved record can have a proposed revision with the same stable ID; only approval replaces production data. Git is the present change history. Full revision history, permissions, and a curator interface are deferred.
+
+The future flow is: authorized curator searches through the existing provider, selects the correct normalized result, creates or revises a profile, adds sourced classifications and relationships, submits for review, and a reviewer approves it. A browser interface can orchestrate these domain operations using a database backed repository without rewriting recommendations. No child names, emails, schools, or other personal information belongs in the catalog.
+
+At recommendation time, the service generates candidates from Google Books, attaches approved profiles by ISBN or title/author, then uses known curated fields in the existing scorer and diversification pass. The provider `Book` remains unchanged. Books outside the small curated set continue through the same pipeline.
